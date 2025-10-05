@@ -1,5 +1,7 @@
 <?php
 
+// this_file: .php-cs-fixer.dist.php
+
 /**
  * @generated
  * @link https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/HEAD/doc/config.rst
@@ -9,13 +11,18 @@ $finder = PhpCsFixer\Finder::create()
     ->exclude('vendor')
     ->exclude('test')
     ->exclude('tests')
+    ->exclude('src/Ragie/Api/lib')
+    ->exclude('src/Ragie/Api/docs')
+    ->exclude('src/Ragie/Api/test')
 ;
 
 $config = new PhpCsFixer\Config();
-return $config->setRules([
+
+return $config
+    ->setRules([
         '@PSR12' => true,
         'phpdoc_order' => true,
-        'array_syntax' => [ 'syntax' => 'short' ],
+        'array_syntax' => ['syntax' => 'short'],
         'strict_comparison' => true,
         'strict_param' => true,
         'no_trailing_whitespace' => false,
@@ -25,5 +32,4 @@ return $config->setRules([
         'blank_line_after_namespace' => false,
         'no_leading_import_slash' => false,
     ])
-    ->setFinder($finder)
-;
+    ->setFinder($finder);

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,20 +25,20 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client;
+namespace Ragie\Api;
 
 use ArrayAccess;
 use DateTime;
 use GuzzleHttp\Psr7\Utils;
 use Psr\Http\Message\StreamInterface;
 use SplFileObject;
-use OpenAPI\Client\Model\ModelInterface;
+use Ragie\Api\Model\ModelInterface;
 
 /**
  * FormDataProcessor Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

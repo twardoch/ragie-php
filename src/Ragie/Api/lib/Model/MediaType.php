@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * MediaType Class Doc Comment
  *
  * @category Class
  * @description The desired media type of the content to return described as a mime type. An error will be returned if the requested media type is not supported for the document&#39;s type.
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>

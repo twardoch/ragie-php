@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * DocumentDeleteWebhook Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class DocumentDeleteWebhook implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $openAPITypes = [
         'nonce' => 'string',
         'type' => 'string',
-        'payload' => '\OpenAPI\Client\Model\DocumentDeleteWebhookPayload'
+        'payload' => '\Ragie\Api\Model\DocumentDeleteWebhookPayload'
     ];
 
     /**
@@ -401,7 +401,7 @@ class DocumentDeleteWebhook implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets payload
      *
-     * @return \OpenAPI\Client\Model\DocumentDeleteWebhookPayload
+     * @return \Ragie\Api\Model\DocumentDeleteWebhookPayload
      */
     public function getPayload()
     {
@@ -411,7 +411,7 @@ class DocumentDeleteWebhook implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets payload
      *
-     * @param \OpenAPI\Client\Model\DocumentDeleteWebhookPayload $payload payload
+     * @param \Ragie\Api\Model\DocumentDeleteWebhookPayload $payload payload
      *
      * @return self
      */

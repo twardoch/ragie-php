@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,14 +26,14 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
-use \OpenAPI\Client\ObjectSerializer;
+namespace Ragie\Api\Model;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * SearchEffort Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

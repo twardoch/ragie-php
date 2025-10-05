@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Ragie\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Ragie\Api\ApiException;
+use Ragie\Api\Configuration;
+use Ragie\Api\FormDataProcessor;
+use Ragie\Api\HeaderSelector;
+use Ragie\Api\ObjectSerializer;
 
 /**
  * RetrievalsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -130,12 +130,12 @@ class RetrievalsApi
      *
      * Retrieve
      *
-     * @param  \OpenAPI\Client\Model\RetrieveParams $retrieve_params retrieve_params (required)
+     * @param  \Ragie\Api\Model\RetrieveParams $retrieve_params retrieve_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieve'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Retrieval|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\Retrieval|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function retrieve($retrieve_params, string $contentType = self::contentTypes['retrieve'][0])
     {
@@ -148,12 +148,12 @@ class RetrievalsApi
      *
      * Retrieve
      *
-     * @param  \OpenAPI\Client\Model\RetrieveParams $retrieve_params (required)
+     * @param  \Ragie\Api\Model\RetrieveParams $retrieve_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieve'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Retrieval|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\Retrieval|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveWithHttpInfo($retrieve_params, string $contentType = self::contentTypes['retrieve'][0])
     {
@@ -185,37 +185,37 @@ class RetrievalsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\Retrieval',
+                        '\Ragie\Api\Model\Retrieval',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -237,7 +237,7 @@ class RetrievalsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\Retrieval',
+                '\Ragie\Api\Model\Retrieval',
                 $request,
                 $response,
             );
@@ -246,7 +246,7 @@ class RetrievalsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Retrieval',
+                        '\Ragie\Api\Model\Retrieval',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class RetrievalsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class RetrievalsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -270,7 +270,7 @@ class RetrievalsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -278,7 +278,7 @@ class RetrievalsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -286,7 +286,7 @@ class RetrievalsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -303,7 +303,7 @@ class RetrievalsApi
      *
      * Retrieve
      *
-     * @param  \OpenAPI\Client\Model\RetrieveParams $retrieve_params (required)
+     * @param  \Ragie\Api\Model\RetrieveParams $retrieve_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieve'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -324,7 +324,7 @@ class RetrievalsApi
      *
      * Retrieve
      *
-     * @param  \OpenAPI\Client\Model\RetrieveParams $retrieve_params (required)
+     * @param  \Ragie\Api\Model\RetrieveParams $retrieve_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieve'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -332,7 +332,7 @@ class RetrievalsApi
      */
     public function retrieveAsyncWithHttpInfo($retrieve_params, string $contentType = self::contentTypes['retrieve'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Retrieval';
+        $returnType = '\Ragie\Api\Model\Retrieval';
         $request = $this->retrieveRequest($retrieve_params, $contentType);
 
         return $this->client
@@ -374,7 +374,7 @@ class RetrievalsApi
     /**
      * Create request for operation 'retrieve'
      *
-     * @param  \OpenAPI\Client\Model\RetrieveParams $retrieve_params (required)
+     * @param  \Ragie\Api\Model\RetrieveParams $retrieve_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieve'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

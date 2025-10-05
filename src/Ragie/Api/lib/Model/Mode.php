@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * Mode Class Doc Comment
  *
  * @category Class
  * @description Partition strategy for the document. Different strategies exist for textual, audio and video file types and you can set the strategy you want for  each file type, or just for textual types.  For textual documents the options are &#x60;&#39;hi_res&#39;&#x60; or &#x60;&#39;fast&#39;&#x60;. When set to &#x60;&#39;hi_res&#39;&#x60;, images and tables will be extracted from the document. &#x60;&#39;fast&#39;&#x60; will only extract text. &#x60;&#39;fast&#39;&#x60; may be up to 20x faster than &#x60;&#39;hi_res&#39;&#x60;. &#x60;hi_res&#x60; is only applicable for Word documents, PDFs, Images, and PowerPoints. Images will always be processed in &#x60;hi_res&#x60;. If &#x60;hi_res&#x60; is set for an unsupported document type, it will be processed and billed in &#x60;fast&#x60; mode.  For audio files, the options are true or false. True if you want to process audio, false otherwise.          For video files, the options are &#x60;&#39;audio_only&#39;&#x60;, &#x60;&#39;video_only&#39;&#x60;, &#x60;&#39;audio_video&#39;&#x60;. &#x60;&#39;audio_only&#39;&#x60; will extract just the audio part of the video. &#x60;&#39;video_only&#39;&#x60; will similarly just extract the video part, ignoring audio. &#x60;&#39;audio_video&#39;&#x60; will extract both audio and video.  To process all media types at the highest quality, use &#x60;&#39;all&#39;&#x60;.  When you specify audio or video stategies, the format must be a JSON object. In this case, textual documents are denoted by the key \&quot;static\&quot;. If you omit a key, that document type won&#39;t be processd.  See examples below.  Examples  Textual documents only     \&quot;fast\&quot;  Video documents only {     \&quot;video\&quot;: \&quot;audio_video\&quot; }  Specify multiple document types {     \&quot;static\&quot;: \&quot;hi_res\&quot;,     \&quot;audio\&quot;: true,     \&quot;video\&quot;: \&quot;video_only\&quot; }  Specify only textual or audio document types {     \&quot;static\&quot;: \&quot;fast\&quot;,     \&quot;audio\&quot;: true }  Highest quality processing for all media types     \&quot;all\&quot;
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>

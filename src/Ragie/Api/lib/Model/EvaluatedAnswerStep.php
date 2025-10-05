@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * EvaluatedAnswerStep Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class EvaluatedAnswerStep implements ModelInterface, ArrayAccess, \JsonSerializa
         'type' => 'string',
         'think' => 'string',
         'current_question' => 'string',
-        'answer' => '\OpenAPI\Client\Model\Answer',
+        'answer' => '\Ragie\Api\Model\Answer',
         'other_resolved_question_ids' => 'string[]',
         'eval_passed' => 'bool',
         'eval_reason' => 'string'
@@ -462,7 +462,7 @@ class EvaluatedAnswerStep implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets answer
      *
-     * @return \OpenAPI\Client\Model\Answer
+     * @return \Ragie\Api\Model\Answer
      */
     public function getAnswer()
     {
@@ -472,7 +472,7 @@ class EvaluatedAnswerStep implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets answer
      *
-     * @param \OpenAPI\Client\Model\Answer $answer answer
+     * @param \Ragie\Api\Model\Answer $answer answer
      *
      * @return self
      */

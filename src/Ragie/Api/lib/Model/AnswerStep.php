@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * AnswerStep Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class AnswerStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'think' => 'string',
         'current_question' => 'string',
         'other_resolved_question_ids' => 'string[]',
-        'answer' => '\OpenAPI\Client\Model\Answer'
+        'answer' => '\Ragie\Api\Model\Answer'
     ];
 
     /**
@@ -469,7 +469,7 @@ class AnswerStep implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets answer
      *
-     * @return \OpenAPI\Client\Model\Answer
+     * @return \Ragie\Api\Model\Answer
      */
     public function getAnswer()
     {
@@ -479,7 +479,7 @@ class AnswerStep implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets answer
      *
-     * @param \OpenAPI\Client\Model\Answer $answer answer
+     * @param \Ragie\Api\Model\Answer $answer answer
      *
      * @return self
      */

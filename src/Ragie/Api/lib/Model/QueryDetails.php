@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * QueryDetails Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class QueryDetails implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'query' => 'string',
-        'search_effort' => '\OpenAPI\Client\Model\SearchEffort',
+        'search_effort' => '\Ragie\Api\Model\SearchEffort',
         'metadata_filter' => 'array<string,mixed>',
-        'search_results' => '\OpenAPI\Client\Model\RagieEvidence[]'
+        'search_results' => '\Ragie\Api\Model\RagieEvidence[]'
     ];
 
     /**
@@ -352,7 +352,7 @@ class QueryDetails implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets search_effort
      *
-     * @return \OpenAPI\Client\Model\SearchEffort
+     * @return \Ragie\Api\Model\SearchEffort
      */
     public function getSearchEffort()
     {
@@ -362,7 +362,7 @@ class QueryDetails implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets search_effort
      *
-     * @param \OpenAPI\Client\Model\SearchEffort $search_effort search_effort
+     * @param \Ragie\Api\Model\SearchEffort $search_effort search_effort
      *
      * @return self
      */
@@ -406,7 +406,7 @@ class QueryDetails implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets search_results
      *
-     * @return \OpenAPI\Client\Model\RagieEvidence[]
+     * @return \Ragie\Api\Model\RagieEvidence[]
      */
     public function getSearchResults()
     {
@@ -416,7 +416,7 @@ class QueryDetails implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets search_results
      *
-     * @param \OpenAPI\Client\Model\RagieEvidence[] $search_results search_results
+     * @param \Ragie\Api\Model\RagieEvidence[] $search_results search_results
      *
      * @return self
      */

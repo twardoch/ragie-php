@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * Connection Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,10 +60,10 @@ class Connection implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'string',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
-        'metadata' => 'array<string,\OpenAPI\Client\Model\MetadataValue>',
+        'metadata' => 'array<string,\Ragie\Api\Model\MetadataValue>',
         'type' => 'string',
         'name' => 'string',
-        'source' => '\OpenAPI\Client\Model\Source',
+        'source' => '\Ragie\Api\Model\Source',
         'enabled' => 'bool',
         'disabled_by_system_reason' => 'string',
         'last_synced_at' => '\DateTime',
@@ -521,7 +521,7 @@ class Connection implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets metadata
      *
-     * @return array<string,\OpenAPI\Client\Model\MetadataValue>
+     * @return array<string,\Ragie\Api\Model\MetadataValue>
      */
     public function getMetadata()
     {
@@ -531,7 +531,7 @@ class Connection implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets metadata
      *
-     * @param array<string,\OpenAPI\Client\Model\MetadataValue> $metadata metadata
+     * @param array<string,\Ragie\Api\Model\MetadataValue> $metadata metadata
      *
      * @return self
      */
@@ -602,7 +602,7 @@ class Connection implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets source
      *
-     * @return \OpenAPI\Client\Model\Source
+     * @return \Ragie\Api\Model\Source
      */
     public function getSource()
     {
@@ -612,7 +612,7 @@ class Connection implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets source
      *
-     * @param \OpenAPI\Client\Model\Source $source source
+     * @param \Ragie\Api\Model\Source $source source
      *
      * @return self
      */

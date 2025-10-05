@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Ragie\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Ragie\Api\ApiException;
+use Ragie\Api\Configuration;
+use Ragie\Api\FormDataProcessor;
+use Ragie\Api\HeaderSelector;
+use Ragie\Api\ObjectSerializer;
 
 /**
  * DocumentsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -176,16 +176,16 @@ class DocumentsApi
      * Create Document
      *
      * @param  \SplFileObject $file The binary file to upload, extract, and index for retrieval. The following file types are supported: Plain Text: &#x60;.eml&#x60; &#x60;.html&#x60; &#x60;.json&#x60; &#x60;.md&#x60; &#x60;.msg&#x60; &#x60;.rst&#x60; &#x60;.rtf&#x60; &#x60;.txt&#x60; &#x60;.xml&#x60; Images: &#x60;.png&#x60; &#x60;.webp&#x60; &#x60;.jpg&#x60; &#x60;.jpeg&#x60; &#x60;.tiff&#x60; &#x60;.bmp&#x60; &#x60;.heic&#x60; Documents: &#x60;.csv&#x60; &#x60;.doc&#x60; &#x60;.docx&#x60; &#x60;.epub&#x60; &#x60;.epub+zip&#x60; &#x60;.odt&#x60; &#x60;.pdf&#x60; &#x60;.ppt&#x60; &#x60;.pptx&#x60; &#x60;.tsv&#x60; &#x60;.xlsx&#x60; &#x60;.xls&#x60;. PDF files over 2000 pages are not supported in hi_res mode. (required)
-     * @param  \OpenAPI\Client\Model\Mode2|null $mode mode (optional)
-     * @param  array<string,\OpenAPI\Client\Model\MetadataValue1>|null $metadata Metadata for the document. Keys must be strings. Values may be strings, numbers, booleans, or lists of strings. Numbers may be integers or floating point and will be converted to 64 bit floating point. 1000 total values are allowed. Each item in an array counts towards the total. The following keys are reserved for internal use: &#x60;document_id&#x60;, &#x60;document_type&#x60;, &#x60;document_source&#x60;, &#x60;document_name&#x60;, &#x60;document_uploaded_at&#x60;, &#x60;start_time&#x60;, &#x60;end_time&#x60;. (optional)
+     * @param  \Ragie\Api\Model\Mode2|null $mode mode (optional)
+     * @param  array<string,\Ragie\Api\Model\MetadataValue1>|null $metadata Metadata for the document. Keys must be strings. Values may be strings, numbers, booleans, or lists of strings. Numbers may be integers or floating point and will be converted to 64 bit floating point. 1000 total values are allowed. Each item in an array counts towards the total. The following keys are reserved for internal use: &#x60;document_id&#x60;, &#x60;document_type&#x60;, &#x60;document_source&#x60;, &#x60;document_name&#x60;, &#x60;document_uploaded_at&#x60;, &#x60;start_time&#x60;, &#x60;end_time&#x60;. (optional)
      * @param  string|null $external_id An optional identifier for the document. A common value might be an id in an external system or the URL where the source file may be found. (optional)
      * @param  string|null $name An optional name for the document. If set, the document will have this name. Otherwise it will default to the file&#39;s name. (optional)
      * @param  string|null $partition An optional partition identifier. Documents can be scoped to a partition. Partitions must be lowercase alphanumeric and may only include the special characters &#x60;_&#x60; and &#x60;-&#x60;.  A partition is created any time a document is created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Document|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\Document|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function createDocument($file, $mode = null, $metadata = null, $external_id = null, $name = null, $partition = null, string $contentType = self::contentTypes['createDocument'][0])
     {
@@ -199,16 +199,16 @@ class DocumentsApi
      * Create Document
      *
      * @param  \SplFileObject $file The binary file to upload, extract, and index for retrieval. The following file types are supported: Plain Text: &#x60;.eml&#x60; &#x60;.html&#x60; &#x60;.json&#x60; &#x60;.md&#x60; &#x60;.msg&#x60; &#x60;.rst&#x60; &#x60;.rtf&#x60; &#x60;.txt&#x60; &#x60;.xml&#x60; Images: &#x60;.png&#x60; &#x60;.webp&#x60; &#x60;.jpg&#x60; &#x60;.jpeg&#x60; &#x60;.tiff&#x60; &#x60;.bmp&#x60; &#x60;.heic&#x60; Documents: &#x60;.csv&#x60; &#x60;.doc&#x60; &#x60;.docx&#x60; &#x60;.epub&#x60; &#x60;.epub+zip&#x60; &#x60;.odt&#x60; &#x60;.pdf&#x60; &#x60;.ppt&#x60; &#x60;.pptx&#x60; &#x60;.tsv&#x60; &#x60;.xlsx&#x60; &#x60;.xls&#x60;. PDF files over 2000 pages are not supported in hi_res mode. (required)
-     * @param  \OpenAPI\Client\Model\Mode2|null $mode (optional)
-     * @param  array<string,\OpenAPI\Client\Model\MetadataValue1>|null $metadata Metadata for the document. Keys must be strings. Values may be strings, numbers, booleans, or lists of strings. Numbers may be integers or floating point and will be converted to 64 bit floating point. 1000 total values are allowed. Each item in an array counts towards the total. The following keys are reserved for internal use: &#x60;document_id&#x60;, &#x60;document_type&#x60;, &#x60;document_source&#x60;, &#x60;document_name&#x60;, &#x60;document_uploaded_at&#x60;, &#x60;start_time&#x60;, &#x60;end_time&#x60;. (optional)
+     * @param  \Ragie\Api\Model\Mode2|null $mode (optional)
+     * @param  array<string,\Ragie\Api\Model\MetadataValue1>|null $metadata Metadata for the document. Keys must be strings. Values may be strings, numbers, booleans, or lists of strings. Numbers may be integers or floating point and will be converted to 64 bit floating point. 1000 total values are allowed. Each item in an array counts towards the total. The following keys are reserved for internal use: &#x60;document_id&#x60;, &#x60;document_type&#x60;, &#x60;document_source&#x60;, &#x60;document_name&#x60;, &#x60;document_uploaded_at&#x60;, &#x60;start_time&#x60;, &#x60;end_time&#x60;. (optional)
      * @param  string|null $external_id An optional identifier for the document. A common value might be an id in an external system or the URL where the source file may be found. (optional)
      * @param  string|null $name An optional name for the document. If set, the document will have this name. Otherwise it will default to the file&#39;s name. (optional)
      * @param  string|null $partition An optional partition identifier. Documents can be scoped to a partition. Partitions must be lowercase alphanumeric and may only include the special characters &#x60;_&#x60; and &#x60;-&#x60;.  A partition is created any time a document is created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Document|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\Document|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createDocumentWithHttpInfo($file, $mode = null, $metadata = null, $external_id = null, $name = null, $partition = null, string $contentType = self::contentTypes['createDocument'][0])
     {
@@ -240,43 +240,43 @@ class DocumentsApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\Document',
+                        '\Ragie\Api\Model\Document',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -298,7 +298,7 @@ class DocumentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\Document',
+                '\Ragie\Api\Model\Document',
                 $request,
                 $response,
             );
@@ -307,7 +307,7 @@ class DocumentsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Document',
+                        '\Ragie\Api\Model\Document',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -315,7 +315,7 @@ class DocumentsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -323,7 +323,7 @@ class DocumentsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -331,7 +331,7 @@ class DocumentsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -339,7 +339,7 @@ class DocumentsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -347,7 +347,7 @@ class DocumentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -355,7 +355,7 @@ class DocumentsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -373,8 +373,8 @@ class DocumentsApi
      * Create Document
      *
      * @param  \SplFileObject $file The binary file to upload, extract, and index for retrieval. The following file types are supported: Plain Text: &#x60;.eml&#x60; &#x60;.html&#x60; &#x60;.json&#x60; &#x60;.md&#x60; &#x60;.msg&#x60; &#x60;.rst&#x60; &#x60;.rtf&#x60; &#x60;.txt&#x60; &#x60;.xml&#x60; Images: &#x60;.png&#x60; &#x60;.webp&#x60; &#x60;.jpg&#x60; &#x60;.jpeg&#x60; &#x60;.tiff&#x60; &#x60;.bmp&#x60; &#x60;.heic&#x60; Documents: &#x60;.csv&#x60; &#x60;.doc&#x60; &#x60;.docx&#x60; &#x60;.epub&#x60; &#x60;.epub+zip&#x60; &#x60;.odt&#x60; &#x60;.pdf&#x60; &#x60;.ppt&#x60; &#x60;.pptx&#x60; &#x60;.tsv&#x60; &#x60;.xlsx&#x60; &#x60;.xls&#x60;. PDF files over 2000 pages are not supported in hi_res mode. (required)
-     * @param  \OpenAPI\Client\Model\Mode2|null $mode (optional)
-     * @param  array<string,\OpenAPI\Client\Model\MetadataValue1>|null $metadata Metadata for the document. Keys must be strings. Values may be strings, numbers, booleans, or lists of strings. Numbers may be integers or floating point and will be converted to 64 bit floating point. 1000 total values are allowed. Each item in an array counts towards the total. The following keys are reserved for internal use: &#x60;document_id&#x60;, &#x60;document_type&#x60;, &#x60;document_source&#x60;, &#x60;document_name&#x60;, &#x60;document_uploaded_at&#x60;, &#x60;start_time&#x60;, &#x60;end_time&#x60;. (optional)
+     * @param  \Ragie\Api\Model\Mode2|null $mode (optional)
+     * @param  array<string,\Ragie\Api\Model\MetadataValue1>|null $metadata Metadata for the document. Keys must be strings. Values may be strings, numbers, booleans, or lists of strings. Numbers may be integers or floating point and will be converted to 64 bit floating point. 1000 total values are allowed. Each item in an array counts towards the total. The following keys are reserved for internal use: &#x60;document_id&#x60;, &#x60;document_type&#x60;, &#x60;document_source&#x60;, &#x60;document_name&#x60;, &#x60;document_uploaded_at&#x60;, &#x60;start_time&#x60;, &#x60;end_time&#x60;. (optional)
      * @param  string|null $external_id An optional identifier for the document. A common value might be an id in an external system or the URL where the source file may be found. (optional)
      * @param  string|null $name An optional name for the document. If set, the document will have this name. Otherwise it will default to the file&#39;s name. (optional)
      * @param  string|null $partition An optional partition identifier. Documents can be scoped to a partition. Partitions must be lowercase alphanumeric and may only include the special characters &#x60;_&#x60; and &#x60;-&#x60;.  A partition is created any time a document is created. (optional)
@@ -399,8 +399,8 @@ class DocumentsApi
      * Create Document
      *
      * @param  \SplFileObject $file The binary file to upload, extract, and index for retrieval. The following file types are supported: Plain Text: &#x60;.eml&#x60; &#x60;.html&#x60; &#x60;.json&#x60; &#x60;.md&#x60; &#x60;.msg&#x60; &#x60;.rst&#x60; &#x60;.rtf&#x60; &#x60;.txt&#x60; &#x60;.xml&#x60; Images: &#x60;.png&#x60; &#x60;.webp&#x60; &#x60;.jpg&#x60; &#x60;.jpeg&#x60; &#x60;.tiff&#x60; &#x60;.bmp&#x60; &#x60;.heic&#x60; Documents: &#x60;.csv&#x60; &#x60;.doc&#x60; &#x60;.docx&#x60; &#x60;.epub&#x60; &#x60;.epub+zip&#x60; &#x60;.odt&#x60; &#x60;.pdf&#x60; &#x60;.ppt&#x60; &#x60;.pptx&#x60; &#x60;.tsv&#x60; &#x60;.xlsx&#x60; &#x60;.xls&#x60;. PDF files over 2000 pages are not supported in hi_res mode. (required)
-     * @param  \OpenAPI\Client\Model\Mode2|null $mode (optional)
-     * @param  array<string,\OpenAPI\Client\Model\MetadataValue1>|null $metadata Metadata for the document. Keys must be strings. Values may be strings, numbers, booleans, or lists of strings. Numbers may be integers or floating point and will be converted to 64 bit floating point. 1000 total values are allowed. Each item in an array counts towards the total. The following keys are reserved for internal use: &#x60;document_id&#x60;, &#x60;document_type&#x60;, &#x60;document_source&#x60;, &#x60;document_name&#x60;, &#x60;document_uploaded_at&#x60;, &#x60;start_time&#x60;, &#x60;end_time&#x60;. (optional)
+     * @param  \Ragie\Api\Model\Mode2|null $mode (optional)
+     * @param  array<string,\Ragie\Api\Model\MetadataValue1>|null $metadata Metadata for the document. Keys must be strings. Values may be strings, numbers, booleans, or lists of strings. Numbers may be integers or floating point and will be converted to 64 bit floating point. 1000 total values are allowed. Each item in an array counts towards the total. The following keys are reserved for internal use: &#x60;document_id&#x60;, &#x60;document_type&#x60;, &#x60;document_source&#x60;, &#x60;document_name&#x60;, &#x60;document_uploaded_at&#x60;, &#x60;start_time&#x60;, &#x60;end_time&#x60;. (optional)
      * @param  string|null $external_id An optional identifier for the document. A common value might be an id in an external system or the URL where the source file may be found. (optional)
      * @param  string|null $name An optional name for the document. If set, the document will have this name. Otherwise it will default to the file&#39;s name. (optional)
      * @param  string|null $partition An optional partition identifier. Documents can be scoped to a partition. Partitions must be lowercase alphanumeric and may only include the special characters &#x60;_&#x60; and &#x60;-&#x60;.  A partition is created any time a document is created. (optional)
@@ -411,7 +411,7 @@ class DocumentsApi
      */
     public function createDocumentAsyncWithHttpInfo($file, $mode = null, $metadata = null, $external_id = null, $name = null, $partition = null, string $contentType = self::contentTypes['createDocument'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Document';
+        $returnType = '\Ragie\Api\Model\Document';
         $request = $this->createDocumentRequest($file, $mode, $metadata, $external_id, $name, $partition, $contentType);
 
         return $this->client
@@ -454,8 +454,8 @@ class DocumentsApi
      * Create request for operation 'createDocument'
      *
      * @param  \SplFileObject $file The binary file to upload, extract, and index for retrieval. The following file types are supported: Plain Text: &#x60;.eml&#x60; &#x60;.html&#x60; &#x60;.json&#x60; &#x60;.md&#x60; &#x60;.msg&#x60; &#x60;.rst&#x60; &#x60;.rtf&#x60; &#x60;.txt&#x60; &#x60;.xml&#x60; Images: &#x60;.png&#x60; &#x60;.webp&#x60; &#x60;.jpg&#x60; &#x60;.jpeg&#x60; &#x60;.tiff&#x60; &#x60;.bmp&#x60; &#x60;.heic&#x60; Documents: &#x60;.csv&#x60; &#x60;.doc&#x60; &#x60;.docx&#x60; &#x60;.epub&#x60; &#x60;.epub+zip&#x60; &#x60;.odt&#x60; &#x60;.pdf&#x60; &#x60;.ppt&#x60; &#x60;.pptx&#x60; &#x60;.tsv&#x60; &#x60;.xlsx&#x60; &#x60;.xls&#x60;. PDF files over 2000 pages are not supported in hi_res mode. (required)
-     * @param  \OpenAPI\Client\Model\Mode2|null $mode (optional)
-     * @param  array<string,\OpenAPI\Client\Model\MetadataValue1>|null $metadata Metadata for the document. Keys must be strings. Values may be strings, numbers, booleans, or lists of strings. Numbers may be integers or floating point and will be converted to 64 bit floating point. 1000 total values are allowed. Each item in an array counts towards the total. The following keys are reserved for internal use: &#x60;document_id&#x60;, &#x60;document_type&#x60;, &#x60;document_source&#x60;, &#x60;document_name&#x60;, &#x60;document_uploaded_at&#x60;, &#x60;start_time&#x60;, &#x60;end_time&#x60;. (optional)
+     * @param  \Ragie\Api\Model\Mode2|null $mode (optional)
+     * @param  array<string,\Ragie\Api\Model\MetadataValue1>|null $metadata Metadata for the document. Keys must be strings. Values may be strings, numbers, booleans, or lists of strings. Numbers may be integers or floating point and will be converted to 64 bit floating point. 1000 total values are allowed. Each item in an array counts towards the total. The following keys are reserved for internal use: &#x60;document_id&#x60;, &#x60;document_type&#x60;, &#x60;document_source&#x60;, &#x60;document_name&#x60;, &#x60;document_uploaded_at&#x60;, &#x60;start_time&#x60;, &#x60;end_time&#x60;. (optional)
      * @param  string|null $external_id An optional identifier for the document. A common value might be an id in an external system or the URL where the source file may be found. (optional)
      * @param  string|null $name An optional name for the document. If set, the document will have this name. Otherwise it will default to the file&#39;s name. (optional)
      * @param  string|null $partition An optional partition identifier. Documents can be scoped to a partition. Partitions must be lowercase alphanumeric and may only include the special characters &#x60;_&#x60; and &#x60;-&#x60;.  A partition is created any time a document is created. (optional)
@@ -568,12 +568,12 @@ class DocumentsApi
      *
      * Create Document From Url
      *
-     * @param  \OpenAPI\Client\Model\CreateDocumentFromUrlParams $create_document_from_url_params create_document_from_url_params (required)
+     * @param  \Ragie\Api\Model\CreateDocumentFromUrlParams $create_document_from_url_params create_document_from_url_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDocumentFromUrl'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Document|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\Document|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function createDocumentFromUrl($create_document_from_url_params, string $contentType = self::contentTypes['createDocumentFromUrl'][0])
     {
@@ -586,12 +586,12 @@ class DocumentsApi
      *
      * Create Document From Url
      *
-     * @param  \OpenAPI\Client\Model\CreateDocumentFromUrlParams $create_document_from_url_params (required)
+     * @param  \Ragie\Api\Model\CreateDocumentFromUrlParams $create_document_from_url_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDocumentFromUrl'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Document|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\Document|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createDocumentFromUrlWithHttpInfo($create_document_from_url_params, string $contentType = self::contentTypes['createDocumentFromUrl'][0])
     {
@@ -623,43 +623,43 @@ class DocumentsApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\Document',
+                        '\Ragie\Api\Model\Document',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -681,7 +681,7 @@ class DocumentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\Document',
+                '\Ragie\Api\Model\Document',
                 $request,
                 $response,
             );
@@ -690,7 +690,7 @@ class DocumentsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Document',
+                        '\Ragie\Api\Model\Document',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -698,7 +698,7 @@ class DocumentsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -706,7 +706,7 @@ class DocumentsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -714,7 +714,7 @@ class DocumentsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -722,7 +722,7 @@ class DocumentsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -730,7 +730,7 @@ class DocumentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -738,7 +738,7 @@ class DocumentsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -755,7 +755,7 @@ class DocumentsApi
      *
      * Create Document From Url
      *
-     * @param  \OpenAPI\Client\Model\CreateDocumentFromUrlParams $create_document_from_url_params (required)
+     * @param  \Ragie\Api\Model\CreateDocumentFromUrlParams $create_document_from_url_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDocumentFromUrl'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -776,7 +776,7 @@ class DocumentsApi
      *
      * Create Document From Url
      *
-     * @param  \OpenAPI\Client\Model\CreateDocumentFromUrlParams $create_document_from_url_params (required)
+     * @param  \Ragie\Api\Model\CreateDocumentFromUrlParams $create_document_from_url_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDocumentFromUrl'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -784,7 +784,7 @@ class DocumentsApi
      */
     public function createDocumentFromUrlAsyncWithHttpInfo($create_document_from_url_params, string $contentType = self::contentTypes['createDocumentFromUrl'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Document';
+        $returnType = '\Ragie\Api\Model\Document';
         $request = $this->createDocumentFromUrlRequest($create_document_from_url_params, $contentType);
 
         return $this->client
@@ -826,7 +826,7 @@ class DocumentsApi
     /**
      * Create request for operation 'createDocumentFromUrl'
      *
-     * @param  \OpenAPI\Client\Model\CreateDocumentFromUrlParams $create_document_from_url_params (required)
+     * @param  \Ragie\Api\Model\CreateDocumentFromUrlParams $create_document_from_url_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDocumentFromUrl'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -923,12 +923,12 @@ class DocumentsApi
      *
      * Create Document Raw
      *
-     * @param  \OpenAPI\Client\Model\CreateDocumentRawParams $create_document_raw_params create_document_raw_params (required)
+     * @param  \Ragie\Api\Model\CreateDocumentRawParams $create_document_raw_params create_document_raw_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDocumentRaw'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Document|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\Document|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function createDocumentRaw($create_document_raw_params, string $contentType = self::contentTypes['createDocumentRaw'][0])
     {
@@ -941,12 +941,12 @@ class DocumentsApi
      *
      * Create Document Raw
      *
-     * @param  \OpenAPI\Client\Model\CreateDocumentRawParams $create_document_raw_params (required)
+     * @param  \Ragie\Api\Model\CreateDocumentRawParams $create_document_raw_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDocumentRaw'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Document|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\Document|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createDocumentRawWithHttpInfo($create_document_raw_params, string $contentType = self::contentTypes['createDocumentRaw'][0])
     {
@@ -978,43 +978,43 @@ class DocumentsApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\Document',
+                        '\Ragie\Api\Model\Document',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -1036,7 +1036,7 @@ class DocumentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\Document',
+                '\Ragie\Api\Model\Document',
                 $request,
                 $response,
             );
@@ -1045,7 +1045,7 @@ class DocumentsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Document',
+                        '\Ragie\Api\Model\Document',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1053,7 +1053,7 @@ class DocumentsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1061,7 +1061,7 @@ class DocumentsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1069,7 +1069,7 @@ class DocumentsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1077,7 +1077,7 @@ class DocumentsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1085,7 +1085,7 @@ class DocumentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1093,7 +1093,7 @@ class DocumentsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1110,7 +1110,7 @@ class DocumentsApi
      *
      * Create Document Raw
      *
-     * @param  \OpenAPI\Client\Model\CreateDocumentRawParams $create_document_raw_params (required)
+     * @param  \Ragie\Api\Model\CreateDocumentRawParams $create_document_raw_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDocumentRaw'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1131,7 +1131,7 @@ class DocumentsApi
      *
      * Create Document Raw
      *
-     * @param  \OpenAPI\Client\Model\CreateDocumentRawParams $create_document_raw_params (required)
+     * @param  \Ragie\Api\Model\CreateDocumentRawParams $create_document_raw_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDocumentRaw'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1139,7 +1139,7 @@ class DocumentsApi
      */
     public function createDocumentRawAsyncWithHttpInfo($create_document_raw_params, string $contentType = self::contentTypes['createDocumentRaw'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Document';
+        $returnType = '\Ragie\Api\Model\Document';
         $request = $this->createDocumentRawRequest($create_document_raw_params, $contentType);
 
         return $this->client
@@ -1181,7 +1181,7 @@ class DocumentsApi
     /**
      * Create request for operation 'createDocumentRaw'
      *
-     * @param  \OpenAPI\Client\Model\CreateDocumentRawParams $create_document_raw_params (required)
+     * @param  \Ragie\Api\Model\CreateDocumentRawParams $create_document_raw_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDocumentRaw'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1283,9 +1283,9 @@ class DocumentsApi
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DocumentDelete|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\DocumentDelete|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\DocumentDelete|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\DocumentDelete|\Ragie\Api\Model\HTTPValidationError
      */
     public function deleteDocument($document_id, $async = null, $partition = null, string $contentType = self::contentTypes['deleteDocument'][0])
     {
@@ -1303,9 +1303,9 @@ class DocumentsApi
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DocumentDelete|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\DocumentDelete|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\DocumentDelete|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\DocumentDelete|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteDocumentWithHttpInfo($document_id, $async = null, $partition = null, string $contentType = self::contentTypes['deleteDocument'][0])
     {
@@ -1337,49 +1337,49 @@ class DocumentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\DocumentDelete',
+                        '\Ragie\Api\Model\DocumentDelete',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 202:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\DocumentDelete',
+                        '\Ragie\Api\Model\DocumentDelete',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -1401,7 +1401,7 @@ class DocumentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\DocumentDelete',
+                '\Ragie\Api\Model\DocumentDelete',
                 $request,
                 $response,
             );
@@ -1410,7 +1410,7 @@ class DocumentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DocumentDelete',
+                        '\Ragie\Api\Model\DocumentDelete',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1418,7 +1418,7 @@ class DocumentsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1426,7 +1426,7 @@ class DocumentsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1434,7 +1434,7 @@ class DocumentsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1442,7 +1442,7 @@ class DocumentsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1450,7 +1450,7 @@ class DocumentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1458,7 +1458,7 @@ class DocumentsApi
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DocumentDelete',
+                        '\Ragie\Api\Model\DocumentDelete',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1466,7 +1466,7 @@ class DocumentsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1516,7 +1516,7 @@ class DocumentsApi
      */
     public function deleteDocumentAsyncWithHttpInfo($document_id, $async = null, $partition = null, string $contentType = self::contentTypes['deleteDocument'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DocumentDelete';
+        $returnType = '\Ragie\Api\Model\DocumentDelete';
         $request = $this->deleteDocumentRequest($document_id, $async, $partition, $contentType);
 
         return $this->client
@@ -1677,9 +1677,9 @@ class DocumentsApi
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DocumentGet|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\DocumentGet|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function getDocument($document_id, $partition = null, string $contentType = self::contentTypes['getDocument'][0])
     {
@@ -1696,9 +1696,9 @@ class DocumentsApi
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DocumentGet|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\DocumentGet|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDocumentWithHttpInfo($document_id, $partition = null, string $contentType = self::contentTypes['getDocument'][0])
     {
@@ -1730,43 +1730,43 @@ class DocumentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\DocumentGet',
+                        '\Ragie\Api\Model\DocumentGet',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -1788,7 +1788,7 @@ class DocumentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\DocumentGet',
+                '\Ragie\Api\Model\DocumentGet',
                 $request,
                 $response,
             );
@@ -1797,7 +1797,7 @@ class DocumentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DocumentGet',
+                        '\Ragie\Api\Model\DocumentGet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1805,7 +1805,7 @@ class DocumentsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1813,7 +1813,7 @@ class DocumentsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1821,7 +1821,7 @@ class DocumentsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1829,7 +1829,7 @@ class DocumentsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1837,7 +1837,7 @@ class DocumentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1845,7 +1845,7 @@ class DocumentsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1893,7 +1893,7 @@ class DocumentsApi
      */
     public function getDocumentAsyncWithHttpInfo($document_id, $partition = null, string $contentType = self::contentTypes['getDocument'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DocumentGet';
+        $returnType = '\Ragie\Api\Model\DocumentGet';
         $request = $this->getDocumentRequest($document_id, $partition, $contentType);
 
         return $this->client
@@ -2044,9 +2044,9 @@ class DocumentsApi
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDocumentChunk'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DocumentChunkDetail|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\DocumentChunkDetail|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function getDocumentChunk($document_id, $chunk_id, $partition = null, string $contentType = self::contentTypes['getDocumentChunk'][0])
     {
@@ -2064,9 +2064,9 @@ class DocumentsApi
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDocumentChunk'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DocumentChunkDetail|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\DocumentChunkDetail|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDocumentChunkWithHttpInfo($document_id, $chunk_id, $partition = null, string $contentType = self::contentTypes['getDocumentChunk'][0])
     {
@@ -2098,43 +2098,43 @@ class DocumentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\DocumentChunkDetail',
+                        '\Ragie\Api\Model\DocumentChunkDetail',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -2156,7 +2156,7 @@ class DocumentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\DocumentChunkDetail',
+                '\Ragie\Api\Model\DocumentChunkDetail',
                 $request,
                 $response,
             );
@@ -2165,7 +2165,7 @@ class DocumentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DocumentChunkDetail',
+                        '\Ragie\Api\Model\DocumentChunkDetail',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2173,7 +2173,7 @@ class DocumentsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2181,7 +2181,7 @@ class DocumentsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2189,7 +2189,7 @@ class DocumentsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2197,7 +2197,7 @@ class DocumentsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2205,7 +2205,7 @@ class DocumentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2213,7 +2213,7 @@ class DocumentsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2263,7 +2263,7 @@ class DocumentsApi
      */
     public function getDocumentChunkAsyncWithHttpInfo($document_id, $chunk_id, $partition = null, string $contentType = self::contentTypes['getDocumentChunk'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DocumentChunkDetail';
+        $returnType = '\Ragie\Api\Model\DocumentChunkDetail';
         $request = $this->getDocumentChunkRequest($document_id, $chunk_id, $partition, $contentType);
 
         return $this->client
@@ -2433,9 +2433,9 @@ class DocumentsApi
      * @param  string|null $range range (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDocumentChunkContent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return mixed|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function getDocumentChunkContent($document_id, $chunk_id, $media_type = null, $download = false, $partition = null, $range = null, string $contentType = self::contentTypes['getDocumentChunkContent'][0])
     {
@@ -2456,9 +2456,9 @@ class DocumentsApi
      * @param  string|null $range (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDocumentChunkContent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of mixed|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDocumentChunkContentWithHttpInfo($document_id, $chunk_id, $media_type = null, $download = false, $partition = null, $range = null, string $contentType = self::contentTypes['getDocumentChunkContent'][0])
     {
@@ -2496,31 +2496,31 @@ class DocumentsApi
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -2559,7 +2559,7 @@ class DocumentsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2567,7 +2567,7 @@ class DocumentsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2575,7 +2575,7 @@ class DocumentsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2583,7 +2583,7 @@ class DocumentsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2591,7 +2591,7 @@ class DocumentsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2845,9 +2845,9 @@ class DocumentsApi
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDocumentChunks'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DocumentChunkList|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\DocumentChunkList|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function getDocumentChunks($document_id, $start_index = null, $end_index = null, $cursor = null, $page_size = 10, $partition = null, string $contentType = self::contentTypes['getDocumentChunks'][0])
     {
@@ -2868,9 +2868,9 @@ class DocumentsApi
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDocumentChunks'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DocumentChunkList|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\DocumentChunkList|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDocumentChunksWithHttpInfo($document_id, $start_index = null, $end_index = null, $cursor = null, $page_size = 10, $partition = null, string $contentType = self::contentTypes['getDocumentChunks'][0])
     {
@@ -2902,43 +2902,43 @@ class DocumentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\DocumentChunkList',
+                        '\Ragie\Api\Model\DocumentChunkList',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -2960,7 +2960,7 @@ class DocumentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\DocumentChunkList',
+                '\Ragie\Api\Model\DocumentChunkList',
                 $request,
                 $response,
             );
@@ -2969,7 +2969,7 @@ class DocumentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DocumentChunkList',
+                        '\Ragie\Api\Model\DocumentChunkList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2977,7 +2977,7 @@ class DocumentsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2985,7 +2985,7 @@ class DocumentsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2993,7 +2993,7 @@ class DocumentsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3001,7 +3001,7 @@ class DocumentsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3009,7 +3009,7 @@ class DocumentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3017,7 +3017,7 @@ class DocumentsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3073,7 +3073,7 @@ class DocumentsApi
      */
     public function getDocumentChunksAsyncWithHttpInfo($document_id, $start_index = null, $end_index = null, $cursor = null, $page_size = 10, $partition = null, string $contentType = self::contentTypes['getDocumentChunks'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DocumentChunkList';
+        $returnType = '\Ragie\Api\Model\DocumentChunkList';
         $request = $this->getDocumentChunksRequest($document_id, $start_index, $end_index, $cursor, $page_size, $partition, $contentType);
 
         return $this->client
@@ -3270,15 +3270,15 @@ class DocumentsApi
      * Get Document Content
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\MediaType|null $media_type The desired media type of the content to return described as a mime type. An error will be returned if the requested media type is not supported for the document&#39;s type. (optional)
+     * @param  \Ragie\Api\Model\MediaType|null $media_type The desired media type of the content to return described as a mime type. An error will be returned if the requested media type is not supported for the document&#39;s type. (optional)
      * @param  bool|null $download Whether to return the content as a file download or a raw stream. If set to &#x60;true&#x60;, the content will be returned as a named file for download. (optional, default to false)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string|null $range range (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDocumentContent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DocumentWithContent|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\DocumentWithContent|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function getDocumentContent($document_id, $media_type = null, $download = false, $partition = null, $range = null, string $contentType = self::contentTypes['getDocumentContent'][0])
     {
@@ -3292,15 +3292,15 @@ class DocumentsApi
      * Get Document Content
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\MediaType|null $media_type The desired media type of the content to return described as a mime type. An error will be returned if the requested media type is not supported for the document&#39;s type. (optional)
+     * @param  \Ragie\Api\Model\MediaType|null $media_type The desired media type of the content to return described as a mime type. An error will be returned if the requested media type is not supported for the document&#39;s type. (optional)
      * @param  bool|null $download Whether to return the content as a file download or a raw stream. If set to &#x60;true&#x60;, the content will be returned as a named file for download. (optional, default to false)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string|null $range (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDocumentContent'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DocumentWithContent|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\DocumentWithContent|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDocumentContentWithHttpInfo($document_id, $media_type = null, $download = false, $partition = null, $range = null, string $contentType = self::contentTypes['getDocumentContent'][0])
     {
@@ -3332,43 +3332,43 @@ class DocumentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\DocumentWithContent',
+                        '\Ragie\Api\Model\DocumentWithContent',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -3390,7 +3390,7 @@ class DocumentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\DocumentWithContent',
+                '\Ragie\Api\Model\DocumentWithContent',
                 $request,
                 $response,
             );
@@ -3399,7 +3399,7 @@ class DocumentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DocumentWithContent',
+                        '\Ragie\Api\Model\DocumentWithContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3407,7 +3407,7 @@ class DocumentsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3415,7 +3415,7 @@ class DocumentsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3423,7 +3423,7 @@ class DocumentsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3431,7 +3431,7 @@ class DocumentsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3439,7 +3439,7 @@ class DocumentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3447,7 +3447,7 @@ class DocumentsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3465,7 +3465,7 @@ class DocumentsApi
      * Get Document Content
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\MediaType|null $media_type The desired media type of the content to return described as a mime type. An error will be returned if the requested media type is not supported for the document&#39;s type. (optional)
+     * @param  \Ragie\Api\Model\MediaType|null $media_type The desired media type of the content to return described as a mime type. An error will be returned if the requested media type is not supported for the document&#39;s type. (optional)
      * @param  bool|null $download Whether to return the content as a file download or a raw stream. If set to &#x60;true&#x60;, the content will be returned as a named file for download. (optional, default to false)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string|null $range (optional)
@@ -3490,7 +3490,7 @@ class DocumentsApi
      * Get Document Content
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\MediaType|null $media_type The desired media type of the content to return described as a mime type. An error will be returned if the requested media type is not supported for the document&#39;s type. (optional)
+     * @param  \Ragie\Api\Model\MediaType|null $media_type The desired media type of the content to return described as a mime type. An error will be returned if the requested media type is not supported for the document&#39;s type. (optional)
      * @param  bool|null $download Whether to return the content as a file download or a raw stream. If set to &#x60;true&#x60;, the content will be returned as a named file for download. (optional, default to false)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string|null $range (optional)
@@ -3501,7 +3501,7 @@ class DocumentsApi
      */
     public function getDocumentContentAsyncWithHttpInfo($document_id, $media_type = null, $download = false, $partition = null, $range = null, string $contentType = self::contentTypes['getDocumentContent'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DocumentWithContent';
+        $returnType = '\Ragie\Api\Model\DocumentWithContent';
         $request = $this->getDocumentContentRequest($document_id, $media_type, $download, $partition, $range, $contentType);
 
         return $this->client
@@ -3544,7 +3544,7 @@ class DocumentsApi
      * Create request for operation 'getDocumentContent'
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\MediaType|null $media_type The desired media type of the content to return described as a mime type. An error will be returned if the requested media type is not supported for the document&#39;s type. (optional)
+     * @param  \Ragie\Api\Model\MediaType|null $media_type The desired media type of the content to return described as a mime type. An error will be returned if the requested media type is not supported for the document&#39;s type. (optional)
      * @param  bool|null $download Whether to return the content as a file download or a raw stream. If set to &#x60;true&#x60;, the content will be returned as a named file for download. (optional, default to false)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string|null $range (optional)
@@ -3679,9 +3679,9 @@ class DocumentsApi
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDocumentSource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \SplFileObject|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \SplFileObject|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function getDocumentSource($document_id, $partition = null, string $contentType = self::contentTypes['getDocumentSource'][0])
     {
@@ -3698,9 +3698,9 @@ class DocumentsApi
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDocumentSource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \SplFileObject|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDocumentSourceWithHttpInfo($document_id, $partition = null, string $contentType = self::contentTypes['getDocumentSource'][0])
     {
@@ -3738,37 +3738,37 @@ class DocumentsApi
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -3807,7 +3807,7 @@ class DocumentsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3815,7 +3815,7 @@ class DocumentsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3823,7 +3823,7 @@ class DocumentsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3831,7 +3831,7 @@ class DocumentsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3839,7 +3839,7 @@ class DocumentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3847,7 +3847,7 @@ class DocumentsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4045,9 +4045,9 @@ class DocumentsApi
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDocumentSummary'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DocumentSummary|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\DocumentSummary|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function getDocumentSummary($document_id, $partition = null, string $contentType = self::contentTypes['getDocumentSummary'][0])
     {
@@ -4064,9 +4064,9 @@ class DocumentsApi
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDocumentSummary'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DocumentSummary|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\DocumentSummary|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDocumentSummaryWithHttpInfo($document_id, $partition = null, string $contentType = self::contentTypes['getDocumentSummary'][0])
     {
@@ -4098,43 +4098,43 @@ class DocumentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\DocumentSummary',
+                        '\Ragie\Api\Model\DocumentSummary',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -4156,7 +4156,7 @@ class DocumentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\DocumentSummary',
+                '\Ragie\Api\Model\DocumentSummary',
                 $request,
                 $response,
             );
@@ -4165,7 +4165,7 @@ class DocumentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DocumentSummary',
+                        '\Ragie\Api\Model\DocumentSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4173,7 +4173,7 @@ class DocumentsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4181,7 +4181,7 @@ class DocumentsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4189,7 +4189,7 @@ class DocumentsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4197,7 +4197,7 @@ class DocumentsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4205,7 +4205,7 @@ class DocumentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4213,7 +4213,7 @@ class DocumentsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4261,7 +4261,7 @@ class DocumentsApi
      */
     public function getDocumentSummaryAsyncWithHttpInfo($document_id, $partition = null, string $contentType = self::contentTypes['getDocumentSummary'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DocumentSummary';
+        $returnType = '\Ragie\Api\Model\DocumentSummary';
         $request = $this->getDocumentSummaryRequest($document_id, $partition, $contentType);
 
         return $this->client
@@ -4413,9 +4413,9 @@ class DocumentsApi
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listDocuments'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DocumentList|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\DocumentList|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function listDocuments($cursor = null, $page_size = 10, $filter = null, $partition = null, string $contentType = self::contentTypes['listDocuments'][0])
     {
@@ -4434,9 +4434,9 @@ class DocumentsApi
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listDocuments'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DocumentList|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\DocumentList|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listDocumentsWithHttpInfo($cursor = null, $page_size = 10, $filter = null, $partition = null, string $contentType = self::contentTypes['listDocuments'][0])
     {
@@ -4468,43 +4468,43 @@ class DocumentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\DocumentList',
+                        '\Ragie\Api\Model\DocumentList',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -4526,7 +4526,7 @@ class DocumentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\DocumentList',
+                '\Ragie\Api\Model\DocumentList',
                 $request,
                 $response,
             );
@@ -4535,7 +4535,7 @@ class DocumentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DocumentList',
+                        '\Ragie\Api\Model\DocumentList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4543,7 +4543,7 @@ class DocumentsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4551,7 +4551,7 @@ class DocumentsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4559,7 +4559,7 @@ class DocumentsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4567,7 +4567,7 @@ class DocumentsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4575,7 +4575,7 @@ class DocumentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4583,7 +4583,7 @@ class DocumentsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4635,7 +4635,7 @@ class DocumentsApi
      */
     public function listDocumentsAsyncWithHttpInfo($cursor = null, $page_size = 10, $filter = null, $partition = null, string $contentType = self::contentTypes['listDocuments'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DocumentList';
+        $returnType = '\Ragie\Api\Model\DocumentList';
         $request = $this->listDocumentsRequest($cursor, $page_size, $filter, $partition, $contentType);
 
         return $this->client
@@ -4805,13 +4805,13 @@ class DocumentsApi
      * Patch Document Metadata
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\PatchDocumentMetadataParams $patch_document_metadata_params patch_document_metadata_params (required)
+     * @param  \Ragie\Api\Model\PatchDocumentMetadataParams $patch_document_metadata_params patch_document_metadata_params (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDocumentMetadata'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ResponsePatchdocumentmetadata|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\ResponsePatchdocumentmetadata|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function patchDocumentMetadata($document_id, $patch_document_metadata_params, $partition = null, string $contentType = self::contentTypes['patchDocumentMetadata'][0])
     {
@@ -4825,13 +4825,13 @@ class DocumentsApi
      * Patch Document Metadata
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\PatchDocumentMetadataParams $patch_document_metadata_params (required)
+     * @param  \Ragie\Api\Model\PatchDocumentMetadataParams $patch_document_metadata_params (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDocumentMetadata'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ResponsePatchdocumentmetadata|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\ResponsePatchdocumentmetadata|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchDocumentMetadataWithHttpInfo($document_id, $patch_document_metadata_params, $partition = null, string $contentType = self::contentTypes['patchDocumentMetadata'][0])
     {
@@ -4863,43 +4863,43 @@ class DocumentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponsePatchdocumentmetadata',
+                        '\Ragie\Api\Model\ResponsePatchdocumentmetadata',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -4921,7 +4921,7 @@ class DocumentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ResponsePatchdocumentmetadata',
+                '\Ragie\Api\Model\ResponsePatchdocumentmetadata',
                 $request,
                 $response,
             );
@@ -4930,7 +4930,7 @@ class DocumentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponsePatchdocumentmetadata',
+                        '\Ragie\Api\Model\ResponsePatchdocumentmetadata',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4938,7 +4938,7 @@ class DocumentsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4946,7 +4946,7 @@ class DocumentsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4954,7 +4954,7 @@ class DocumentsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4962,7 +4962,7 @@ class DocumentsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4970,7 +4970,7 @@ class DocumentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4978,7 +4978,7 @@ class DocumentsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4996,7 +4996,7 @@ class DocumentsApi
      * Patch Document Metadata
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\PatchDocumentMetadataParams $patch_document_metadata_params (required)
+     * @param  \Ragie\Api\Model\PatchDocumentMetadataParams $patch_document_metadata_params (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDocumentMetadata'] to see the possible values for this operation
      *
@@ -5019,7 +5019,7 @@ class DocumentsApi
      * Patch Document Metadata
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\PatchDocumentMetadataParams $patch_document_metadata_params (required)
+     * @param  \Ragie\Api\Model\PatchDocumentMetadataParams $patch_document_metadata_params (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDocumentMetadata'] to see the possible values for this operation
      *
@@ -5028,7 +5028,7 @@ class DocumentsApi
      */
     public function patchDocumentMetadataAsyncWithHttpInfo($document_id, $patch_document_metadata_params, $partition = null, string $contentType = self::contentTypes['patchDocumentMetadata'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ResponsePatchdocumentmetadata';
+        $returnType = '\Ragie\Api\Model\ResponsePatchdocumentmetadata';
         $request = $this->patchDocumentMetadataRequest($document_id, $patch_document_metadata_params, $partition, $contentType);
 
         return $this->client
@@ -5071,7 +5071,7 @@ class DocumentsApi
      * Create request for operation 'patchDocumentMetadata'
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\PatchDocumentMetadataParams $patch_document_metadata_params (required)
+     * @param  \Ragie\Api\Model\PatchDocumentMetadataParams $patch_document_metadata_params (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDocumentMetadata'] to see the possible values for this operation
      *
@@ -5192,12 +5192,12 @@ class DocumentsApi
      * @param  string $document_id The id of the document. (required)
      * @param  \SplFileObject $file The binary file to upload, extract, and index for retrieval. The following file types are supported: Plain Text: &#x60;.eml&#x60; &#x60;.html&#x60; &#x60;.json&#x60; &#x60;.md&#x60; &#x60;.msg&#x60; &#x60;.rst&#x60; &#x60;.rtf&#x60; &#x60;.txt&#x60; &#x60;.xml&#x60; Images: &#x60;.png&#x60; &#x60;.webp&#x60; &#x60;.jpg&#x60; &#x60;.jpeg&#x60; &#x60;.tiff&#x60; &#x60;.bmp&#x60; &#x60;.heic&#x60; Documents: &#x60;.csv&#x60; &#x60;.doc&#x60; &#x60;.docx&#x60; &#x60;.epub&#x60; &#x60;.epub+zip&#x60; &#x60;.odt&#x60; &#x60;.pdf&#x60; &#x60;.ppt&#x60; &#x60;.pptx&#x60; &#x60;.tsv&#x60; &#x60;.xlsx&#x60; &#x60;.xls&#x60;. PDF files over 2000 pages are not supported in hi_res mode. (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
-     * @param  \OpenAPI\Client\Model\Mode2|null $mode mode (optional)
+     * @param  \Ragie\Api\Model\Mode2|null $mode mode (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDocumentFile'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DocumentFileUpdate|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\DocumentFileUpdate|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function updateDocumentFile($document_id, $file, $partition = null, $mode = null, string $contentType = self::contentTypes['updateDocumentFile'][0])
     {
@@ -5213,12 +5213,12 @@ class DocumentsApi
      * @param  string $document_id The id of the document. (required)
      * @param  \SplFileObject $file The binary file to upload, extract, and index for retrieval. The following file types are supported: Plain Text: &#x60;.eml&#x60; &#x60;.html&#x60; &#x60;.json&#x60; &#x60;.md&#x60; &#x60;.msg&#x60; &#x60;.rst&#x60; &#x60;.rtf&#x60; &#x60;.txt&#x60; &#x60;.xml&#x60; Images: &#x60;.png&#x60; &#x60;.webp&#x60; &#x60;.jpg&#x60; &#x60;.jpeg&#x60; &#x60;.tiff&#x60; &#x60;.bmp&#x60; &#x60;.heic&#x60; Documents: &#x60;.csv&#x60; &#x60;.doc&#x60; &#x60;.docx&#x60; &#x60;.epub&#x60; &#x60;.epub+zip&#x60; &#x60;.odt&#x60; &#x60;.pdf&#x60; &#x60;.ppt&#x60; &#x60;.pptx&#x60; &#x60;.tsv&#x60; &#x60;.xlsx&#x60; &#x60;.xls&#x60;. PDF files over 2000 pages are not supported in hi_res mode. (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
-     * @param  \OpenAPI\Client\Model\Mode2|null $mode (optional)
+     * @param  \Ragie\Api\Model\Mode2|null $mode (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDocumentFile'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DocumentFileUpdate|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\DocumentFileUpdate|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateDocumentFileWithHttpInfo($document_id, $file, $partition = null, $mode = null, string $contentType = self::contentTypes['updateDocumentFile'][0])
     {
@@ -5250,43 +5250,43 @@ class DocumentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\DocumentFileUpdate',
+                        '\Ragie\Api\Model\DocumentFileUpdate',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -5308,7 +5308,7 @@ class DocumentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\DocumentFileUpdate',
+                '\Ragie\Api\Model\DocumentFileUpdate',
                 $request,
                 $response,
             );
@@ -5317,7 +5317,7 @@ class DocumentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DocumentFileUpdate',
+                        '\Ragie\Api\Model\DocumentFileUpdate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5325,7 +5325,7 @@ class DocumentsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5333,7 +5333,7 @@ class DocumentsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5341,7 +5341,7 @@ class DocumentsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5349,7 +5349,7 @@ class DocumentsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5357,7 +5357,7 @@ class DocumentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5365,7 +5365,7 @@ class DocumentsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5385,7 +5385,7 @@ class DocumentsApi
      * @param  string $document_id The id of the document. (required)
      * @param  \SplFileObject $file The binary file to upload, extract, and index for retrieval. The following file types are supported: Plain Text: &#x60;.eml&#x60; &#x60;.html&#x60; &#x60;.json&#x60; &#x60;.md&#x60; &#x60;.msg&#x60; &#x60;.rst&#x60; &#x60;.rtf&#x60; &#x60;.txt&#x60; &#x60;.xml&#x60; Images: &#x60;.png&#x60; &#x60;.webp&#x60; &#x60;.jpg&#x60; &#x60;.jpeg&#x60; &#x60;.tiff&#x60; &#x60;.bmp&#x60; &#x60;.heic&#x60; Documents: &#x60;.csv&#x60; &#x60;.doc&#x60; &#x60;.docx&#x60; &#x60;.epub&#x60; &#x60;.epub+zip&#x60; &#x60;.odt&#x60; &#x60;.pdf&#x60; &#x60;.ppt&#x60; &#x60;.pptx&#x60; &#x60;.tsv&#x60; &#x60;.xlsx&#x60; &#x60;.xls&#x60;. PDF files over 2000 pages are not supported in hi_res mode. (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
-     * @param  \OpenAPI\Client\Model\Mode2|null $mode (optional)
+     * @param  \Ragie\Api\Model\Mode2|null $mode (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDocumentFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5409,7 +5409,7 @@ class DocumentsApi
      * @param  string $document_id The id of the document. (required)
      * @param  \SplFileObject $file The binary file to upload, extract, and index for retrieval. The following file types are supported: Plain Text: &#x60;.eml&#x60; &#x60;.html&#x60; &#x60;.json&#x60; &#x60;.md&#x60; &#x60;.msg&#x60; &#x60;.rst&#x60; &#x60;.rtf&#x60; &#x60;.txt&#x60; &#x60;.xml&#x60; Images: &#x60;.png&#x60; &#x60;.webp&#x60; &#x60;.jpg&#x60; &#x60;.jpeg&#x60; &#x60;.tiff&#x60; &#x60;.bmp&#x60; &#x60;.heic&#x60; Documents: &#x60;.csv&#x60; &#x60;.doc&#x60; &#x60;.docx&#x60; &#x60;.epub&#x60; &#x60;.epub+zip&#x60; &#x60;.odt&#x60; &#x60;.pdf&#x60; &#x60;.ppt&#x60; &#x60;.pptx&#x60; &#x60;.tsv&#x60; &#x60;.xlsx&#x60; &#x60;.xls&#x60;. PDF files over 2000 pages are not supported in hi_res mode. (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
-     * @param  \OpenAPI\Client\Model\Mode2|null $mode (optional)
+     * @param  \Ragie\Api\Model\Mode2|null $mode (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDocumentFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5417,7 +5417,7 @@ class DocumentsApi
      */
     public function updateDocumentFileAsyncWithHttpInfo($document_id, $file, $partition = null, $mode = null, string $contentType = self::contentTypes['updateDocumentFile'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DocumentFileUpdate';
+        $returnType = '\Ragie\Api\Model\DocumentFileUpdate';
         $request = $this->updateDocumentFileRequest($document_id, $file, $partition, $mode, $contentType);
 
         return $this->client
@@ -5462,7 +5462,7 @@ class DocumentsApi
      * @param  string $document_id The id of the document. (required)
      * @param  \SplFileObject $file The binary file to upload, extract, and index for retrieval. The following file types are supported: Plain Text: &#x60;.eml&#x60; &#x60;.html&#x60; &#x60;.json&#x60; &#x60;.md&#x60; &#x60;.msg&#x60; &#x60;.rst&#x60; &#x60;.rtf&#x60; &#x60;.txt&#x60; &#x60;.xml&#x60; Images: &#x60;.png&#x60; &#x60;.webp&#x60; &#x60;.jpg&#x60; &#x60;.jpeg&#x60; &#x60;.tiff&#x60; &#x60;.bmp&#x60; &#x60;.heic&#x60; Documents: &#x60;.csv&#x60; &#x60;.doc&#x60; &#x60;.docx&#x60; &#x60;.epub&#x60; &#x60;.epub+zip&#x60; &#x60;.odt&#x60; &#x60;.pdf&#x60; &#x60;.ppt&#x60; &#x60;.pptx&#x60; &#x60;.tsv&#x60; &#x60;.xlsx&#x60; &#x60;.xls&#x60;. PDF files over 2000 pages are not supported in hi_res mode. (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
-     * @param  \OpenAPI\Client\Model\Mode2|null $mode (optional)
+     * @param  \Ragie\Api\Model\Mode2|null $mode (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDocumentFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5585,13 +5585,13 @@ class DocumentsApi
      * Update Document Url
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\UpdateDocumentFromUrlParams $update_document_from_url_params update_document_from_url_params (required)
+     * @param  \Ragie\Api\Model\UpdateDocumentFromUrlParams $update_document_from_url_params update_document_from_url_params (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDocumentFromUrl'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DocumentUrlUpdate|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\DocumentUrlUpdate|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function updateDocumentFromUrl($document_id, $update_document_from_url_params, $partition = null, string $contentType = self::contentTypes['updateDocumentFromUrl'][0])
     {
@@ -5605,13 +5605,13 @@ class DocumentsApi
      * Update Document Url
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\UpdateDocumentFromUrlParams $update_document_from_url_params (required)
+     * @param  \Ragie\Api\Model\UpdateDocumentFromUrlParams $update_document_from_url_params (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDocumentFromUrl'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DocumentUrlUpdate|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\DocumentUrlUpdate|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateDocumentFromUrlWithHttpInfo($document_id, $update_document_from_url_params, $partition = null, string $contentType = self::contentTypes['updateDocumentFromUrl'][0])
     {
@@ -5643,43 +5643,43 @@ class DocumentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\DocumentUrlUpdate',
+                        '\Ragie\Api\Model\DocumentUrlUpdate',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -5701,7 +5701,7 @@ class DocumentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\DocumentUrlUpdate',
+                '\Ragie\Api\Model\DocumentUrlUpdate',
                 $request,
                 $response,
             );
@@ -5710,7 +5710,7 @@ class DocumentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DocumentUrlUpdate',
+                        '\Ragie\Api\Model\DocumentUrlUpdate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5718,7 +5718,7 @@ class DocumentsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5726,7 +5726,7 @@ class DocumentsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5734,7 +5734,7 @@ class DocumentsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5742,7 +5742,7 @@ class DocumentsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5750,7 +5750,7 @@ class DocumentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5758,7 +5758,7 @@ class DocumentsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5776,7 +5776,7 @@ class DocumentsApi
      * Update Document Url
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\UpdateDocumentFromUrlParams $update_document_from_url_params (required)
+     * @param  \Ragie\Api\Model\UpdateDocumentFromUrlParams $update_document_from_url_params (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDocumentFromUrl'] to see the possible values for this operation
      *
@@ -5799,7 +5799,7 @@ class DocumentsApi
      * Update Document Url
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\UpdateDocumentFromUrlParams $update_document_from_url_params (required)
+     * @param  \Ragie\Api\Model\UpdateDocumentFromUrlParams $update_document_from_url_params (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDocumentFromUrl'] to see the possible values for this operation
      *
@@ -5808,7 +5808,7 @@ class DocumentsApi
      */
     public function updateDocumentFromUrlAsyncWithHttpInfo($document_id, $update_document_from_url_params, $partition = null, string $contentType = self::contentTypes['updateDocumentFromUrl'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DocumentUrlUpdate';
+        $returnType = '\Ragie\Api\Model\DocumentUrlUpdate';
         $request = $this->updateDocumentFromUrlRequest($document_id, $update_document_from_url_params, $partition, $contentType);
 
         return $this->client
@@ -5851,7 +5851,7 @@ class DocumentsApi
      * Create request for operation 'updateDocumentFromUrl'
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\UpdateDocumentFromUrlParams $update_document_from_url_params (required)
+     * @param  \Ragie\Api\Model\UpdateDocumentFromUrlParams $update_document_from_url_params (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDocumentFromUrl'] to see the possible values for this operation
      *
@@ -5970,13 +5970,13 @@ class DocumentsApi
      * Update Document Raw
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\UpdateDocumentRawParams $update_document_raw_params update_document_raw_params (required)
+     * @param  \Ragie\Api\Model\UpdateDocumentRawParams $update_document_raw_params update_document_raw_params (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDocumentRaw'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DocumentRawUpdate|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\DocumentRawUpdate|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function updateDocumentRaw($document_id, $update_document_raw_params, $partition = null, string $contentType = self::contentTypes['updateDocumentRaw'][0])
     {
@@ -5990,13 +5990,13 @@ class DocumentsApi
      * Update Document Raw
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\UpdateDocumentRawParams $update_document_raw_params (required)
+     * @param  \Ragie\Api\Model\UpdateDocumentRawParams $update_document_raw_params (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDocumentRaw'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DocumentRawUpdate|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\DocumentRawUpdate|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateDocumentRawWithHttpInfo($document_id, $update_document_raw_params, $partition = null, string $contentType = self::contentTypes['updateDocumentRaw'][0])
     {
@@ -6028,43 +6028,43 @@ class DocumentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\DocumentRawUpdate',
+                        '\Ragie\Api\Model\DocumentRawUpdate',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -6086,7 +6086,7 @@ class DocumentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\DocumentRawUpdate',
+                '\Ragie\Api\Model\DocumentRawUpdate',
                 $request,
                 $response,
             );
@@ -6095,7 +6095,7 @@ class DocumentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DocumentRawUpdate',
+                        '\Ragie\Api\Model\DocumentRawUpdate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6103,7 +6103,7 @@ class DocumentsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6111,7 +6111,7 @@ class DocumentsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6119,7 +6119,7 @@ class DocumentsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6127,7 +6127,7 @@ class DocumentsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6135,7 +6135,7 @@ class DocumentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6143,7 +6143,7 @@ class DocumentsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6161,7 +6161,7 @@ class DocumentsApi
      * Update Document Raw
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\UpdateDocumentRawParams $update_document_raw_params (required)
+     * @param  \Ragie\Api\Model\UpdateDocumentRawParams $update_document_raw_params (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDocumentRaw'] to see the possible values for this operation
      *
@@ -6184,7 +6184,7 @@ class DocumentsApi
      * Update Document Raw
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\UpdateDocumentRawParams $update_document_raw_params (required)
+     * @param  \Ragie\Api\Model\UpdateDocumentRawParams $update_document_raw_params (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDocumentRaw'] to see the possible values for this operation
      *
@@ -6193,7 +6193,7 @@ class DocumentsApi
      */
     public function updateDocumentRawAsyncWithHttpInfo($document_id, $update_document_raw_params, $partition = null, string $contentType = self::contentTypes['updateDocumentRaw'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DocumentRawUpdate';
+        $returnType = '\Ragie\Api\Model\DocumentRawUpdate';
         $request = $this->updateDocumentRawRequest($document_id, $update_document_raw_params, $partition, $contentType);
 
         return $this->client
@@ -6236,7 +6236,7 @@ class DocumentsApi
      * Create request for operation 'updateDocumentRaw'
      *
      * @param  string $document_id The id of the document. (required)
-     * @param  \OpenAPI\Client\Model\UpdateDocumentRawParams $update_document_raw_params (required)
+     * @param  \Ragie\Api\Model\UpdateDocumentRawParams $update_document_raw_params (required)
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDocumentRaw'] to see the possible values for this operation
      *

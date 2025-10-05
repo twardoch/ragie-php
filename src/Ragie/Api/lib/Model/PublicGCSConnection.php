@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * PublicGCSConnection Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class PublicGCSConnection implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPITypes = [
         'provider' => 'string',
-        'data' => '\OpenAPI\Client\Model\BucketData',
+        'data' => '\Ragie\Api\Model\BucketData',
         'credentials' => 'array<string,mixed>'
     ];
 
@@ -374,7 +374,7 @@ class PublicGCSConnection implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\BucketData
+     * @return \Ragie\Api\Model\BucketData
      */
     public function getData()
     {
@@ -384,7 +384,7 @@ class PublicGCSConnection implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\BucketData $data data
+     * @param \Ragie\Api\Model\BucketData $data data
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * AuthenticatorConfluenceConnection Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class AuthenticatorConfluenceConnection implements ModelInterface, ArrayAccess, 
       */
     protected static $openAPITypes = [
         'provider' => 'string',
-        'data' => '\OpenAPI\Client\Model\ConfluenceData[]',
-        'credentials' => '\OpenAPI\Client\Model\OAuthRefreshTokenCredentials'
+        'data' => '\Ragie\Api\Model\ConfluenceData[]',
+        'credentials' => '\Ragie\Api\Model\OAuthRefreshTokenCredentials'
     ];
 
     /**
@@ -374,7 +374,7 @@ class AuthenticatorConfluenceConnection implements ModelInterface, ArrayAccess, 
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\ConfluenceData[]
+     * @return \Ragie\Api\Model\ConfluenceData[]
      */
     public function getData()
     {
@@ -384,7 +384,7 @@ class AuthenticatorConfluenceConnection implements ModelInterface, ArrayAccess, 
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\ConfluenceData[] $data data
+     * @param \Ragie\Api\Model\ConfluenceData[] $data data
      *
      * @return self
      */
@@ -401,7 +401,7 @@ class AuthenticatorConfluenceConnection implements ModelInterface, ArrayAccess, 
     /**
      * Gets credentials
      *
-     * @return \OpenAPI\Client\Model\OAuthRefreshTokenCredentials
+     * @return \Ragie\Api\Model\OAuthRefreshTokenCredentials
      */
     public function getCredentials()
     {
@@ -411,7 +411,7 @@ class AuthenticatorConfluenceConnection implements ModelInterface, ArrayAccess, 
     /**
      * Sets credentials
      *
-     * @param \OpenAPI\Client\Model\OAuthRefreshTokenCredentials $credentials credentials
+     * @param \Ragie\Api\Model\OAuthRefreshTokenCredentials $credentials credentials
      *
      * @return self
      */

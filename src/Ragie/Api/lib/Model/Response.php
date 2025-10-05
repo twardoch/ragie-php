@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * Response Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -66,10 +66,10 @@ class Response implements ModelInterface, ArrayAccess, \JsonSerializable
         'instructions' => 'string',
         'max_output_tokens' => 'mixed',
         'model' => 'string',
-        'output' => '\OpenAPI\Client\Model\ResponseOutputInner[]',
-        'output_parsed' => '\OpenAPI\Client\Model\FinalAnswer',
-        'tools' => '\OpenAPI\Client\Model\Tool[]',
-        'reasoning' => '\OpenAPI\Client\Model\Reasoning',
+        'output' => '\Ragie\Api\Model\ResponseOutputInner[]',
+        'output_parsed' => '\Ragie\Api\Model\FinalAnswer',
+        'tools' => '\Ragie\Api\Model\Tool[]',
+        'reasoning' => '\Ragie\Api\Model\Reasoning',
         'parallel_tool_calls' => 'bool',
         'store' => 'bool',
         'temperature' => 'float',
@@ -77,7 +77,7 @@ class Response implements ModelInterface, ArrayAccess, \JsonSerializable
         'tool_choice' => 'string',
         'top_p' => 'float',
         'truncation' => 'string',
-        'usage' => '\OpenAPI\Client\Model\RagieApiSchemaResponseUsage',
+        'usage' => '\Ragie\Api\Model\RagieApiSchemaResponseUsage',
         'user' => 'mixed',
         'metadata' => 'array<string,mixed>'
     ];
@@ -882,7 +882,7 @@ class Response implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets output
      *
-     * @return \OpenAPI\Client\Model\ResponseOutputInner[]
+     * @return \Ragie\Api\Model\ResponseOutputInner[]
      */
     public function getOutput()
     {
@@ -892,7 +892,7 @@ class Response implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets output
      *
-     * @param \OpenAPI\Client\Model\ResponseOutputInner[] $output output
+     * @param \Ragie\Api\Model\ResponseOutputInner[] $output output
      *
      * @return self
      */
@@ -909,7 +909,7 @@ class Response implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets output_parsed
      *
-     * @return \OpenAPI\Client\Model\FinalAnswer|null
+     * @return \Ragie\Api\Model\FinalAnswer|null
      */
     public function getOutputParsed()
     {
@@ -919,7 +919,7 @@ class Response implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets output_parsed
      *
-     * @param \OpenAPI\Client\Model\FinalAnswer|null $output_parsed output_parsed
+     * @param \Ragie\Api\Model\FinalAnswer|null $output_parsed output_parsed
      *
      * @return self
      */
@@ -943,7 +943,7 @@ class Response implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tools
      *
-     * @return \OpenAPI\Client\Model\Tool[]
+     * @return \Ragie\Api\Model\Tool[]
      */
     public function getTools()
     {
@@ -953,7 +953,7 @@ class Response implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tools
      *
-     * @param \OpenAPI\Client\Model\Tool[] $tools tools
+     * @param \Ragie\Api\Model\Tool[] $tools tools
      *
      * @return self
      */
@@ -970,7 +970,7 @@ class Response implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets reasoning
      *
-     * @return \OpenAPI\Client\Model\Reasoning
+     * @return \Ragie\Api\Model\Reasoning
      */
     public function getReasoning()
     {
@@ -980,7 +980,7 @@ class Response implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets reasoning
      *
-     * @param \OpenAPI\Client\Model\Reasoning $reasoning reasoning
+     * @param \Ragie\Api\Model\Reasoning $reasoning reasoning
      *
      * @return self
      */
@@ -1213,7 +1213,7 @@ class Response implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets usage
      *
-     * @return \OpenAPI\Client\Model\RagieApiSchemaResponseUsage
+     * @return \Ragie\Api\Model\RagieApiSchemaResponseUsage
      */
     public function getUsage()
     {
@@ -1223,7 +1223,7 @@ class Response implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets usage
      *
-     * @param \OpenAPI\Client\Model\RagieApiSchemaResponseUsage $usage usage
+     * @param \Ragie\Api\Model\RagieApiSchemaResponseUsage $usage usage
      *
      * @return self
      */

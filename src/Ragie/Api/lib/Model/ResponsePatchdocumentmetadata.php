@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * ResponsePatchdocumentmetadata Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ResponsePatchdocumentmetadata implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'metadata' => 'array<string,\OpenAPI\Client\Model\MetadataValue>',
+        'metadata' => 'array<string,\Ragie\Api\Model\MetadataValue>',
         'status' => 'string'
     ];
 
@@ -305,7 +305,7 @@ class ResponsePatchdocumentmetadata implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets metadata
      *
-     * @return array<string,\OpenAPI\Client\Model\MetadataValue>
+     * @return array<string,\Ragie\Api\Model\MetadataValue>
      */
     public function getMetadata()
     {
@@ -315,7 +315,7 @@ class ResponsePatchdocumentmetadata implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets metadata
      *
-     * @param array<string,\OpenAPI\Client\Model\MetadataValue> $metadata The full document metadata inclusive of the update.
+     * @param array<string,\Ragie\Api\Model\MetadataValue> $metadata The full document metadata inclusive of the update.
      *
      * @return self
      */

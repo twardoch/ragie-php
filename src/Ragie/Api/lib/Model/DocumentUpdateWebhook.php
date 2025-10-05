@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * DocumentUpdateWebhook Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class DocumentUpdateWebhook implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $openAPITypes = [
         'nonce' => 'string',
         'type' => 'string',
-        'payload' => '\OpenAPI\Client\Model\DocumentUpdateWebhookPayload'
+        'payload' => '\Ragie\Api\Model\DocumentUpdateWebhookPayload'
     ];
 
     /**
@@ -401,7 +401,7 @@ class DocumentUpdateWebhook implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets payload
      *
-     * @return \OpenAPI\Client\Model\DocumentUpdateWebhookPayload
+     * @return \Ragie\Api\Model\DocumentUpdateWebhookPayload
      */
     public function getPayload()
     {
@@ -411,7 +411,7 @@ class DocumentUpdateWebhook implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets payload
      *
-     * @param \OpenAPI\Client\Model\DocumentUpdateWebhookPayload $payload payload
+     * @param \Ragie\Api\Model\DocumentUpdateWebhookPayload $payload payload
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * PublicFreshdeskConnection Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class PublicFreshdeskConnection implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static $openAPITypes = [
         'provider' => 'string',
-        'data' => '\OpenAPI\Client\Model\FreshdeskData',
+        'data' => '\Ragie\Api\Model\FreshdeskData',
         'user_email' => 'string',
-        'credentials' => '\OpenAPI\Client\Model\FreshdeskCredentials'
+        'credentials' => '\Ragie\Api\Model\FreshdeskCredentials'
     ];
 
     /**
@@ -384,7 +384,7 @@ class PublicFreshdeskConnection implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\FreshdeskData
+     * @return \Ragie\Api\Model\FreshdeskData
      */
     public function getData()
     {
@@ -394,7 +394,7 @@ class PublicFreshdeskConnection implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\FreshdeskData $data data
+     * @param \Ragie\Api\Model\FreshdeskData $data data
      *
      * @return self
      */
@@ -438,7 +438,7 @@ class PublicFreshdeskConnection implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets credentials
      *
-     * @return \OpenAPI\Client\Model\FreshdeskCredentials
+     * @return \Ragie\Api\Model\FreshdeskCredentials
      */
     public function getCredentials()
     {
@@ -448,7 +448,7 @@ class PublicFreshdeskConnection implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets credentials
      *
-     * @param \OpenAPI\Client\Model\FreshdeskCredentials $credentials credentials
+     * @param \Ragie\Api\Model\FreshdeskCredentials $credentials credentials
      *
      * @return self
      */

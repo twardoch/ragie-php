@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * Body Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class Body implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'nonce' => 'string',
         'type' => 'string',
-        'payload' => '\OpenAPI\Client\Model\PartitionLimitResetWebhookPayload'
+        'payload' => '\Ragie\Api\Model\PartitionLimitResetWebhookPayload'
     ];
 
     /**
@@ -417,7 +417,7 @@ class Body implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets payload
      *
-     * @return \OpenAPI\Client\Model\PartitionLimitResetWebhookPayload
+     * @return \Ragie\Api\Model\PartitionLimitResetWebhookPayload
      */
     public function getPayload()
     {
@@ -427,7 +427,7 @@ class Body implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets payload
      *
-     * @param \OpenAPI\Client\Model\PartitionLimitResetWebhookPayload $payload payload
+     * @param \Ragie\Api\Model\PartitionLimitResetWebhookPayload $payload payload
      *
      * @return self
      */

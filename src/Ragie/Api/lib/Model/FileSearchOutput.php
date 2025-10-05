@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * FileSearchOutput Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class FileSearchOutput implements ModelInterface, ArrayAccess, \JsonSerializable
         'queries' => 'string[]',
         'status' => 'string',
         'type' => 'string',
-        'results' => '\OpenAPI\Client\Model\FileSearchResult[]'
+        'results' => '\Ragie\Api\Model\FileSearchResult[]'
     ];
 
     /**
@@ -512,7 +512,7 @@ class FileSearchOutput implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets results
      *
-     * @return \OpenAPI\Client\Model\FileSearchResult[]
+     * @return \Ragie\Api\Model\FileSearchResult[]
      */
     public function getResults()
     {
@@ -522,7 +522,7 @@ class FileSearchOutput implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets results
      *
-     * @param \OpenAPI\Client\Model\FileSearchResult[] $results The results of the file search tool call.
+     * @param \Ragie\Api\Model\FileSearchResult[] $results The results of the file search tool call.
      *
      * @return self
      */

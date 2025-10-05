@@ -1,0 +1,9 @@
+# this_file: .gitattributes
+* text=auto eol=lf
+
+/docs export-ignore
+/tests export-ignore
+/.github export-ignore
+/build_generatapi.sh export-ignore
+/openapi.json export-ignore
+/openapi.sha256 export-ignore

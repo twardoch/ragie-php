@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * ConnectionLimitExceededWebhook Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class ConnectionLimitExceededWebhook implements ModelInterface, ArrayAccess, \Js
     protected static $openAPITypes = [
         'nonce' => 'string',
         'type' => 'string',
-        'payload' => '\OpenAPI\Client\Model\ConnectionLimitExceededWebhookPayload'
+        'payload' => '\Ragie\Api\Model\ConnectionLimitExceededWebhookPayload'
     ];
 
     /**
@@ -401,7 +401,7 @@ class ConnectionLimitExceededWebhook implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets payload
      *
-     * @return \OpenAPI\Client\Model\ConnectionLimitExceededWebhookPayload
+     * @return \Ragie\Api\Model\ConnectionLimitExceededWebhookPayload
      */
     public function getPayload()
     {
@@ -411,7 +411,7 @@ class ConnectionLimitExceededWebhook implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets payload
      *
-     * @param \OpenAPI\Client\Model\ConnectionLimitExceededWebhookPayload $payload payload
+     * @param \Ragie\Api\Model\ConnectionLimitExceededWebhookPayload $payload payload
      *
      * @return self
      */

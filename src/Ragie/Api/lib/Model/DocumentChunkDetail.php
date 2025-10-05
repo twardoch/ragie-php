@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * DocumentChunkDetail Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,8 +61,8 @@ class DocumentChunkDetail implements ModelInterface, ArrayAccess, \JsonSerializa
         'index' => 'int',
         'text' => 'string',
         'metadata' => 'array<string,mixed>',
-        'links' => 'array<string,\OpenAPI\Client\Model\Link>',
-        'modality_data' => '\OpenAPI\Client\Model\DocumentChunkDetailModalityData'
+        'links' => 'array<string,\Ragie\Api\Model\Link>',
+        'modality_data' => '\Ragie\Api\Model\DocumentChunkDetailModalityData'
     ];
 
     /**
@@ -444,7 +444,7 @@ class DocumentChunkDetail implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets links
      *
-     * @return array<string,\OpenAPI\Client\Model\Link>
+     * @return array<string,\Ragie\Api\Model\Link>
      */
     public function getLinks()
     {
@@ -454,7 +454,7 @@ class DocumentChunkDetail implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets links
      *
-     * @param array<string,\OpenAPI\Client\Model\Link> $links links
+     * @param array<string,\Ragie\Api\Model\Link> $links links
      *
      * @return self
      */
@@ -471,7 +471,7 @@ class DocumentChunkDetail implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets modality_data
      *
-     * @return \OpenAPI\Client\Model\DocumentChunkDetailModalityData|null
+     * @return \Ragie\Api\Model\DocumentChunkDetailModalityData|null
      */
     public function getModalityData()
     {
@@ -481,7 +481,7 @@ class DocumentChunkDetail implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets modality_data
      *
-     * @param \OpenAPI\Client\Model\DocumentChunkDetailModalityData|null $modality_data modality_data
+     * @param \Ragie\Api\Model\DocumentChunkDetailModalityData|null $modality_data modality_data
      *
      * @return self
      */

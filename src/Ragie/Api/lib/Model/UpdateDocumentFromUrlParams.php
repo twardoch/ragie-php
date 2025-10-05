@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * UpdateDocumentFromUrlParams Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class UpdateDocumentFromUrlParams implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'mode' => '\OpenAPI\Client\Model\Mode',
+        'mode' => '\Ragie\Api\Model\Mode',
         'url' => 'string'
     ];
 
@@ -302,7 +302,7 @@ class UpdateDocumentFromUrlParams implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets mode
      *
-     * @return \OpenAPI\Client\Model\Mode|null
+     * @return \Ragie\Api\Model\Mode|null
      */
     public function getMode()
     {
@@ -312,7 +312,7 @@ class UpdateDocumentFromUrlParams implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets mode
      *
-     * @param \OpenAPI\Client\Model\Mode|null $mode mode
+     * @param \Ragie\Api\Model\Mode|null $mode mode
      *
      * @return self
      */

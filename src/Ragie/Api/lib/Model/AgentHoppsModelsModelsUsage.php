@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * AgentHoppsModelsModelsUsage Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class AgentHoppsModelsModelsUsage implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'models' => '\OpenAPI\Client\Model\ModelUsage[]'
+        'models' => '\Ragie\Api\Model\ModelUsage[]'
     ];
 
     /**
@@ -292,7 +292,7 @@ class AgentHoppsModelsModelsUsage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets models
      *
-     * @return \OpenAPI\Client\Model\ModelUsage[]|null
+     * @return \Ragie\Api\Model\ModelUsage[]|null
      */
     public function getModels()
     {
@@ -302,7 +302,7 @@ class AgentHoppsModelsModelsUsage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets models
      *
-     * @param \OpenAPI\Client\Model\ModelUsage[]|null $models models
+     * @param \Ragie\Api\Model\ModelUsage[]|null $models models
      *
      * @return self
      */

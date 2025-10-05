@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * AuthenticatorSlackConnection Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class AuthenticatorSlackConnection implements ModelInterface, ArrayAccess, \Json
       */
     protected static $openAPITypes = [
         'provider' => 'string',
-        'data' => '\OpenAPI\Client\Model\SlackData',
+        'data' => '\Ragie\Api\Model\SlackData',
         'user_email' => 'string',
-        'credentials' => '\OpenAPI\Client\Model\AccessTokenCredentials'
+        'credentials' => '\Ragie\Api\Model\AccessTokenCredentials'
     ];
 
     /**
@@ -384,7 +384,7 @@ class AuthenticatorSlackConnection implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\SlackData
+     * @return \Ragie\Api\Model\SlackData
      */
     public function getData()
     {
@@ -394,7 +394,7 @@ class AuthenticatorSlackConnection implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\SlackData $data data
+     * @param \Ragie\Api\Model\SlackData $data data
      *
      * @return self
      */
@@ -438,7 +438,7 @@ class AuthenticatorSlackConnection implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets credentials
      *
-     * @return \OpenAPI\Client\Model\AccessTokenCredentials
+     * @return \Ragie\Api\Model\AccessTokenCredentials
      */
     public function getCredentials()
     {
@@ -448,7 +448,7 @@ class AuthenticatorSlackConnection implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets credentials
      *
-     * @param \OpenAPI\Client\Model\AccessTokenCredentials $credentials credentials
+     * @param \Ragie\Api\Model\AccessTokenCredentials $credentials credentials
      *
      * @return self
      */

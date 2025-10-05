@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * PublicBackblazeConnection Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class PublicBackblazeConnection implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static $openAPITypes = [
         'provider' => 'string',
-        'data' => '\OpenAPI\Client\Model\BucketData',
-        'credentials' => '\OpenAPI\Client\Model\BackblazeCredentials'
+        'data' => '\Ragie\Api\Model\BucketData',
+        'credentials' => '\Ragie\Api\Model\BackblazeCredentials'
     ];
 
     /**
@@ -374,7 +374,7 @@ class PublicBackblazeConnection implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\BucketData
+     * @return \Ragie\Api\Model\BucketData
      */
     public function getData()
     {
@@ -384,7 +384,7 @@ class PublicBackblazeConnection implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\BucketData $data data
+     * @param \Ragie\Api\Model\BucketData $data data
      *
      * @return self
      */
@@ -401,7 +401,7 @@ class PublicBackblazeConnection implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets credentials
      *
-     * @return \OpenAPI\Client\Model\BackblazeCredentials
+     * @return \Ragie\Api\Model\BackblazeCredentials
      */
     public function getCredentials()
     {
@@ -411,7 +411,7 @@ class PublicBackblazeConnection implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets credentials
      *
-     * @param \OpenAPI\Client\Model\BackblazeCredentials $credentials credentials
+     * @param \Ragie\Api\Model\BackblazeCredentials $credentials credentials
      *
      * @return self
      */

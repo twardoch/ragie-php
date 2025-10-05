@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * ConnectorSourceTypeInfo Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ConnectorSourceTypeInfo implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'source_type' => '\OpenAPI\Client\Model\ConnectorSource',
+        'source_type' => '\Ragie\Api\Model\ConnectorSource',
         'display_name' => 'string',
         'icon_url' => 'string',
         'docs_url' => 'string'
@@ -325,7 +325,7 @@ class ConnectorSourceTypeInfo implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets source_type
      *
-     * @return \OpenAPI\Client\Model\ConnectorSource
+     * @return \Ragie\Api\Model\ConnectorSource
      */
     public function getSourceType()
     {
@@ -335,7 +335,7 @@ class ConnectorSourceTypeInfo implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets source_type
      *
-     * @param \OpenAPI\Client\Model\ConnectorSource $source_type source_type
+     * @param \Ragie\Api\Model\ConnectorSource $source_type source_type
      *
      * @return self
      */

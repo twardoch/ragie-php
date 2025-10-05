@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * SurrenderStep Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class SurrenderStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'string',
         'think' => 'string',
         'current_question' => 'string',
-        'partial_answer' => '\OpenAPI\Client\Model\Answer'
+        'partial_answer' => '\Ragie\Api\Model\Answer'
     ];
 
     /**
@@ -435,7 +435,7 @@ class SurrenderStep implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets partial_answer
      *
-     * @return \OpenAPI\Client\Model\Answer
+     * @return \Ragie\Api\Model\Answer
      */
     public function getPartialAnswer()
     {
@@ -445,7 +445,7 @@ class SurrenderStep implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets partial_answer
      *
-     * @param \OpenAPI\Client\Model\Answer $partial_answer The a potential partial answer when a full answer was not possible.
+     * @param \Ragie\Api\Model\Answer $partial_answer The a potential partial answer when a full answer was not possible.
      *
      * @return self
      */

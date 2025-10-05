@@ -4,10 +4,10 @@ this_file: TODO.md
 
 # TODO
 
-- [ ] Mirror the upstream OpenAPI spec locally, extend generator config with Ragie namespaces, and document checksum tracking.
-- [ ] Update `build_generatapi.sh` and `WORK.md` with the regeneration workflow using the local spec.
-- [ ] Create root-level `composer.json` with package metadata, PSR-4 autoload configuration, and required dependencies.
-- [ ] Add repository scaffolding (`.editorconfig`, `.gitattributes`, QA configs, `test.sh`) and document the tooling in `DEPENDENCIES.md`.
+- [x] Mirror the upstream OpenAPI spec locally, extend generator config with Ragie namespaces, and document checksum tracking.
+- [x] Update `build_generatapi.sh` and `WORK.md` with the regeneration workflow using the local spec.
+- [x] Create root-level `composer.json` with package metadata, PSR-4 autoload configuration, and required dependencies.
+- [x] Add repository scaffolding (`.editorconfig`, `.gitattributes`, QA configs, `test.sh`) and document the tooling in `DEPENDENCIES.md`.
 - [ ] Regenerate the API client to use the `Ragie\Api` namespace and implement a `ClientFactory` that centralizes configuration.
 - [ ] Introduce DTOs plus `DocumentsService` covering all `/documents` endpoints with unit tests.
 - [ ] Build `RetrievalsService` and `ResponsesService` with polling helpers and accompanying tests.

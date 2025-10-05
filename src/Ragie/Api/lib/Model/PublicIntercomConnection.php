@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * PublicIntercomConnection Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class PublicIntercomConnection implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static $openAPITypes = [
         'provider' => 'string',
-        'data' => '\OpenAPI\Client\Model\IntercomData',
-        'credentials' => '\OpenAPI\Client\Model\IntercomCredentials'
+        'data' => '\Ragie\Api\Model\IntercomData',
+        'credentials' => '\Ragie\Api\Model\IntercomCredentials'
     ];
 
     /**
@@ -374,7 +374,7 @@ class PublicIntercomConnection implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\IntercomData
+     * @return \Ragie\Api\Model\IntercomData
      */
     public function getData()
     {
@@ -384,7 +384,7 @@ class PublicIntercomConnection implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\IntercomData $data data
+     * @param \Ragie\Api\Model\IntercomData $data data
      *
      * @return self
      */
@@ -401,7 +401,7 @@ class PublicIntercomConnection implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets credentials
      *
-     * @return \OpenAPI\Client\Model\IntercomCredentials
+     * @return \Ragie\Api\Model\IntercomCredentials
      */
     public function getCredentials()
     {
@@ -411,7 +411,7 @@ class PublicIntercomConnection implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets credentials
      *
-     * @param \OpenAPI\Client\Model\IntercomCredentials $credentials credentials
+     * @param \Ragie\Api\Model\IntercomCredentials $credentials credentials
      *
      * @return self
      */

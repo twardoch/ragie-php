@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * ConnectionList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class ConnectionList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'pagination' => '\OpenAPI\Client\Model\Pagination',
-        'connections' => '\OpenAPI\Client\Model\Connection[]'
+        'pagination' => '\Ragie\Api\Model\Pagination',
+        'connections' => '\Ragie\Api\Model\Connection[]'
     ];
 
     /**
@@ -305,7 +305,7 @@ class ConnectionList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets pagination
      *
-     * @return \OpenAPI\Client\Model\Pagination
+     * @return \Ragie\Api\Model\Pagination
      */
     public function getPagination()
     {
@@ -315,7 +315,7 @@ class ConnectionList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets pagination
      *
-     * @param \OpenAPI\Client\Model\Pagination $pagination pagination
+     * @param \Ragie\Api\Model\Pagination $pagination pagination
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class ConnectionList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets connections
      *
-     * @return \OpenAPI\Client\Model\Connection[]
+     * @return \Ragie\Api\Model\Connection[]
      */
     public function getConnections()
     {
@@ -342,7 +342,7 @@ class ConnectionList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets connections
      *
-     * @param \OpenAPI\Client\Model\Connection[] $connections connections
+     * @param \Ragie\Api\Model\Connection[] $connections connections
      *
      * @return self
      */

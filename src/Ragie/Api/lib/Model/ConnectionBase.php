@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * ConnectionBase Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class ConnectionBase implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'partition_strategy' => '\OpenAPI\Client\Model\PartitionStrategy',
-        'metadata' => 'array<string,\OpenAPI\Client\Model\MetadataValue>',
+        'partition_strategy' => '\Ragie\Api\Model\PartitionStrategy',
+        'metadata' => 'array<string,\Ragie\Api\Model\MetadataValue>',
         'page_limit' => 'int'
     ];
 
@@ -313,7 +313,7 @@ class ConnectionBase implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets partition_strategy
      *
-     * @return \OpenAPI\Client\Model\PartitionStrategy
+     * @return \Ragie\Api\Model\PartitionStrategy
      */
     public function getPartitionStrategy()
     {
@@ -323,7 +323,7 @@ class ConnectionBase implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets partition_strategy
      *
-     * @param \OpenAPI\Client\Model\PartitionStrategy $partition_strategy partition_strategy
+     * @param \Ragie\Api\Model\PartitionStrategy $partition_strategy partition_strategy
      *
      * @return self
      */
@@ -340,7 +340,7 @@ class ConnectionBase implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets metadata
      *
-     * @return array<string,\OpenAPI\Client\Model\MetadataValue>|null
+     * @return array<string,\Ragie\Api\Model\MetadataValue>|null
      */
     public function getMetadata()
     {
@@ -350,7 +350,7 @@ class ConnectionBase implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets metadata
      *
-     * @param array<string,\OpenAPI\Client\Model\MetadataValue>|null $metadata Metadata for the document. Keys must be strings. Values may be strings, numbers, booleans, or lists of strings. Numbers may be integers or floating point and will be converted to 64 bit floating point. 1000 total values are allowed. Each item in an array counts towards the total. The following keys are reserved for internal use: `document_id`, `document_type`, `document_source`, `document_name`, `document_uploaded_at`, `start_time`, `end_time`.
+     * @param array<string,\Ragie\Api\Model\MetadataValue>|null $metadata Metadata for the document. Keys must be strings. Values may be strings, numbers, booleans, or lists of strings. Numbers may be integers or floating point and will be converted to 64 bit floating point. 1000 total values are allowed. Each item in an array counts towards the total. The following keys are reserved for internal use: `document_id`, `document_type`, `document_source`, `document_name`, `document_uploaded_at`, `start_time`, `end_time`.
      *
      * @return self
      */

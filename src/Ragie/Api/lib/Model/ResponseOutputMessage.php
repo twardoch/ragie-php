@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * ResponseOutputMessage Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class ResponseOutputMessage implements ModelInterface, ArrayAccess, \JsonSeriali
         'type' => 'string',
         'id' => 'string',
         'role' => 'string',
-        'content' => '\OpenAPI\Client\Model\ResponseContent[]'
+        'content' => '\Ragie\Api\Model\ResponseContent[]'
     ];
 
     /**
@@ -464,7 +464,7 @@ class ResponseOutputMessage implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets content
      *
-     * @return \OpenAPI\Client\Model\ResponseContent[]
+     * @return \Ragie\Api\Model\ResponseContent[]
      */
     public function getContent()
     {
@@ -474,7 +474,7 @@ class ResponseOutputMessage implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets content
      *
-     * @param \OpenAPI\Client\Model\ResponseContent[] $content content
+     * @param \Ragie\Api\Model\ResponseContent[] $content content
      *
      * @return self
      */

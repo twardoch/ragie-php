@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * PartitionLimitExceededWebhook Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class PartitionLimitExceededWebhook implements ModelInterface, ArrayAccess, \Jso
     protected static $openAPITypes = [
         'nonce' => 'string',
         'type' => 'string',
-        'payload' => '\OpenAPI\Client\Model\PartitionLimitExceededWebhookPayload'
+        'payload' => '\Ragie\Api\Model\PartitionLimitExceededWebhookPayload'
     ];
 
     /**
@@ -401,7 +401,7 @@ class PartitionLimitExceededWebhook implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets payload
      *
-     * @return \OpenAPI\Client\Model\PartitionLimitExceededWebhookPayload
+     * @return \Ragie\Api\Model\PartitionLimitExceededWebhookPayload
      */
     public function getPayload()
     {
@@ -411,7 +411,7 @@ class PartitionLimitExceededWebhook implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets payload
      *
-     * @param \OpenAPI\Client\Model\PartitionLimitExceededWebhookPayload $payload payload
+     * @param \Ragie\Api\Model\PartitionLimitExceededWebhookPayload $payload payload
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * Partition Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class Partition implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'string',
         'is_default' => 'bool',
         'limit_exceeded_at' => '\DateTime',
-        'limits' => '\OpenAPI\Client\Model\PartitionLimits'
+        'limits' => '\Ragie\Api\Model\PartitionLimits'
     ];
 
     /**
@@ -410,7 +410,7 @@ class Partition implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets limits
      *
-     * @return \OpenAPI\Client\Model\PartitionLimits
+     * @return \Ragie\Api\Model\PartitionLimits
      */
     public function getLimits()
     {
@@ -420,7 +420,7 @@ class Partition implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets limits
      *
-     * @param \OpenAPI\Client\Model\PartitionLimits $limits limits
+     * @param \Ragie\Api\Model\PartitionLimits $limits limits
      *
      * @return self
      */

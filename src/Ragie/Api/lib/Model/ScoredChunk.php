@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * ScoredChunk Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -65,7 +65,7 @@ class ScoredChunk implements ModelInterface, ArrayAccess, \JsonSerializable
         'document_id' => 'string',
         'document_name' => 'string',
         'document_metadata' => 'array<string,mixed>',
-        'links' => 'array<string,\OpenAPI\Client\Model\Link>'
+        'links' => 'array<string,\Ragie\Api\Model\Link>'
     ];
 
     /**
@@ -588,7 +588,7 @@ class ScoredChunk implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets links
      *
-     * @return array<string,\OpenAPI\Client\Model\Link>
+     * @return array<string,\Ragie\Api\Model\Link>
      */
     public function getLinks()
     {
@@ -598,7 +598,7 @@ class ScoredChunk implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets links
      *
-     * @param array<string,\OpenAPI\Client\Model\Link> $links links
+     * @param array<string,\Ragie\Api\Model\Link> $links links
      *
      * @return self
      */

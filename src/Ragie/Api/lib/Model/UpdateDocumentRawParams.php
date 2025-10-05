@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * UpdateDocumentRawParams Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class UpdateDocumentRawParams implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\OpenAPI\Client\Model\Data'
+        'data' => '\Ragie\Api\Model\Data'
     ];
 
     /**
@@ -295,7 +295,7 @@ class UpdateDocumentRawParams implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\Data
+     * @return \Ragie\Api\Model\Data
      */
     public function getData()
     {
@@ -305,7 +305,7 @@ class UpdateDocumentRawParams implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\Data $data data
+     * @param \Ragie\Api\Model\Data $data data
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * RagieApiSchemaResponseUsage Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class RagieApiSchemaResponseUsage implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPITypes = [
         'input_tokens' => 'int',
-        'input_token_details' => '\OpenAPI\Client\Model\InputTokenDetails',
+        'input_token_details' => '\Ragie\Api\Model\InputTokenDetails',
         'output_tokens' => 'int',
-        'output_token_details' => '\OpenAPI\Client\Model\OutputTokenDetails',
+        'output_token_details' => '\Ragie\Api\Model\OutputTokenDetails',
         'total_tokens' => 'int'
     ];
 
@@ -356,7 +356,7 @@ class RagieApiSchemaResponseUsage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets input_token_details
      *
-     * @return \OpenAPI\Client\Model\InputTokenDetails|null
+     * @return \Ragie\Api\Model\InputTokenDetails|null
      */
     public function getInputTokenDetails()
     {
@@ -366,7 +366,7 @@ class RagieApiSchemaResponseUsage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets input_token_details
      *
-     * @param \OpenAPI\Client\Model\InputTokenDetails|null $input_token_details input_token_details
+     * @param \Ragie\Api\Model\InputTokenDetails|null $input_token_details input_token_details
      *
      * @return self
      */
@@ -410,7 +410,7 @@ class RagieApiSchemaResponseUsage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets output_token_details
      *
-     * @return \OpenAPI\Client\Model\OutputTokenDetails|null
+     * @return \Ragie\Api\Model\OutputTokenDetails|null
      */
     public function getOutputTokenDetails()
     {
@@ -420,7 +420,7 @@ class RagieApiSchemaResponseUsage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets output_token_details
      *
-     * @param \OpenAPI\Client\Model\OutputTokenDetails|null $output_token_details output_token_details
+     * @param \Ragie\Api\Model\OutputTokenDetails|null $output_token_details output_token_details
      *
      * @return self
      */

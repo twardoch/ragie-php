@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * Document Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class Document implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
         'name' => 'string',
-        'metadata' => 'array<string,\OpenAPI\Client\Model\MetadataValue>',
+        'metadata' => 'array<string,\Ragie\Api\Model\MetadataValue>',
         'partition' => 'string',
         'chunk_count' => 'int',
         'external_id' => 'string',
@@ -511,7 +511,7 @@ class Document implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets metadata
      *
-     * @return array<string,\OpenAPI\Client\Model\MetadataValue>
+     * @return array<string,\Ragie\Api\Model\MetadataValue>
      */
     public function getMetadata()
     {
@@ -521,7 +521,7 @@ class Document implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets metadata
      *
-     * @param array<string,\OpenAPI\Client\Model\MetadataValue> $metadata metadata
+     * @param array<string,\Ragie\Api\Model\MetadataValue> $metadata metadata
      *
      * @return self
      */

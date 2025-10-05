@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * AuthenticatorHubspotConnection Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,10 +58,10 @@ class AuthenticatorHubspotConnection implements ModelInterface, ArrayAccess, \Js
       */
     protected static $openAPITypes = [
         'provider' => 'string',
-        'data' => '\OpenAPI\Client\Model\HubspotData',
+        'data' => '\Ragie\Api\Model\HubspotData',
         'hub_id' => 'string',
         'hub_domain' => 'string',
-        'credentials' => '\OpenAPI\Client\Model\OAuthRefreshTokenCredentials'
+        'credentials' => '\Ragie\Api\Model\OAuthRefreshTokenCredentials'
     ];
 
     /**
@@ -394,7 +394,7 @@ class AuthenticatorHubspotConnection implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\HubspotData
+     * @return \Ragie\Api\Model\HubspotData
      */
     public function getData()
     {
@@ -404,7 +404,7 @@ class AuthenticatorHubspotConnection implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\HubspotData $data data
+     * @param \Ragie\Api\Model\HubspotData $data data
      *
      * @return self
      */
@@ -475,7 +475,7 @@ class AuthenticatorHubspotConnection implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets credentials
      *
-     * @return \OpenAPI\Client\Model\OAuthRefreshTokenCredentials
+     * @return \Ragie\Api\Model\OAuthRefreshTokenCredentials
      */
     public function getCredentials()
     {
@@ -485,7 +485,7 @@ class AuthenticatorHubspotConnection implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets credentials
      *
-     * @param \OpenAPI\Client\Model\OAuthRefreshTokenCredentials $credentials credentials
+     * @param \Ragie\Api\Model\OAuthRefreshTokenCredentials $credentials credentials
      *
      * @return self
      */

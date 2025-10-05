@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * AuthenticatorGoogleDriveConnection Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class AuthenticatorGoogleDriveConnection implements ModelInterface, ArrayAccess,
       */
     protected static $openAPITypes = [
         'provider' => 'string',
-        'data' => '\OpenAPI\Client\Model\GoogleFolderData[]',
+        'data' => '\Ragie\Api\Model\GoogleFolderData[]',
         'email' => 'string',
-        'credentials' => '\OpenAPI\Client\Model\OAuthRefreshTokenCredentials'
+        'credentials' => '\Ragie\Api\Model\OAuthRefreshTokenCredentials'
     ];
 
     /**
@@ -384,7 +384,7 @@ class AuthenticatorGoogleDriveConnection implements ModelInterface, ArrayAccess,
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\GoogleFolderData[]
+     * @return \Ragie\Api\Model\GoogleFolderData[]
      */
     public function getData()
     {
@@ -394,7 +394,7 @@ class AuthenticatorGoogleDriveConnection implements ModelInterface, ArrayAccess,
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\GoogleFolderData[] $data data
+     * @param \Ragie\Api\Model\GoogleFolderData[] $data data
      *
      * @return self
      */
@@ -438,7 +438,7 @@ class AuthenticatorGoogleDriveConnection implements ModelInterface, ArrayAccess,
     /**
      * Gets credentials
      *
-     * @return \OpenAPI\Client\Model\OAuthRefreshTokenCredentials
+     * @return \Ragie\Api\Model\OAuthRefreshTokenCredentials
      */
     public function getCredentials()
     {
@@ -448,7 +448,7 @@ class AuthenticatorGoogleDriveConnection implements ModelInterface, ArrayAccess,
     /**
      * Sets credentials
      *
-     * @param \OpenAPI\Client\Model\OAuthRefreshTokenCredentials $credentials credentials
+     * @param \Ragie\Api\Model\OAuthRefreshTokenCredentials $credentials credentials
      *
      * @return self
      */

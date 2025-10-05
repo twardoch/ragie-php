@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Ragie\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Ragie\Api\ApiException;
+use Ragie\Api\Configuration;
+use Ragie\Api\FormDataProcessor;
+use Ragie\Api\HeaderSelector;
+use Ragie\Api\ObjectSerializer;
 
 /**
  * PartitionsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -148,12 +148,12 @@ class PartitionsApi
      *
      * Create Partition
      *
-     * @param  \OpenAPI\Client\Model\CreatePartitionParams $create_partition_params create_partition_params (required)
+     * @param  \Ragie\Api\Model\CreatePartitionParams $create_partition_params create_partition_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPartitionPartitionsPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Partition|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\Partition|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function createPartitionPartitionsPost($create_partition_params, string $contentType = self::contentTypes['createPartitionPartitionsPost'][0])
     {
@@ -166,12 +166,12 @@ class PartitionsApi
      *
      * Create Partition
      *
-     * @param  \OpenAPI\Client\Model\CreatePartitionParams $create_partition_params (required)
+     * @param  \Ragie\Api\Model\CreatePartitionParams $create_partition_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPartitionPartitionsPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Partition|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\Partition|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPartitionPartitionsPostWithHttpInfo($create_partition_params, string $contentType = self::contentTypes['createPartitionPartitionsPost'][0])
     {
@@ -203,37 +203,37 @@ class PartitionsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\Partition',
+                        '\Ragie\Api\Model\Partition',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -255,7 +255,7 @@ class PartitionsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\Partition',
+                '\Ragie\Api\Model\Partition',
                 $request,
                 $response,
             );
@@ -264,7 +264,7 @@ class PartitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Partition',
+                        '\Ragie\Api\Model\Partition',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -272,7 +272,7 @@ class PartitionsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -280,7 +280,7 @@ class PartitionsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -288,7 +288,7 @@ class PartitionsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -296,7 +296,7 @@ class PartitionsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -304,7 +304,7 @@ class PartitionsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -321,7 +321,7 @@ class PartitionsApi
      *
      * Create Partition
      *
-     * @param  \OpenAPI\Client\Model\CreatePartitionParams $create_partition_params (required)
+     * @param  \Ragie\Api\Model\CreatePartitionParams $create_partition_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPartitionPartitionsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -342,7 +342,7 @@ class PartitionsApi
      *
      * Create Partition
      *
-     * @param  \OpenAPI\Client\Model\CreatePartitionParams $create_partition_params (required)
+     * @param  \Ragie\Api\Model\CreatePartitionParams $create_partition_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPartitionPartitionsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -350,7 +350,7 @@ class PartitionsApi
      */
     public function createPartitionPartitionsPostAsyncWithHttpInfo($create_partition_params, string $contentType = self::contentTypes['createPartitionPartitionsPost'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Partition';
+        $returnType = '\Ragie\Api\Model\Partition';
         $request = $this->createPartitionPartitionsPostRequest($create_partition_params, $contentType);
 
         return $this->client
@@ -392,7 +392,7 @@ class PartitionsApi
     /**
      * Create request for operation 'createPartitionPartitionsPost'
      *
-     * @param  \OpenAPI\Client\Model\CreatePartitionParams $create_partition_params (required)
+     * @param  \Ragie\Api\Model\CreatePartitionParams $create_partition_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPartitionPartitionsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -492,9 +492,9 @@ class PartitionsApi
      * @param  string $partition_id partition_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePartitionPartitionsPartitionIdDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array<string,string>|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return array<string,string>|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function deletePartitionPartitionsPartitionIdDelete($partition_id, string $contentType = self::contentTypes['deletePartitionPartitionsPartitionIdDelete'][0])
     {
@@ -510,9 +510,9 @@ class PartitionsApi
      * @param  string $partition_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePartitionPartitionsPartitionIdDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of array<string,string>|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of array<string,string>|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function deletePartitionPartitionsPartitionIdDeleteWithHttpInfo($partition_id, string $contentType = self::contentTypes['deletePartitionPartitionsPartitionIdDelete'][0])
     {
@@ -550,31 +550,31 @@ class PartitionsApi
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -613,7 +613,7 @@ class PartitionsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -621,7 +621,7 @@ class PartitionsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -629,7 +629,7 @@ class PartitionsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -637,7 +637,7 @@ class PartitionsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -645,7 +645,7 @@ class PartitionsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -834,9 +834,9 @@ class PartitionsApi
      * @param  string $partition_id partition_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['disableMcpPartitionsPartitionIdMcpDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return mixed|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function disableMcpPartitionsPartitionIdMcpDelete($partition_id, string $contentType = self::contentTypes['disableMcpPartitionsPartitionIdMcpDelete'][0])
     {
@@ -852,9 +852,9 @@ class PartitionsApi
      * @param  string $partition_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['disableMcpPartitionsPartitionIdMcpDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of mixed|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function disableMcpPartitionsPartitionIdMcpDeleteWithHttpInfo($partition_id, string $contentType = self::contentTypes['disableMcpPartitionsPartitionIdMcpDelete'][0])
     {
@@ -892,31 +892,31 @@ class PartitionsApi
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -955,7 +955,7 @@ class PartitionsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -963,7 +963,7 @@ class PartitionsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -971,7 +971,7 @@ class PartitionsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -979,7 +979,7 @@ class PartitionsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -987,7 +987,7 @@ class PartitionsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1176,9 +1176,9 @@ class PartitionsApi
      * @param  string $partition_id partition_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['enableMcpPartitionsPartitionIdMcpPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return mixed|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function enableMcpPartitionsPartitionIdMcpPost($partition_id, string $contentType = self::contentTypes['enableMcpPartitionsPartitionIdMcpPost'][0])
     {
@@ -1194,9 +1194,9 @@ class PartitionsApi
      * @param  string $partition_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['enableMcpPartitionsPartitionIdMcpPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of mixed|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function enableMcpPartitionsPartitionIdMcpPostWithHttpInfo($partition_id, string $contentType = self::contentTypes['enableMcpPartitionsPartitionIdMcpPost'][0])
     {
@@ -1234,31 +1234,31 @@ class PartitionsApi
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -1297,7 +1297,7 @@ class PartitionsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1305,7 +1305,7 @@ class PartitionsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1313,7 +1313,7 @@ class PartitionsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1321,7 +1321,7 @@ class PartitionsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1329,7 +1329,7 @@ class PartitionsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1518,9 +1518,9 @@ class PartitionsApi
      * @param  string $partition_id partition_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPartitionPartitionsPartitionIdGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PartitionDetail|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\PartitionDetail|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function getPartitionPartitionsPartitionIdGet($partition_id, string $contentType = self::contentTypes['getPartitionPartitionsPartitionIdGet'][0])
     {
@@ -1536,9 +1536,9 @@ class PartitionsApi
      * @param  string $partition_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPartitionPartitionsPartitionIdGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PartitionDetail|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\PartitionDetail|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPartitionPartitionsPartitionIdGetWithHttpInfo($partition_id, string $contentType = self::contentTypes['getPartitionPartitionsPartitionIdGet'][0])
     {
@@ -1570,37 +1570,37 @@ class PartitionsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\PartitionDetail',
+                        '\Ragie\Api\Model\PartitionDetail',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -1622,7 +1622,7 @@ class PartitionsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\PartitionDetail',
+                '\Ragie\Api\Model\PartitionDetail',
                 $request,
                 $response,
             );
@@ -1631,7 +1631,7 @@ class PartitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PartitionDetail',
+                        '\Ragie\Api\Model\PartitionDetail',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1639,7 +1639,7 @@ class PartitionsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1647,7 +1647,7 @@ class PartitionsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1655,7 +1655,7 @@ class PartitionsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1663,7 +1663,7 @@ class PartitionsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1671,7 +1671,7 @@ class PartitionsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1717,7 +1717,7 @@ class PartitionsApi
      */
     public function getPartitionPartitionsPartitionIdGetAsyncWithHttpInfo($partition_id, string $contentType = self::contentTypes['getPartitionPartitionsPartitionIdGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PartitionDetail';
+        $returnType = '\Ragie\Api\Model\PartitionDetail';
         $request = $this->getPartitionPartitionsPartitionIdGetRequest($partition_id, $contentType);
 
         return $this->client
@@ -1861,9 +1861,9 @@ class PartitionsApi
      * @param  int|null $page_size The number of items per page (must be greater than 0 and less than or equal to 100) (optional, default to 10)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listPartitionsPartitionsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PartitionList|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\PartitionList|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function listPartitionsPartitionsGet($cursor = null, $page_size = 10, string $contentType = self::contentTypes['listPartitionsPartitionsGet'][0])
     {
@@ -1880,9 +1880,9 @@ class PartitionsApi
      * @param  int|null $page_size The number of items per page (must be greater than 0 and less than or equal to 100) (optional, default to 10)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listPartitionsPartitionsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PartitionList|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\PartitionList|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPartitionsPartitionsGetWithHttpInfo($cursor = null, $page_size = 10, string $contentType = self::contentTypes['listPartitionsPartitionsGet'][0])
     {
@@ -1914,37 +1914,37 @@ class PartitionsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\PartitionList',
+                        '\Ragie\Api\Model\PartitionList',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -1966,7 +1966,7 @@ class PartitionsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\PartitionList',
+                '\Ragie\Api\Model\PartitionList',
                 $request,
                 $response,
             );
@@ -1975,7 +1975,7 @@ class PartitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PartitionList',
+                        '\Ragie\Api\Model\PartitionList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1983,7 +1983,7 @@ class PartitionsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1991,7 +1991,7 @@ class PartitionsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1999,7 +1999,7 @@ class PartitionsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2007,7 +2007,7 @@ class PartitionsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2015,7 +2015,7 @@ class PartitionsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2063,7 +2063,7 @@ class PartitionsApi
      */
     public function listPartitionsPartitionsGetAsyncWithHttpInfo($cursor = null, $page_size = 10, string $contentType = self::contentTypes['listPartitionsPartitionsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PartitionList';
+        $returnType = '\Ragie\Api\Model\PartitionList';
         $request = $this->listPartitionsPartitionsGetRequest($cursor, $page_size, $contentType);
 
         return $this->client
@@ -2216,12 +2216,12 @@ class PartitionsApi
      * Set Partition Limits
      *
      * @param  string $partition_id partition_id (required)
-     * @param  \OpenAPI\Client\Model\PartitionLimitParams $partition_limit_params partition_limit_params (required)
+     * @param  \Ragie\Api\Model\PartitionLimitParams $partition_limit_params partition_limit_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setPartitionLimitsPartitionsPartitionIdLimitsPut'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PartitionDetail|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\PartitionDetail|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function setPartitionLimitsPartitionsPartitionIdLimitsPut($partition_id, $partition_limit_params, string $contentType = self::contentTypes['setPartitionLimitsPartitionsPartitionIdLimitsPut'][0])
     {
@@ -2235,12 +2235,12 @@ class PartitionsApi
      * Set Partition Limits
      *
      * @param  string $partition_id (required)
-     * @param  \OpenAPI\Client\Model\PartitionLimitParams $partition_limit_params (required)
+     * @param  \Ragie\Api\Model\PartitionLimitParams $partition_limit_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setPartitionLimitsPartitionsPartitionIdLimitsPut'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PartitionDetail|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\PartitionDetail|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function setPartitionLimitsPartitionsPartitionIdLimitsPutWithHttpInfo($partition_id, $partition_limit_params, string $contentType = self::contentTypes['setPartitionLimitsPartitionsPartitionIdLimitsPut'][0])
     {
@@ -2272,37 +2272,37 @@ class PartitionsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\PartitionDetail',
+                        '\Ragie\Api\Model\PartitionDetail',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -2324,7 +2324,7 @@ class PartitionsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\PartitionDetail',
+                '\Ragie\Api\Model\PartitionDetail',
                 $request,
                 $response,
             );
@@ -2333,7 +2333,7 @@ class PartitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PartitionDetail',
+                        '\Ragie\Api\Model\PartitionDetail',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2341,7 +2341,7 @@ class PartitionsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2349,7 +2349,7 @@ class PartitionsApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2357,7 +2357,7 @@ class PartitionsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2365,7 +2365,7 @@ class PartitionsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2373,7 +2373,7 @@ class PartitionsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2391,7 +2391,7 @@ class PartitionsApi
      * Set Partition Limits
      *
      * @param  string $partition_id (required)
-     * @param  \OpenAPI\Client\Model\PartitionLimitParams $partition_limit_params (required)
+     * @param  \Ragie\Api\Model\PartitionLimitParams $partition_limit_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setPartitionLimitsPartitionsPartitionIdLimitsPut'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2413,7 +2413,7 @@ class PartitionsApi
      * Set Partition Limits
      *
      * @param  string $partition_id (required)
-     * @param  \OpenAPI\Client\Model\PartitionLimitParams $partition_limit_params (required)
+     * @param  \Ragie\Api\Model\PartitionLimitParams $partition_limit_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setPartitionLimitsPartitionsPartitionIdLimitsPut'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2421,7 +2421,7 @@ class PartitionsApi
      */
     public function setPartitionLimitsPartitionsPartitionIdLimitsPutAsyncWithHttpInfo($partition_id, $partition_limit_params, string $contentType = self::contentTypes['setPartitionLimitsPartitionsPartitionIdLimitsPut'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PartitionDetail';
+        $returnType = '\Ragie\Api\Model\PartitionDetail';
         $request = $this->setPartitionLimitsPartitionsPartitionIdLimitsPutRequest($partition_id, $partition_limit_params, $contentType);
 
         return $this->client
@@ -2464,7 +2464,7 @@ class PartitionsApi
      * Create request for operation 'setPartitionLimitsPartitionsPartitionIdLimitsPut'
      *
      * @param  string $partition_id (required)
-     * @param  \OpenAPI\Client\Model\PartitionLimitParams $partition_limit_params (required)
+     * @param  \Ragie\Api\Model\PartitionLimitParams $partition_limit_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setPartitionLimitsPartitionsPartitionIdLimitsPut'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * DocumentList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class DocumentList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'pagination' => '\OpenAPI\Client\Model\Pagination',
-        'documents' => '\OpenAPI\Client\Model\Document[]'
+        'pagination' => '\Ragie\Api\Model\Pagination',
+        'documents' => '\Ragie\Api\Model\Document[]'
     ];
 
     /**
@@ -305,7 +305,7 @@ class DocumentList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets pagination
      *
-     * @return \OpenAPI\Client\Model\Pagination
+     * @return \Ragie\Api\Model\Pagination
      */
     public function getPagination()
     {
@@ -315,7 +315,7 @@ class DocumentList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets pagination
      *
-     * @param \OpenAPI\Client\Model\Pagination $pagination pagination
+     * @param \Ragie\Api\Model\Pagination $pagination pagination
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class DocumentList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets documents
      *
-     * @return \OpenAPI\Client\Model\Document[]
+     * @return \Ragie\Api\Model\Document[]
      */
     public function getDocuments()
     {
@@ -342,7 +342,7 @@ class DocumentList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets documents
      *
-     * @param \OpenAPI\Client\Model\Document[] $documents documents
+     * @param \Ragie\Api\Model\Document[] $documents documents
      *
      * @return self
      */

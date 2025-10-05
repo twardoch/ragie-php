@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * SearchStepWithQueryDetails Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,8 +60,8 @@ class SearchStepWithQueryDetails implements ModelInterface, ArrayAccess, \JsonSe
         'type' => 'string',
         'think' => 'string',
         'current_question' => 'string',
-        'search' => '\OpenAPI\Client\Model\Search',
-        'query_details' => '\OpenAPI\Client\Model\QueryDetails[]',
+        'search' => '\Ragie\Api\Model\Search',
+        'query_details' => '\Ragie\Api\Model\QueryDetails[]',
         'search_log' => 'string'
     ];
 
@@ -449,7 +449,7 @@ class SearchStepWithQueryDetails implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets search
      *
-     * @return \OpenAPI\Client\Model\Search
+     * @return \Ragie\Api\Model\Search
      */
     public function getSearch()
     {
@@ -459,7 +459,7 @@ class SearchStepWithQueryDetails implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets search
      *
-     * @param \OpenAPI\Client\Model\Search $search The search request to be made.
+     * @param \Ragie\Api\Model\Search $search The search request to be made.
      *
      * @return self
      */
@@ -476,7 +476,7 @@ class SearchStepWithQueryDetails implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets query_details
      *
-     * @return \OpenAPI\Client\Model\QueryDetails[]|null
+     * @return \Ragie\Api\Model\QueryDetails[]|null
      */
     public function getQueryDetails()
     {
@@ -486,7 +486,7 @@ class SearchStepWithQueryDetails implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets query_details
      *
-     * @param \OpenAPI\Client\Model\QueryDetails[]|null $query_details query_details
+     * @param \Ragie\Api\Model\QueryDetails[]|null $query_details query_details
      *
      * @return self
      */

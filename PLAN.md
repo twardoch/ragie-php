@@ -12,7 +12,7 @@ this_file: PLAN.md
 - Repository docs (`README.md`, `TODO.md`) reference a future high-level client but there is no structured plan, automation, or packaging metadata.
 
 ## Guiding Principles
-- Keep the OpenAPI-generated surface authoritative; customize through configuration instead of hand-editing generated files.
+- Keep the OpenAPI-generated surface authoritative; never hand-edit files under `src/Ragie/Api` and rely solely on regeneration to refresh them.
 - Provide a thin but expressive high-level layer focused on core RAG flows (ingest documents, manage partitions/instructions, run retrievals, read responses).
 - Enforce test-first development, lean dependencies, PSR-4 autoloading, and `this_file` markers across the codebase.
 - Maintain a reproducible release workflow so the package can be tagged and published to Packagist with confidence.

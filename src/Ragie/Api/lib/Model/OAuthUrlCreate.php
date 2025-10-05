@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * OAuthUrlCreate Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,9 +59,9 @@ class OAuthUrlCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'redirect_uri' => 'string',
         'partition' => 'string',
-        'source_type' => '\OpenAPI\Client\Model\ConnectorSource',
-        'metadata' => 'array<string,\OpenAPI\Client\Model\MetadataValue>',
-        'mode' => '\OpenAPI\Client\Model\Mode1',
+        'source_type' => '\Ragie\Api\Model\ConnectorSource',
+        'metadata' => 'array<string,\Ragie\Api\Model\MetadataValue>',
+        'mode' => '\Ragie\Api\Model\Mode1',
         'theme' => 'string',
         'page_limit' => 'int',
         'config' => 'array<string,mixed>',
@@ -442,7 +442,7 @@ class OAuthUrlCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets source_type
      *
-     * @return \OpenAPI\Client\Model\ConnectorSource|null
+     * @return \Ragie\Api\Model\ConnectorSource|null
      */
     public function getSourceType()
     {
@@ -452,7 +452,7 @@ class OAuthUrlCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets source_type
      *
-     * @param \OpenAPI\Client\Model\ConnectorSource|null $source_type The type of connector you want to create, such as google_drive, notion, hubspot, etc.
+     * @param \Ragie\Api\Model\ConnectorSource|null $source_type The type of connector you want to create, such as google_drive, notion, hubspot, etc.
      *
      * @return self
      */
@@ -469,7 +469,7 @@ class OAuthUrlCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets metadata
      *
-     * @return array<string,\OpenAPI\Client\Model\MetadataValue>|null
+     * @return array<string,\Ragie\Api\Model\MetadataValue>|null
      */
     public function getMetadata()
     {
@@ -479,7 +479,7 @@ class OAuthUrlCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets metadata
      *
-     * @param array<string,\OpenAPI\Client\Model\MetadataValue>|null $metadata Metadata for the document. Keys must be strings. Values may be strings, numbers, booleans, or lists of strings. Numbers may be integers or floating point and will be converted to 64 bit floating point. 1000 total values are allowed. Each item in an array counts towards the total. The following keys are reserved for internal use: `document_id`, `document_type`, `document_source`, `document_name`, `document_uploaded_at`, `start_time`, `end_time`.
+     * @param array<string,\Ragie\Api\Model\MetadataValue>|null $metadata Metadata for the document. Keys must be strings. Values may be strings, numbers, booleans, or lists of strings. Numbers may be integers or floating point and will be converted to 64 bit floating point. 1000 total values are allowed. Each item in an array counts towards the total. The following keys are reserved for internal use: `document_id`, `document_type`, `document_source`, `document_name`, `document_uploaded_at`, `start_time`, `end_time`.
      *
      * @return self
      */
@@ -496,7 +496,7 @@ class OAuthUrlCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets mode
      *
-     * @return \OpenAPI\Client\Model\Mode1|null
+     * @return \Ragie\Api\Model\Mode1|null
      */
     public function getMode()
     {
@@ -506,7 +506,7 @@ class OAuthUrlCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets mode
      *
-     * @param \OpenAPI\Client\Model\Mode1|null $mode mode
+     * @param \Ragie\Api\Model\Mode1|null $mode mode
      *
      * @return self
      */

@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Ragie\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Ragie\Api\ApiException;
+use Ragie\Api\Configuration;
+use Ragie\Api\FormDataProcessor;
+use Ragie\Api\HeaderSelector;
+use Ragie\Api\ObjectSerializer;
 
 /**
  * EnterpriseApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -142,12 +142,12 @@ class EnterpriseApi
      *
      * Create Authenticator
      *
-     * @param  \OpenAPI\Client\Model\Payload $payload payload (required)
+     * @param  \Ragie\Api\Model\Payload $payload payload (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthenticator'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BaseGetAuthenticator|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\BaseGetAuthenticator|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function createAuthenticator($payload, string $contentType = self::contentTypes['createAuthenticator'][0])
     {
@@ -160,12 +160,12 @@ class EnterpriseApi
      *
      * Create Authenticator
      *
-     * @param  \OpenAPI\Client\Model\Payload $payload (required)
+     * @param  \Ragie\Api\Model\Payload $payload (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthenticator'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BaseGetAuthenticator|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\BaseGetAuthenticator|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAuthenticatorWithHttpInfo($payload, string $contentType = self::contentTypes['createAuthenticator'][0])
     {
@@ -197,43 +197,43 @@ class EnterpriseApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\BaseGetAuthenticator',
+                        '\Ragie\Api\Model\BaseGetAuthenticator',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -255,7 +255,7 @@ class EnterpriseApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\BaseGetAuthenticator',
+                '\Ragie\Api\Model\BaseGetAuthenticator',
                 $request,
                 $response,
             );
@@ -264,7 +264,7 @@ class EnterpriseApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BaseGetAuthenticator',
+                        '\Ragie\Api\Model\BaseGetAuthenticator',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -272,7 +272,7 @@ class EnterpriseApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -280,7 +280,7 @@ class EnterpriseApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -288,7 +288,7 @@ class EnterpriseApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -296,7 +296,7 @@ class EnterpriseApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -304,7 +304,7 @@ class EnterpriseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -312,7 +312,7 @@ class EnterpriseApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -329,7 +329,7 @@ class EnterpriseApi
      *
      * Create Authenticator
      *
-     * @param  \OpenAPI\Client\Model\Payload $payload (required)
+     * @param  \Ragie\Api\Model\Payload $payload (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthenticator'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -350,7 +350,7 @@ class EnterpriseApi
      *
      * Create Authenticator
      *
-     * @param  \OpenAPI\Client\Model\Payload $payload (required)
+     * @param  \Ragie\Api\Model\Payload $payload (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthenticator'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -358,7 +358,7 @@ class EnterpriseApi
      */
     public function createAuthenticatorAsyncWithHttpInfo($payload, string $contentType = self::contentTypes['createAuthenticator'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BaseGetAuthenticator';
+        $returnType = '\Ragie\Api\Model\BaseGetAuthenticator';
         $request = $this->createAuthenticatorRequest($payload, $contentType);
 
         return $this->client
@@ -400,7 +400,7 @@ class EnterpriseApi
     /**
      * Create request for operation 'createAuthenticator'
      *
-     * @param  \OpenAPI\Client\Model\Payload $payload (required)
+     * @param  \Ragie\Api\Model\Payload $payload (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthenticator'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -498,12 +498,12 @@ class EnterpriseApi
      * Create Authenticator Connection
      *
      * @param  string $authenticator_id authenticator_id (required)
-     * @param  \OpenAPI\Client\Model\CreateAuthenticatorConnection $create_authenticator_connection create_authenticator_connection (required)
+     * @param  \Ragie\Api\Model\CreateAuthenticatorConnection $create_authenticator_connection create_authenticator_connection (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthenticatorConnection'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Connection|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\Connection|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function createAuthenticatorConnection($authenticator_id, $create_authenticator_connection, string $contentType = self::contentTypes['createAuthenticatorConnection'][0])
     {
@@ -517,12 +517,12 @@ class EnterpriseApi
      * Create Authenticator Connection
      *
      * @param  string $authenticator_id (required)
-     * @param  \OpenAPI\Client\Model\CreateAuthenticatorConnection $create_authenticator_connection (required)
+     * @param  \Ragie\Api\Model\CreateAuthenticatorConnection $create_authenticator_connection (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthenticatorConnection'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Connection|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\Connection|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAuthenticatorConnectionWithHttpInfo($authenticator_id, $create_authenticator_connection, string $contentType = self::contentTypes['createAuthenticatorConnection'][0])
     {
@@ -554,43 +554,43 @@ class EnterpriseApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\Connection',
+                        '\Ragie\Api\Model\Connection',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -612,7 +612,7 @@ class EnterpriseApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\Connection',
+                '\Ragie\Api\Model\Connection',
                 $request,
                 $response,
             );
@@ -621,7 +621,7 @@ class EnterpriseApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Connection',
+                        '\Ragie\Api\Model\Connection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -629,7 +629,7 @@ class EnterpriseApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -637,7 +637,7 @@ class EnterpriseApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -645,7 +645,7 @@ class EnterpriseApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -653,7 +653,7 @@ class EnterpriseApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -661,7 +661,7 @@ class EnterpriseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -669,7 +669,7 @@ class EnterpriseApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -687,7 +687,7 @@ class EnterpriseApi
      * Create Authenticator Connection
      *
      * @param  string $authenticator_id (required)
-     * @param  \OpenAPI\Client\Model\CreateAuthenticatorConnection $create_authenticator_connection (required)
+     * @param  \Ragie\Api\Model\CreateAuthenticatorConnection $create_authenticator_connection (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthenticatorConnection'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -709,7 +709,7 @@ class EnterpriseApi
      * Create Authenticator Connection
      *
      * @param  string $authenticator_id (required)
-     * @param  \OpenAPI\Client\Model\CreateAuthenticatorConnection $create_authenticator_connection (required)
+     * @param  \Ragie\Api\Model\CreateAuthenticatorConnection $create_authenticator_connection (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthenticatorConnection'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -717,7 +717,7 @@ class EnterpriseApi
      */
     public function createAuthenticatorConnectionAsyncWithHttpInfo($authenticator_id, $create_authenticator_connection, string $contentType = self::contentTypes['createAuthenticatorConnection'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Connection';
+        $returnType = '\Ragie\Api\Model\Connection';
         $request = $this->createAuthenticatorConnectionRequest($authenticator_id, $create_authenticator_connection, $contentType);
 
         return $this->client
@@ -760,7 +760,7 @@ class EnterpriseApi
      * Create request for operation 'createAuthenticatorConnection'
      *
      * @param  string $authenticator_id (required)
-     * @param  \OpenAPI\Client\Model\CreateAuthenticatorConnection $create_authenticator_connection (required)
+     * @param  \Ragie\Api\Model\CreateAuthenticatorConnection $create_authenticator_connection (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthenticatorConnection'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -872,12 +872,12 @@ class EnterpriseApi
      *
      * Create Connection
      *
-     * @param  \OpenAPI\Client\Model\PublicCreateConnection $public_create_connection public_create_connection (required)
+     * @param  \Ragie\Api\Model\PublicCreateConnection $public_create_connection public_create_connection (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConnection'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Connection|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\Connection|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function createConnection($public_create_connection, string $contentType = self::contentTypes['createConnection'][0])
     {
@@ -890,12 +890,12 @@ class EnterpriseApi
      *
      * Create Connection
      *
-     * @param  \OpenAPI\Client\Model\PublicCreateConnection $public_create_connection (required)
+     * @param  \Ragie\Api\Model\PublicCreateConnection $public_create_connection (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConnection'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Connection|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\Connection|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createConnectionWithHttpInfo($public_create_connection, string $contentType = self::contentTypes['createConnection'][0])
     {
@@ -927,43 +927,43 @@ class EnterpriseApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\Connection',
+                        '\Ragie\Api\Model\Connection',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -985,7 +985,7 @@ class EnterpriseApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\Connection',
+                '\Ragie\Api\Model\Connection',
                 $request,
                 $response,
             );
@@ -994,7 +994,7 @@ class EnterpriseApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Connection',
+                        '\Ragie\Api\Model\Connection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1002,7 +1002,7 @@ class EnterpriseApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1010,7 +1010,7 @@ class EnterpriseApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1018,7 +1018,7 @@ class EnterpriseApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1026,7 +1026,7 @@ class EnterpriseApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1034,7 +1034,7 @@ class EnterpriseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1042,7 +1042,7 @@ class EnterpriseApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1059,7 +1059,7 @@ class EnterpriseApi
      *
      * Create Connection
      *
-     * @param  \OpenAPI\Client\Model\PublicCreateConnection $public_create_connection (required)
+     * @param  \Ragie\Api\Model\PublicCreateConnection $public_create_connection (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConnection'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1080,7 +1080,7 @@ class EnterpriseApi
      *
      * Create Connection
      *
-     * @param  \OpenAPI\Client\Model\PublicCreateConnection $public_create_connection (required)
+     * @param  \Ragie\Api\Model\PublicCreateConnection $public_create_connection (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConnection'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1088,7 +1088,7 @@ class EnterpriseApi
      */
     public function createConnectionAsyncWithHttpInfo($public_create_connection, string $contentType = self::contentTypes['createConnection'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Connection';
+        $returnType = '\Ragie\Api\Model\Connection';
         $request = $this->createConnectionRequest($public_create_connection, $contentType);
 
         return $this->client
@@ -1130,7 +1130,7 @@ class EnterpriseApi
     /**
      * Create request for operation 'createConnection'
      *
-     * @param  \OpenAPI\Client\Model\PublicCreateConnection $public_create_connection (required)
+     * @param  \Ragie\Api\Model\PublicCreateConnection $public_create_connection (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConnection'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1230,9 +1230,9 @@ class EnterpriseApi
      * @param  string $authenticator_id authenticator_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAuthenticatorConnection'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ResponseOK|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\ResponseOK|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function deleteAuthenticatorConnection($authenticator_id, string $contentType = self::contentTypes['deleteAuthenticatorConnection'][0])
     {
@@ -1248,9 +1248,9 @@ class EnterpriseApi
      * @param  string $authenticator_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAuthenticatorConnection'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ResponseOK|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\ResponseOK|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteAuthenticatorConnectionWithHttpInfo($authenticator_id, string $contentType = self::contentTypes['deleteAuthenticatorConnection'][0])
     {
@@ -1282,43 +1282,43 @@ class EnterpriseApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseOK',
+                        '\Ragie\Api\Model\ResponseOK',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -1340,7 +1340,7 @@ class EnterpriseApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ResponseOK',
+                '\Ragie\Api\Model\ResponseOK',
                 $request,
                 $response,
             );
@@ -1349,7 +1349,7 @@ class EnterpriseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseOK',
+                        '\Ragie\Api\Model\ResponseOK',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1357,7 +1357,7 @@ class EnterpriseApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1365,7 +1365,7 @@ class EnterpriseApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1373,7 +1373,7 @@ class EnterpriseApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1381,7 +1381,7 @@ class EnterpriseApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1389,7 +1389,7 @@ class EnterpriseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1397,7 +1397,7 @@ class EnterpriseApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1443,7 +1443,7 @@ class EnterpriseApi
      */
     public function deleteAuthenticatorConnectionAsyncWithHttpInfo($authenticator_id, string $contentType = self::contentTypes['deleteAuthenticatorConnection'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ResponseOK';
+        $returnType = '\Ragie\Api\Model\ResponseOK';
         $request = $this->deleteAuthenticatorConnectionRequest($authenticator_id, $contentType);
 
         return $this->client
@@ -1587,9 +1587,9 @@ class EnterpriseApi
      * @param  int|null $page_size The number of items per page (must be greater than 0 and less than or equal to 100) (optional, default to 10)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listAuthenticators'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AuthenticatorList|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\AuthenticatorList|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function listAuthenticators($cursor = null, $page_size = 10, string $contentType = self::contentTypes['listAuthenticators'][0])
     {
@@ -1606,9 +1606,9 @@ class EnterpriseApi
      * @param  int|null $page_size The number of items per page (must be greater than 0 and less than or equal to 100) (optional, default to 10)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listAuthenticators'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AuthenticatorList|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\AuthenticatorList|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listAuthenticatorsWithHttpInfo($cursor = null, $page_size = 10, string $contentType = self::contentTypes['listAuthenticators'][0])
     {
@@ -1640,43 +1640,43 @@ class EnterpriseApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\AuthenticatorList',
+                        '\Ragie\Api\Model\AuthenticatorList',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -1698,7 +1698,7 @@ class EnterpriseApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\AuthenticatorList',
+                '\Ragie\Api\Model\AuthenticatorList',
                 $request,
                 $response,
             );
@@ -1707,7 +1707,7 @@ class EnterpriseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AuthenticatorList',
+                        '\Ragie\Api\Model\AuthenticatorList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1715,7 +1715,7 @@ class EnterpriseApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1723,7 +1723,7 @@ class EnterpriseApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1731,7 +1731,7 @@ class EnterpriseApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1739,7 +1739,7 @@ class EnterpriseApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1747,7 +1747,7 @@ class EnterpriseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1755,7 +1755,7 @@ class EnterpriseApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1803,7 +1803,7 @@ class EnterpriseApi
      */
     public function listAuthenticatorsAsyncWithHttpInfo($cursor = null, $page_size = 10, string $contentType = self::contentTypes['listAuthenticators'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AuthenticatorList';
+        $returnType = '\Ragie\Api\Model\AuthenticatorList';
         $request = $this->listAuthenticatorsRequest($cursor, $page_size, $contentType);
 
         return $this->client

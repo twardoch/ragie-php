@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * PartitionList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class PartitionList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'pagination' => '\OpenAPI\Client\Model\Pagination',
-        'partitions' => '\OpenAPI\Client\Model\Partition[]'
+        'pagination' => '\Ragie\Api\Model\Pagination',
+        'partitions' => '\Ragie\Api\Model\Partition[]'
     ];
 
     /**
@@ -305,7 +305,7 @@ class PartitionList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets pagination
      *
-     * @return \OpenAPI\Client\Model\Pagination
+     * @return \Ragie\Api\Model\Pagination
      */
     public function getPagination()
     {
@@ -315,7 +315,7 @@ class PartitionList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets pagination
      *
-     * @param \OpenAPI\Client\Model\Pagination $pagination pagination
+     * @param \Ragie\Api\Model\Pagination $pagination pagination
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class PartitionList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets partitions
      *
-     * @return \OpenAPI\Client\Model\Partition[]
+     * @return \Ragie\Api\Model\Partition[]
      */
     public function getPartitions()
     {
@@ -342,7 +342,7 @@ class PartitionList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets partitions
      *
-     * @param \OpenAPI\Client\Model\Partition[] $partitions partitions
+     * @param \Ragie\Api\Model\Partition[] $partitions partitions
      *
      * @return self
      */

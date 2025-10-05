@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * DocumentChunkList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class DocumentChunkList implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'pagination' => '\OpenAPI\Client\Model\Pagination',
-        'chunks' => '\OpenAPI\Client\Model\DocumentChunk[]'
+        'pagination' => '\Ragie\Api\Model\Pagination',
+        'chunks' => '\Ragie\Api\Model\DocumentChunk[]'
     ];
 
     /**
@@ -305,7 +305,7 @@ class DocumentChunkList implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets pagination
      *
-     * @return \OpenAPI\Client\Model\Pagination
+     * @return \Ragie\Api\Model\Pagination
      */
     public function getPagination()
     {
@@ -315,7 +315,7 @@ class DocumentChunkList implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets pagination
      *
-     * @param \OpenAPI\Client\Model\Pagination $pagination pagination
+     * @param \Ragie\Api\Model\Pagination $pagination pagination
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class DocumentChunkList implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets chunks
      *
-     * @return \OpenAPI\Client\Model\DocumentChunk[]
+     * @return \Ragie\Api\Model\DocumentChunk[]
      */
     public function getChunks()
     {
@@ -342,7 +342,7 @@ class DocumentChunkList implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets chunks
      *
-     * @param \OpenAPI\Client\Model\DocumentChunk[] $chunks chunks
+     * @param \Ragie\Api\Model\DocumentChunk[] $chunks chunks
      *
      * @return self
      */

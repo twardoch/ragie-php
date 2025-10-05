@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * ListConnectorSourceTypeInfo Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ListConnectorSourceTypeInfo implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'connectors' => '\OpenAPI\Client\Model\ConnectorSourceTypeInfo[]'
+        'connectors' => '\Ragie\Api\Model\ConnectorSourceTypeInfo[]'
     ];
 
     /**
@@ -295,7 +295,7 @@ class ListConnectorSourceTypeInfo implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets connectors
      *
-     * @return \OpenAPI\Client\Model\ConnectorSourceTypeInfo[]
+     * @return \Ragie\Api\Model\ConnectorSourceTypeInfo[]
      */
     public function getConnectors()
     {
@@ -305,7 +305,7 @@ class ListConnectorSourceTypeInfo implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets connectors
      *
-     * @param \OpenAPI\Client\Model\ConnectorSourceTypeInfo[] $connectors connectors
+     * @param \Ragie\Api\Model\ConnectorSourceTypeInfo[] $connectors connectors
      *
      * @return self
      */

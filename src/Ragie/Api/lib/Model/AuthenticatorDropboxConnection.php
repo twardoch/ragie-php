@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * AuthenticatorDropboxConnection Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class AuthenticatorDropboxConnection implements ModelInterface, ArrayAccess, \Js
       */
     protected static $openAPITypes = [
         'provider' => 'string',
-        'data' => '\OpenAPI\Client\Model\FolderData',
+        'data' => '\Ragie\Api\Model\FolderData',
         'email' => 'string',
-        'credentials' => '\OpenAPI\Client\Model\OAuthRefreshTokenCredentials'
+        'credentials' => '\Ragie\Api\Model\OAuthRefreshTokenCredentials'
     ];
 
     /**
@@ -384,7 +384,7 @@ class AuthenticatorDropboxConnection implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\FolderData
+     * @return \Ragie\Api\Model\FolderData
      */
     public function getData()
     {
@@ -394,7 +394,7 @@ class AuthenticatorDropboxConnection implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\FolderData $data data
+     * @param \Ragie\Api\Model\FolderData $data data
      *
      * @return self
      */
@@ -438,7 +438,7 @@ class AuthenticatorDropboxConnection implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets credentials
      *
-     * @return \OpenAPI\Client\Model\OAuthRefreshTokenCredentials
+     * @return \Ragie\Api\Model\OAuthRefreshTokenCredentials
      */
     public function getCredentials()
     {
@@ -448,7 +448,7 @@ class AuthenticatorDropboxConnection implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets credentials
      *
-     * @param \OpenAPI\Client\Model\OAuthRefreshTokenCredentials $credentials credentials
+     * @param \Ragie\Api\Model\OAuthRefreshTokenCredentials $credentials credentials
      *
      * @return self
      */

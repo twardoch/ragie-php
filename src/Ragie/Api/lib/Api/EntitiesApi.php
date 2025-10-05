@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Ragie\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Ragie\Api\ApiException;
+use Ragie\Api\Configuration;
+use Ragie\Api\FormDataProcessor;
+use Ragie\Api\HeaderSelector;
+use Ragie\Api\ObjectSerializer;
 
 /**
  * EntitiesApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -145,12 +145,12 @@ class EntitiesApi
      *
      * Create Instruction
      *
-     * @param  \OpenAPI\Client\Model\CreateInstructionParams $create_instruction_params create_instruction_params (required)
+     * @param  \Ragie\Api\Model\CreateInstructionParams $create_instruction_params create_instruction_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInstruction'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Instruction|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\Instruction|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function createInstruction($create_instruction_params, string $contentType = self::contentTypes['createInstruction'][0])
     {
@@ -163,12 +163,12 @@ class EntitiesApi
      *
      * Create Instruction
      *
-     * @param  \OpenAPI\Client\Model\CreateInstructionParams $create_instruction_params (required)
+     * @param  \Ragie\Api\Model\CreateInstructionParams $create_instruction_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInstruction'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Instruction|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\Instruction|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createInstructionWithHttpInfo($create_instruction_params, string $contentType = self::contentTypes['createInstruction'][0])
     {
@@ -200,37 +200,37 @@ class EntitiesApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\Instruction',
+                        '\Ragie\Api\Model\Instruction',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -252,7 +252,7 @@ class EntitiesApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\Instruction',
+                '\Ragie\Api\Model\Instruction',
                 $request,
                 $response,
             );
@@ -261,7 +261,7 @@ class EntitiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Instruction',
+                        '\Ragie\Api\Model\Instruction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -269,7 +269,7 @@ class EntitiesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -277,7 +277,7 @@ class EntitiesApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -285,7 +285,7 @@ class EntitiesApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -293,7 +293,7 @@ class EntitiesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -301,7 +301,7 @@ class EntitiesApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -318,7 +318,7 @@ class EntitiesApi
      *
      * Create Instruction
      *
-     * @param  \OpenAPI\Client\Model\CreateInstructionParams $create_instruction_params (required)
+     * @param  \Ragie\Api\Model\CreateInstructionParams $create_instruction_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInstruction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -339,7 +339,7 @@ class EntitiesApi
      *
      * Create Instruction
      *
-     * @param  \OpenAPI\Client\Model\CreateInstructionParams $create_instruction_params (required)
+     * @param  \Ragie\Api\Model\CreateInstructionParams $create_instruction_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInstruction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -347,7 +347,7 @@ class EntitiesApi
      */
     public function createInstructionAsyncWithHttpInfo($create_instruction_params, string $contentType = self::contentTypes['createInstruction'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Instruction';
+        $returnType = '\Ragie\Api\Model\Instruction';
         $request = $this->createInstructionRequest($create_instruction_params, $contentType);
 
         return $this->client
@@ -389,7 +389,7 @@ class EntitiesApi
     /**
      * Create request for operation 'createInstruction'
      *
-     * @param  \OpenAPI\Client\Model\CreateInstructionParams $create_instruction_params (required)
+     * @param  \Ragie\Api\Model\CreateInstructionParams $create_instruction_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInstruction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -489,9 +489,9 @@ class EntitiesApi
      * @param  string $instruction_id The ID of the instruction. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteInstruction'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array<string,string>|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return array<string,string>|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function deleteInstruction($instruction_id, string $contentType = self::contentTypes['deleteInstruction'][0])
     {
@@ -507,9 +507,9 @@ class EntitiesApi
      * @param  string $instruction_id The ID of the instruction. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteInstruction'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of array<string,string>|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of array<string,string>|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteInstructionWithHttpInfo($instruction_id, string $contentType = self::contentTypes['deleteInstruction'][0])
     {
@@ -547,31 +547,31 @@ class EntitiesApi
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -610,7 +610,7 @@ class EntitiesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -618,7 +618,7 @@ class EntitiesApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -626,7 +626,7 @@ class EntitiesApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -634,7 +634,7 @@ class EntitiesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -642,7 +642,7 @@ class EntitiesApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -834,9 +834,9 @@ class EntitiesApi
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listEntitiesByDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EntityList|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\EntityList|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function listEntitiesByDocument($document_id, $cursor = null, $page_size = 10, $partition = null, string $contentType = self::contentTypes['listEntitiesByDocument'][0])
     {
@@ -855,9 +855,9 @@ class EntitiesApi
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listEntitiesByDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EntityList|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\EntityList|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listEntitiesByDocumentWithHttpInfo($document_id, $cursor = null, $page_size = 10, $partition = null, string $contentType = self::contentTypes['listEntitiesByDocument'][0])
     {
@@ -889,37 +889,37 @@ class EntitiesApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\EntityList',
+                        '\Ragie\Api\Model\EntityList',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -941,7 +941,7 @@ class EntitiesApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\EntityList',
+                '\Ragie\Api\Model\EntityList',
                 $request,
                 $response,
             );
@@ -950,7 +950,7 @@ class EntitiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EntityList',
+                        '\Ragie\Api\Model\EntityList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -958,7 +958,7 @@ class EntitiesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -966,7 +966,7 @@ class EntitiesApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -974,7 +974,7 @@ class EntitiesApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -982,7 +982,7 @@ class EntitiesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -990,7 +990,7 @@ class EntitiesApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1042,7 +1042,7 @@ class EntitiesApi
      */
     public function listEntitiesByDocumentAsyncWithHttpInfo($document_id, $cursor = null, $page_size = 10, $partition = null, string $contentType = self::contentTypes['listEntitiesByDocument'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EntityList';
+        $returnType = '\Ragie\Api\Model\EntityList';
         $request = $this->listEntitiesByDocumentRequest($document_id, $cursor, $page_size, $partition, $contentType);
 
         return $this->client
@@ -1222,9 +1222,9 @@ class EntitiesApi
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listEntitiesByInstruction'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EntityList|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\EntityList|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function listEntitiesByInstruction($instruction_id, $cursor = null, $page_size = 10, $partition = null, string $contentType = self::contentTypes['listEntitiesByInstruction'][0])
     {
@@ -1243,9 +1243,9 @@ class EntitiesApi
      * @param  string|null $partition An optional partition to scope the request to. If omitted, accounts created after 1/9/2025 will have the request scoped to the default partition, while older accounts will have the request scoped to all partitions. Older accounts may opt in to strict partition scoping by contacting support@ragie.ai. Older accounts using the partitions feature are strongly recommended to scope the request to a partition. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listEntitiesByInstruction'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EntityList|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\EntityList|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listEntitiesByInstructionWithHttpInfo($instruction_id, $cursor = null, $page_size = 10, $partition = null, string $contentType = self::contentTypes['listEntitiesByInstruction'][0])
     {
@@ -1277,37 +1277,37 @@ class EntitiesApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\EntityList',
+                        '\Ragie\Api\Model\EntityList',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -1329,7 +1329,7 @@ class EntitiesApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\EntityList',
+                '\Ragie\Api\Model\EntityList',
                 $request,
                 $response,
             );
@@ -1338,7 +1338,7 @@ class EntitiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EntityList',
+                        '\Ragie\Api\Model\EntityList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1346,7 +1346,7 @@ class EntitiesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1354,7 +1354,7 @@ class EntitiesApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1362,7 +1362,7 @@ class EntitiesApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1370,7 +1370,7 @@ class EntitiesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1378,7 +1378,7 @@ class EntitiesApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1430,7 +1430,7 @@ class EntitiesApi
      */
     public function listEntitiesByInstructionAsyncWithHttpInfo($instruction_id, $cursor = null, $page_size = 10, $partition = null, string $contentType = self::contentTypes['listEntitiesByInstruction'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EntityList';
+        $returnType = '\Ragie\Api\Model\EntityList';
         $request = $this->listEntitiesByInstructionRequest($instruction_id, $cursor, $page_size, $partition, $contentType);
 
         return $this->client
@@ -1606,9 +1606,9 @@ class EntitiesApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listInstructions'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Instruction[]|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage
+     * @return \Ragie\Api\Model\Instruction[]|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage
      */
     public function listInstructions(string $contentType = self::contentTypes['listInstructions'][0])
     {
@@ -1623,9 +1623,9 @@ class EntitiesApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listInstructions'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Instruction[]|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\Instruction[]|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage, HTTP status code, HTTP response headers (array of strings)
      */
     public function listInstructionsWithHttpInfo(string $contentType = self::contentTypes['listInstructions'][0])
     {
@@ -1657,31 +1657,31 @@ class EntitiesApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\Instruction[]',
+                        '\Ragie\Api\Model\Instruction[]',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
@@ -1703,7 +1703,7 @@ class EntitiesApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\Instruction[]',
+                '\Ragie\Api\Model\Instruction[]',
                 $request,
                 $response,
             );
@@ -1712,7 +1712,7 @@ class EntitiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Instruction[]',
+                        '\Ragie\Api\Model\Instruction[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1720,7 +1720,7 @@ class EntitiesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1728,7 +1728,7 @@ class EntitiesApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1736,7 +1736,7 @@ class EntitiesApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1744,7 +1744,7 @@ class EntitiesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1788,7 +1788,7 @@ class EntitiesApi
      */
     public function listInstructionsAsyncWithHttpInfo(string $contentType = self::contentTypes['listInstructions'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Instruction[]';
+        $returnType = '\Ragie\Api\Model\Instruction[]';
         $request = $this->listInstructionsRequest($contentType);
 
         return $this->client
@@ -1913,12 +1913,12 @@ class EntitiesApi
      * Update Instruction
      *
      * @param  string $instruction_id The ID of the instruction. (required)
-     * @param  \OpenAPI\Client\Model\UpdateInstructionParams $update_instruction_params update_instruction_params (required)
+     * @param  \Ragie\Api\Model\UpdateInstructionParams $update_instruction_params update_instruction_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateInstruction'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Instruction|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError
+     * @return \Ragie\Api\Model\Instruction|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
      */
     public function updateInstruction($instruction_id, $update_instruction_params, string $contentType = self::contentTypes['updateInstruction'][0])
     {
@@ -1932,12 +1932,12 @@ class EntitiesApi
      * Update Instruction
      *
      * @param  string $instruction_id The ID of the instruction. (required)
-     * @param  \OpenAPI\Client\Model\UpdateInstructionParams $update_instruction_params (required)
+     * @param  \Ragie\Api\Model\UpdateInstructionParams $update_instruction_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateInstruction'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Instruction|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\ErrorMessage|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ragie\Api\Model\Instruction|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateInstructionWithHttpInfo($instruction_id, $update_instruction_params, string $contentType = self::contentTypes['updateInstruction'][0])
     {
@@ -1969,37 +1969,37 @@ class EntitiesApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\Instruction',
+                        '\Ragie\Api\Model\Instruction',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 402:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 429:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -2021,7 +2021,7 @@ class EntitiesApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\Instruction',
+                '\Ragie\Api\Model\Instruction',
                 $request,
                 $response,
             );
@@ -2030,7 +2030,7 @@ class EntitiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Instruction',
+                        '\Ragie\Api\Model\Instruction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2038,7 +2038,7 @@ class EntitiesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2046,7 +2046,7 @@ class EntitiesApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2054,7 +2054,7 @@ class EntitiesApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2062,7 +2062,7 @@ class EntitiesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorMessage',
+                        '\Ragie\Api\Model\ErrorMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2070,7 +2070,7 @@ class EntitiesApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2088,7 +2088,7 @@ class EntitiesApi
      * Update Instruction
      *
      * @param  string $instruction_id The ID of the instruction. (required)
-     * @param  \OpenAPI\Client\Model\UpdateInstructionParams $update_instruction_params (required)
+     * @param  \Ragie\Api\Model\UpdateInstructionParams $update_instruction_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateInstruction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2110,7 +2110,7 @@ class EntitiesApi
      * Update Instruction
      *
      * @param  string $instruction_id The ID of the instruction. (required)
-     * @param  \OpenAPI\Client\Model\UpdateInstructionParams $update_instruction_params (required)
+     * @param  \Ragie\Api\Model\UpdateInstructionParams $update_instruction_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateInstruction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2118,7 +2118,7 @@ class EntitiesApi
      */
     public function updateInstructionAsyncWithHttpInfo($instruction_id, $update_instruction_params, string $contentType = self::contentTypes['updateInstruction'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Instruction';
+        $returnType = '\Ragie\Api\Model\Instruction';
         $request = $this->updateInstructionRequest($instruction_id, $update_instruction_params, $contentType);
 
         return $this->client
@@ -2161,7 +2161,7 @@ class EntitiesApi
      * Create request for operation 'updateInstruction'
      *
      * @param  string $instruction_id The ID of the instruction. (required)
-     * @param  \OpenAPI\Client\Model\UpdateInstructionParams $update_instruction_params (required)
+     * @param  \Ragie\Api\Model\UpdateInstructionParams $update_instruction_params (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateInstruction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

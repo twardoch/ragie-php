@@ -3,5 +3,28 @@
   "spaces": 2,
   "generator-cli": {
     "version": "7.14.0"
+  },
+  "_metadata": {
+    "this_file": "openapitools.json"
+  },
+  "generatorName": "php",
+  "inputSpec": "./openapi.json",
+  "output": "./src/Ragie/Api",
+  "additionalProperties": {
+    "invokerPackage": "Ragie\\Api",
+    "apiPackage": "Api",
+    "modelPackage": "Model",
+    "packageVersion": "0.1.0",
+    "gitUserId": "ragie",
+    "gitRepoId": "ragie-php",
+    "composerVendorName": "ragie",
+    "composerProjectName": "ragie-php",
+    "srcBasePath": "lib"
+  },
+  "globalProperties": {
+    "apiDocs": "false",
+    "modelDocs": "false",
+    "apiTests": "false",
+    "modelTests": "false"
   }
 }

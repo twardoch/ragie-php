@@ -1,0 +1,14 @@
+# this_file: phpstan.neon.dist
+includes:
+  - phpstan-baseline.neon
+
+parameters:
+  level: 6
+  paths:
+    - src
+    - tests
+  excludePaths:
+    - src/Ragie/Api/lib
+    - src/Ragie/Api/docs
+    - src/Ragie/Api/test
+  ignoreErrors: []

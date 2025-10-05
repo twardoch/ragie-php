@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * Connection1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class Connection1 implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'provider' => 'string',
-        'data' => '\OpenAPI\Client\Model\SlackData',
-        'credentials' => '\OpenAPI\Client\Model\AccessTokenCredentials',
+        'data' => '\Ragie\Api\Model\SlackData',
+        'credentials' => '\Ragie\Api\Model\AccessTokenCredentials',
         'email' => 'string',
         'hub_id' => 'string',
         'hub_domain' => 'string',
@@ -447,7 +447,7 @@ class Connection1 implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\SlackData
+     * @return \Ragie\Api\Model\SlackData
      */
     public function getData()
     {
@@ -457,7 +457,7 @@ class Connection1 implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\SlackData $data data
+     * @param \Ragie\Api\Model\SlackData $data data
      *
      * @return self
      */
@@ -474,7 +474,7 @@ class Connection1 implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets credentials
      *
-     * @return \OpenAPI\Client\Model\AccessTokenCredentials
+     * @return \Ragie\Api\Model\AccessTokenCredentials
      */
     public function getCredentials()
     {
@@ -484,7 +484,7 @@ class Connection1 implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets credentials
      *
-     * @param \OpenAPI\Client\Model\AccessTokenCredentials $credentials credentials
+     * @param \Ragie\Api\Model\AccessTokenCredentials $credentials credentials
      *
      * @return self
      */

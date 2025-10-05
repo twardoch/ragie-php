@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * DocumentUpdateWebhookPayload Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class DocumentUpdateWebhookPayload implements ModelInterface, ArrayAccess, \Json
       */
     protected static $openAPITypes = [
         'document_id' => 'string',
-        'status' => '\OpenAPI\Client\Model\Status',
+        'status' => '\Ragie\Api\Model\Status',
         'partition' => 'string',
         'metadata' => 'array<string,mixed>',
         'external_id' => 'string',
@@ -402,7 +402,7 @@ class DocumentUpdateWebhookPayload implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets status
      *
-     * @return \OpenAPI\Client\Model\Status
+     * @return \Ragie\Api\Model\Status
      */
     public function getStatus()
     {
@@ -412,7 +412,7 @@ class DocumentUpdateWebhookPayload implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets status
      *
-     * @param \OpenAPI\Client\Model\Status $status status
+     * @param \Ragie\Api\Model\Status $status status
      *
      * @return self
      */

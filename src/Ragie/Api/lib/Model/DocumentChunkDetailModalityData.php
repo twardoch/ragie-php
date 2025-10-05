@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * DocumentChunkDetailModalityData Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class DocumentChunkDetailModalityData implements ModelInterface, ArrayAccess, \J
       */
     protected static $openAPITypes = [
         'type' => 'string',
-        'word_timestamps' => '\OpenAPI\Client\Model\WordTimestamp[]'
+        'word_timestamps' => '\Ragie\Api\Model\WordTimestamp[]'
     ];
 
     /**
@@ -363,7 +363,7 @@ class DocumentChunkDetailModalityData implements ModelInterface, ArrayAccess, \J
     /**
      * Gets word_timestamps
      *
-     * @return \OpenAPI\Client\Model\WordTimestamp[]|null
+     * @return \Ragie\Api\Model\WordTimestamp[]|null
      */
     public function getWordTimestamps()
     {
@@ -373,7 +373,7 @@ class DocumentChunkDetailModalityData implements ModelInterface, ArrayAccess, \J
     /**
      * Sets word_timestamps
      *
-     * @param \OpenAPI\Client\Model\WordTimestamp[]|null $word_timestamps word_timestamps
+     * @param \Ragie\Api\Model\WordTimestamp[]|null $word_timestamps word_timestamps
      *
      * @return self
      */

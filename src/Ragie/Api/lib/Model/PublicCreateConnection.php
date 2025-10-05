@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * PublicCreateConnection Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,12 +57,12 @@ class PublicCreateConnection implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'partition_strategy' => '\OpenAPI\Client\Model\MediaModeParam',
+        'partition_strategy' => '\Ragie\Api\Model\MediaModeParam',
         'partition' => 'string',
         'page_limit' => 'int',
         'config' => 'array<string,mixed>',
-        'metadata' => 'array<string,\OpenAPI\Client\Model\MetadataValue>',
-        'connection' => '\OpenAPI\Client\Model\Connection2'
+        'metadata' => 'array<string,\Ragie\Api\Model\MetadataValue>',
+        'connection' => '\Ragie\Api\Model\Connection2'
     ];
 
     /**
@@ -333,7 +333,7 @@ class PublicCreateConnection implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets partition_strategy
      *
-     * @return \OpenAPI\Client\Model\MediaModeParam
+     * @return \Ragie\Api\Model\MediaModeParam
      */
     public function getPartitionStrategy()
     {
@@ -343,7 +343,7 @@ class PublicCreateConnection implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets partition_strategy
      *
-     * @param \OpenAPI\Client\Model\MediaModeParam $partition_strategy partition_strategy
+     * @param \Ragie\Api\Model\MediaModeParam $partition_strategy partition_strategy
      *
      * @return self
      */
@@ -462,7 +462,7 @@ class PublicCreateConnection implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets metadata
      *
-     * @return array<string,\OpenAPI\Client\Model\MetadataValue>|null
+     * @return array<string,\Ragie\Api\Model\MetadataValue>|null
      */
     public function getMetadata()
     {
@@ -472,7 +472,7 @@ class PublicCreateConnection implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets metadata
      *
-     * @param array<string,\OpenAPI\Client\Model\MetadataValue>|null $metadata Metadata for the document. Keys must be strings. Values may be strings, numbers, booleans, or lists of strings. Numbers may be integers or floating point and will be converted to 64 bit floating point. 1000 total values are allowed. Each item in an array counts towards the total. The following keys are reserved for internal use: `document_id`, `document_type`, `document_source`, `document_name`, `document_uploaded_at`, `start_time`, `end_time`.
+     * @param array<string,\Ragie\Api\Model\MetadataValue>|null $metadata Metadata for the document. Keys must be strings. Values may be strings, numbers, booleans, or lists of strings. Numbers may be integers or floating point and will be converted to 64 bit floating point. 1000 total values are allowed. Each item in an array counts towards the total. The following keys are reserved for internal use: `document_id`, `document_type`, `document_source`, `document_name`, `document_uploaded_at`, `start_time`, `end_time`.
      *
      * @return self
      */
@@ -489,7 +489,7 @@ class PublicCreateConnection implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets connection
      *
-     * @return \OpenAPI\Client\Model\Connection2
+     * @return \Ragie\Api\Model\Connection2
      */
     public function getConnection()
     {
@@ -499,7 +499,7 @@ class PublicCreateConnection implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets connection
      *
-     * @param \OpenAPI\Client\Model\Connection2 $connection connection
+     * @param \Ragie\Api\Model\Connection2 $connection connection
      *
      * @return self
      */

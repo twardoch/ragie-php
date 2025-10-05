@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * CreatePartitionParams Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -70,7 +70,7 @@ class CreatePartitionParams implements ModelInterface, ArrayAccess, \JsonSeriali
         'media_streamed_limit_max' => 'int',
         'media_hosted_limit_monthly' => 'int',
         'media_hosted_limit_max' => 'int',
-        'metadata_schema' => 'array<string,\OpenAPI\Client\Model\CreatePartitionParamsMetadataSchemaValue>'
+        'metadata_schema' => 'array<string,\Ragie\Api\Model\CreatePartitionParamsMetadataSchemaValue>'
     ];
 
     /**
@@ -929,7 +929,7 @@ class CreatePartitionParams implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets metadata_schema
      *
-     * @return array<string,\OpenAPI\Client\Model\CreatePartitionParamsMetadataSchemaValue>|null
+     * @return array<string,\Ragie\Api\Model\CreatePartitionParamsMetadataSchemaValue>|null
      */
     public function getMetadataSchema()
     {
@@ -939,7 +939,7 @@ class CreatePartitionParams implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets metadata_schema
      *
-     * @param array<string,\OpenAPI\Client\Model\CreatePartitionParamsMetadataSchemaValue>|null $metadata_schema metadata_schema
+     * @param array<string,\Ragie\Api\Model\CreatePartitionParamsMetadataSchemaValue>|null $metadata_schema metadata_schema
      *
      * @return self
      */

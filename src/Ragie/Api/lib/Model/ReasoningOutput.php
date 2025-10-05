@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * ReasoningOutput Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class ReasoningOutput implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'summary' => '\OpenAPI\Client\Model\ReasoningSummary[]',
+        'summary' => '\Ragie\Api\Model\ReasoningSummary[]',
         'type' => 'string',
-        'content' => '\OpenAPI\Client\Model\ReasoningText[]',
+        'content' => '\Ragie\Api\Model\ReasoningText[]',
         'encrypted_content' => 'string',
         'status' => 'string'
     ];
@@ -414,7 +414,7 @@ class ReasoningOutput implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets summary
      *
-     * @return \OpenAPI\Client\Model\ReasoningSummary[]
+     * @return \Ragie\Api\Model\ReasoningSummary[]
      */
     public function getSummary()
     {
@@ -424,7 +424,7 @@ class ReasoningOutput implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets summary
      *
-     * @param \OpenAPI\Client\Model\ReasoningSummary[] $summary The summary of the reasoning.
+     * @param \Ragie\Api\Model\ReasoningSummary[] $summary The summary of the reasoning.
      *
      * @return self
      */
@@ -478,7 +478,7 @@ class ReasoningOutput implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets content
      *
-     * @return \OpenAPI\Client\Model\ReasoningText[]
+     * @return \Ragie\Api\Model\ReasoningText[]
      */
     public function getContent()
     {
@@ -488,7 +488,7 @@ class ReasoningOutput implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets content
      *
-     * @param \OpenAPI\Client\Model\ReasoningText[] $content The content of the reasoning.
+     * @param \Ragie\Api\Model\ReasoningText[] $content The content of the reasoning.
      *
      * @return self
      */

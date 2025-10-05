@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- this_file: psalm.xml -->
+<psalm
+    errorLevel="4"
+    phpVersion="8.1"
+    findUnusedPsalmSuppress="true"
+>
+    <projectFiles>
+        <directory name="src"/>
+        <directory name="tests"/>
+        <ignoreFiles>
+            <directory name="vendor"/>
+            <directory name="src/Ragie/Api/lib"/>
+            <directory name="src/Ragie/Api/docs"/>
+            <directory name="src/Ragie/Api/test"/>
+        </ignoreFiles>
+    </projectFiles>
+</psalm>

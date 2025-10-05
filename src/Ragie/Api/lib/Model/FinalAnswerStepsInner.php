@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * FinalAnswerStepsInner Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,15 +61,15 @@ class FinalAnswerStepsInner implements ModelInterface, ArrayAccess, \JsonSeriali
         'think' => 'string',
         'current_question' => 'string',
         'other_resolved_question_ids' => 'string[]',
-        'answer' => '\OpenAPI\Client\Model\Answer',
-        'search' => '\OpenAPI\Client\Model\Search',
-        'query_details' => '\OpenAPI\Client\Model\QueryDetails[]',
+        'answer' => '\Ragie\Api\Model\Answer',
+        'search' => '\Ragie\Api\Model\Search',
+        'query_details' => '\Ragie\Api\Model\QueryDetails[]',
         'search_log' => 'string',
         'questions_to_answer' => 'string[]',
         'code_issue' => 'string',
         'code' => 'string',
         'code_result' => 'string',
-        'partial_answer' => '\OpenAPI\Client\Model\Answer',
+        'partial_answer' => '\Ragie\Api\Model\Answer',
         'eval_passed' => 'bool',
         'eval_reason' => 'string'
     ];
@@ -566,7 +566,7 @@ class FinalAnswerStepsInner implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets answer
      *
-     * @return \OpenAPI\Client\Model\Answer
+     * @return \Ragie\Api\Model\Answer
      */
     public function getAnswer()
     {
@@ -576,7 +576,7 @@ class FinalAnswerStepsInner implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets answer
      *
-     * @param \OpenAPI\Client\Model\Answer $answer answer
+     * @param \Ragie\Api\Model\Answer $answer answer
      *
      * @return self
      */
@@ -593,7 +593,7 @@ class FinalAnswerStepsInner implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets search
      *
-     * @return \OpenAPI\Client\Model\Search
+     * @return \Ragie\Api\Model\Search
      */
     public function getSearch()
     {
@@ -603,7 +603,7 @@ class FinalAnswerStepsInner implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets search
      *
-     * @param \OpenAPI\Client\Model\Search $search The search request to be made.
+     * @param \Ragie\Api\Model\Search $search The search request to be made.
      *
      * @return self
      */
@@ -620,7 +620,7 @@ class FinalAnswerStepsInner implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets query_details
      *
-     * @return \OpenAPI\Client\Model\QueryDetails[]|null
+     * @return \Ragie\Api\Model\QueryDetails[]|null
      */
     public function getQueryDetails()
     {
@@ -630,7 +630,7 @@ class FinalAnswerStepsInner implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets query_details
      *
-     * @param \OpenAPI\Client\Model\QueryDetails[]|null $query_details query_details
+     * @param \Ragie\Api\Model\QueryDetails[]|null $query_details query_details
      *
      * @return self
      */
@@ -782,7 +782,7 @@ class FinalAnswerStepsInner implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets partial_answer
      *
-     * @return \OpenAPI\Client\Model\Answer
+     * @return \Ragie\Api\Model\Answer
      */
     public function getPartialAnswer()
     {
@@ -792,7 +792,7 @@ class FinalAnswerStepsInner implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets partial_answer
      *
-     * @param \OpenAPI\Client\Model\Answer $partial_answer The a potential partial answer when a full answer was not possible.
+     * @param \Ragie\Api\Model\Answer $partial_answer The a potential partial answer when a full answer was not possible.
      *
      * @return self
      */

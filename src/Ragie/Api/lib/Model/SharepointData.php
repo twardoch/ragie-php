@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * SharepointData Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class SharepointData implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'site' => '\OpenAPI\Client\Model\SharepointSiteData',
-        'files' => '\OpenAPI\Client\Model\SharepointFileData[]'
+        'site' => '\Ragie\Api\Model\SharepointSiteData',
+        'files' => '\Ragie\Api\Model\SharepointFileData[]'
     ];
 
     /**
@@ -305,7 +305,7 @@ class SharepointData implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets site
      *
-     * @return \OpenAPI\Client\Model\SharepointSiteData
+     * @return \Ragie\Api\Model\SharepointSiteData
      */
     public function getSite()
     {
@@ -315,7 +315,7 @@ class SharepointData implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets site
      *
-     * @param \OpenAPI\Client\Model\SharepointSiteData $site site
+     * @param \Ragie\Api\Model\SharepointSiteData $site site
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class SharepointData implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets files
      *
-     * @return \OpenAPI\Client\Model\SharepointFileData[]
+     * @return \Ragie\Api\Model\SharepointFileData[]
      */
     public function getFiles()
     {
@@ -342,7 +342,7 @@ class SharepointData implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets files
      *
-     * @param \OpenAPI\Client\Model\SharepointFileData[] $files files
+     * @param \Ragie\Api\Model\SharepointFileData[] $files files
      *
      * @return self
      */

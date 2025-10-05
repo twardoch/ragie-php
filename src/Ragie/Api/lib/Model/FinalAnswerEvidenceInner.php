@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * FinalAnswerEvidenceInner Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -68,7 +68,7 @@ class FinalAnswerEvidenceInner implements ModelInterface, ArrayAccess, \JsonSeri
         'document_name' => 'string',
         'metadata' => 'array<string,mixed>',
         'document_metadata' => 'array<string,mixed>',
-        'links' => 'array<string,\OpenAPI\Client\Model\SearchResultLink>'
+        'links' => 'array<string,\Ragie\Api\Model\SearchResultLink>'
     ];
 
     /**
@@ -724,7 +724,7 @@ class FinalAnswerEvidenceInner implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets links
      *
-     * @return array<string,\OpenAPI\Client\Model\SearchResultLink>|null
+     * @return array<string,\Ragie\Api\Model\SearchResultLink>|null
      */
     public function getLinks()
     {
@@ -734,7 +734,7 @@ class FinalAnswerEvidenceInner implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets links
      *
-     * @param array<string,\OpenAPI\Client\Model\SearchResultLink>|null $links The links to the evidence.
+     * @param array<string,\Ragie\Api\Model\SearchResultLink>|null $links The links to the evidence.
      *
      * @return self
      */

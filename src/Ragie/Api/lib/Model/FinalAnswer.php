@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * FinalAnswer Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class FinalAnswer implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'text' => 'string',
-        'evidence' => '\OpenAPI\Client\Model\FinalAnswerEvidenceInner[]',
-        'steps' => '\OpenAPI\Client\Model\FinalAnswerStepsInner[]',
-        'usage' => '\OpenAPI\Client\Model\AgentHoppsModelsModelsUsage'
+        'evidence' => '\Ragie\Api\Model\FinalAnswerEvidenceInner[]',
+        'steps' => '\Ragie\Api\Model\FinalAnswerStepsInner[]',
+        'usage' => '\Ragie\Api\Model\AgentHoppsModelsModelsUsage'
     ];
 
     /**
@@ -343,7 +343,7 @@ class FinalAnswer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets evidence
      *
-     * @return \OpenAPI\Client\Model\FinalAnswerEvidenceInner[]|null
+     * @return \Ragie\Api\Model\FinalAnswerEvidenceInner[]|null
      */
     public function getEvidence()
     {
@@ -353,7 +353,7 @@ class FinalAnswer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets evidence
      *
-     * @param \OpenAPI\Client\Model\FinalAnswerEvidenceInner[]|null $evidence The evidence used to derive the answer.
+     * @param \Ragie\Api\Model\FinalAnswerEvidenceInner[]|null $evidence The evidence used to derive the answer.
      *
      * @return self
      */
@@ -370,7 +370,7 @@ class FinalAnswer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets steps
      *
-     * @return \OpenAPI\Client\Model\FinalAnswerStepsInner[]|null
+     * @return \Ragie\Api\Model\FinalAnswerStepsInner[]|null
      */
     public function getSteps()
     {
@@ -380,7 +380,7 @@ class FinalAnswer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets steps
      *
-     * @param \OpenAPI\Client\Model\FinalAnswerStepsInner[]|null $steps The steps that led to the answer.
+     * @param \Ragie\Api\Model\FinalAnswerStepsInner[]|null $steps The steps that led to the answer.
      *
      * @return self
      */
@@ -397,7 +397,7 @@ class FinalAnswer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets usage
      *
-     * @return \OpenAPI\Client\Model\AgentHoppsModelsModelsUsage|null
+     * @return \Ragie\Api\Model\AgentHoppsModelsModelsUsage|null
      */
     public function getUsage()
     {
@@ -407,7 +407,7 @@ class FinalAnswer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets usage
      *
-     * @param \OpenAPI\Client\Model\AgentHoppsModelsModelsUsage|null $usage The usage of the models.
+     * @param \Ragie\Api\Model\AgentHoppsModelsModelsUsage|null $usage The usage of the models.
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * PublicZendeskConnection Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class PublicZendeskConnection implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPITypes = [
         'provider' => 'string',
-        'data' => '\OpenAPI\Client\Model\ZendeskData',
-        'credentials' => '\OpenAPI\Client\Model\ZendeskCredentials'
+        'data' => '\Ragie\Api\Model\ZendeskData',
+        'credentials' => '\Ragie\Api\Model\ZendeskCredentials'
     ];
 
     /**
@@ -374,7 +374,7 @@ class PublicZendeskConnection implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\ZendeskData
+     * @return \Ragie\Api\Model\ZendeskData
      */
     public function getData()
     {
@@ -384,7 +384,7 @@ class PublicZendeskConnection implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\ZendeskData $data data
+     * @param \Ragie\Api\Model\ZendeskData $data data
      *
      * @return self
      */
@@ -401,7 +401,7 @@ class PublicZendeskConnection implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets credentials
      *
-     * @return \OpenAPI\Client\Model\ZendeskCredentials
+     * @return \Ragie\Api\Model\ZendeskCredentials
      */
     public function getCredentials()
     {
@@ -411,7 +411,7 @@ class PublicZendeskConnection implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets credentials
      *
-     * @param \OpenAPI\Client\Model\ZendeskCredentials $credentials credentials
+     * @param \Ragie\Api\Model\ZendeskCredentials $credentials credentials
      *
      * @return self
      */

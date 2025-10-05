@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * AudioModalityData Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class AudioModalityData implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPITypes = [
         'type' => 'string',
-        'word_timestamps' => '\OpenAPI\Client\Model\WordTimestamp[]'
+        'word_timestamps' => '\Ragie\Api\Model\WordTimestamp[]'
     ];
 
     /**
@@ -358,7 +358,7 @@ class AudioModalityData implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets word_timestamps
      *
-     * @return \OpenAPI\Client\Model\WordTimestamp[]|null
+     * @return \Ragie\Api\Model\WordTimestamp[]|null
      */
     public function getWordTimestamps()
     {
@@ -368,7 +368,7 @@ class AudioModalityData implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets word_timestamps
      *
-     * @param \OpenAPI\Client\Model\WordTimestamp[]|null $word_timestamps word_timestamps
+     * @param \Ragie\Api\Model\WordTimestamp[]|null $word_timestamps word_timestamps
      *
      * @return self
      */

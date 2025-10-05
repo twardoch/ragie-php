@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * Request Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,9 +59,9 @@ class Request implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'input' => 'string',
         'instructions' => 'string',
-        'tools' => '\OpenAPI\Client\Model\Tool[]',
+        'tools' => '\Ragie\Api\Model\Tool[]',
         'model' => 'string',
-        'reasoning' => '\OpenAPI\Client\Model\Reasoning',
+        'reasoning' => '\Ragie\Api\Model\Reasoning',
         'stream' => 'bool'
     ];
 
@@ -413,7 +413,7 @@ class Request implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tools
      *
-     * @return \OpenAPI\Client\Model\Tool[]|null
+     * @return \Ragie\Api\Model\Tool[]|null
      */
     public function getTools()
     {
@@ -423,7 +423,7 @@ class Request implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tools
      *
-     * @param \OpenAPI\Client\Model\Tool[]|null $tools The tools available to the agent. Currently the only tool is retrieve. The `default` partition is used by default unless an other partition is specified.
+     * @param \Ragie\Api\Model\Tool[]|null $tools The tools available to the agent. Currently the only tool is retrieve. The `default` partition is used by default unless an other partition is specified.
      *
      * @return self
      */
@@ -477,7 +477,7 @@ class Request implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets reasoning
      *
-     * @return \OpenAPI\Client\Model\Reasoning|null
+     * @return \Ragie\Api\Model\Reasoning|null
      */
     public function getReasoning()
     {
@@ -487,7 +487,7 @@ class Request implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets reasoning
      *
-     * @param \OpenAPI\Client\Model\Reasoning|null $reasoning The reasoning to use for the agent. The default effort level is medium.
+     * @param \Ragie\Api\Model\Reasoning|null $reasoning The reasoning to use for the agent. The default effort level is medium.
      *
      * @return self
      */

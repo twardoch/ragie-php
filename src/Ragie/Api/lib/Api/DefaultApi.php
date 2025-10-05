@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Ragie\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Ragie\Api\ApiException;
+use Ragie\Api\Configuration;
+use Ragie\Api\FormDataProcessor;
+use Ragie\Api\HeaderSelector;
+use Ragie\Api\ObjectSerializer;
 
 /**
  * DefaultApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -130,12 +130,12 @@ class DefaultApi
      *
      * Event
      *
-     * @param  \OpenAPI\Client\Model\Body $body body (required)
+     * @param  \Ragie\Api\Model\Body $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['eventeventPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed|\OpenAPI\Client\Model\HTTPValidationError
+     * @return mixed|\Ragie\Api\Model\HTTPValidationError
      */
     public function eventeventPost($body, string $contentType = self::contentTypes['eventeventPost'][0])
     {
@@ -148,12 +148,12 @@ class DefaultApi
      *
      * Event
      *
-     * @param  \OpenAPI\Client\Model\Body $body (required)
+     * @param  \Ragie\Api\Model\Body $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['eventeventPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of mixed|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function eventeventPostWithHttpInfo($body, string $contentType = self::contentTypes['eventeventPost'][0])
     {
@@ -191,7 +191,7 @@ class DefaultApi
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $request,
                         $response,
                     );
@@ -230,7 +230,7 @@ class DefaultApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HTTPValidationError',
+                        '\Ragie\Api\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -247,7 +247,7 @@ class DefaultApi
      *
      * Event
      *
-     * @param  \OpenAPI\Client\Model\Body $body (required)
+     * @param  \Ragie\Api\Model\Body $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['eventeventPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -268,7 +268,7 @@ class DefaultApi
      *
      * Event
      *
-     * @param  \OpenAPI\Client\Model\Body $body (required)
+     * @param  \Ragie\Api\Model\Body $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['eventeventPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -318,7 +318,7 @@ class DefaultApi
     /**
      * Create request for operation 'eventeventPost'
      *
-     * @param  \OpenAPI\Client\Model\Body $body (required)
+     * @param  \Ragie\Api\Model\Body $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['eventeventPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

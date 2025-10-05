@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * SearchStep Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class SearchStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'string',
         'think' => 'string',
         'current_question' => 'string',
-        'search' => '\OpenAPI\Client\Model\Search'
+        'search' => '\Ragie\Api\Model\Search'
     ];
 
     /**
@@ -435,7 +435,7 @@ class SearchStep implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets search
      *
-     * @return \OpenAPI\Client\Model\Search
+     * @return \Ragie\Api\Model\Search
      */
     public function getSearch()
     {
@@ -445,7 +445,7 @@ class SearchStep implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets search
      *
-     * @param \OpenAPI\Client\Model\Search $search The search request to be made.
+     * @param \Ragie\Api\Model\Search $search The search request to be made.
      *
      * @return self
      */

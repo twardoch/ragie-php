@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * Retrieval Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class Retrieval implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'scored_chunks' => '\OpenAPI\Client\Model\ScoredChunk[]'
+        'scored_chunks' => '\Ragie\Api\Model\ScoredChunk[]'
     ];
 
     /**
@@ -295,7 +295,7 @@ class Retrieval implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets scored_chunks
      *
-     * @return \OpenAPI\Client\Model\ScoredChunk[]
+     * @return \Ragie\Api\Model\ScoredChunk[]
      */
     public function getScoredChunks()
     {
@@ -305,7 +305,7 @@ class Retrieval implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets scored_chunks
      *
-     * @param \OpenAPI\Client\Model\ScoredChunk[] $scored_chunks scored_chunks
+     * @param \Ragie\Api\Model\ScoredChunk[] $scored_chunks scored_chunks
      *
      * @return self
      */

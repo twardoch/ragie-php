@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * EntityExtractedWebhook Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class EntityExtractedWebhook implements ModelInterface, ArrayAccess, \JsonSerial
     protected static $openAPITypes = [
         'nonce' => 'string',
         'type' => 'string',
-        'payload' => '\OpenAPI\Client\Model\EntityExtractedWebhookPayload'
+        'payload' => '\Ragie\Api\Model\EntityExtractedWebhookPayload'
     ];
 
     /**
@@ -401,7 +401,7 @@ class EntityExtractedWebhook implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets payload
      *
-     * @return \OpenAPI\Client\Model\EntityExtractedWebhookPayload
+     * @return \Ragie\Api\Model\EntityExtractedWebhookPayload
      */
     public function getPayload()
     {
@@ -411,7 +411,7 @@ class EntityExtractedWebhook implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets payload
      *
-     * @param \OpenAPI\Client\Model\EntityExtractedWebhookPayload $payload payload
+     * @param \Ragie\Api\Model\EntityExtractedWebhookPayload $payload payload
      *
      * @return self
      */

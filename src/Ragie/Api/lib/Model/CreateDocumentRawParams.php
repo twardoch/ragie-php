@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * CreateDocumentRawParams Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,10 +58,10 @@ class CreateDocumentRawParams implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPITypes = [
         'name' => 'string',
-        'metadata' => 'array<string,\OpenAPI\Client\Model\MetadataValue>',
+        'metadata' => 'array<string,\Ragie\Api\Model\MetadataValue>',
         'external_id' => 'string',
         'partition' => 'string',
-        'data' => '\OpenAPI\Client\Model\Data'
+        'data' => '\Ragie\Api\Model\Data'
     ];
 
     /**
@@ -350,7 +350,7 @@ class CreateDocumentRawParams implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets metadata
      *
-     * @return array<string,\OpenAPI\Client\Model\MetadataValue>|null
+     * @return array<string,\Ragie\Api\Model\MetadataValue>|null
      */
     public function getMetadata()
     {
@@ -360,7 +360,7 @@ class CreateDocumentRawParams implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets metadata
      *
-     * @param array<string,\OpenAPI\Client\Model\MetadataValue>|null $metadata Metadata for the document. Keys must be strings. Values may be strings, numbers, booleans, or lists of strings. Numbers may be integers or floating point and will be converted to 64 bit floating point. 1000 total values are allowed. Each item in an array counts towards the total. The following keys are reserved for internal use: `document_id`, `document_type`, `document_source`, `document_name`, `document_uploaded_at`, `start_time`, `end_time`.
+     * @param array<string,\Ragie\Api\Model\MetadataValue>|null $metadata Metadata for the document. Keys must be strings. Values may be strings, numbers, booleans, or lists of strings. Numbers may be integers or floating point and will be converted to 64 bit floating point. 1000 total values are allowed. Each item in an array counts towards the total. The following keys are reserved for internal use: `document_id`, `document_type`, `document_source`, `document_name`, `document_uploaded_at`, `start_time`, `end_time`.
      *
      * @return self
      */
@@ -438,7 +438,7 @@ class CreateDocumentRawParams implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\Data
+     * @return \Ragie\Api\Model\Data
      */
     public function getData()
     {
@@ -448,7 +448,7 @@ class CreateDocumentRawParams implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\Data $data data
+     * @param \Ragie\Api\Model\Data $data data
      *
      * @return self
      */

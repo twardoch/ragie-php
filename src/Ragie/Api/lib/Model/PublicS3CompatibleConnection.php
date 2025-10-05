@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * PublicS3CompatibleConnection Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class PublicS3CompatibleConnection implements ModelInterface, ArrayAccess, \Json
       */
     protected static $openAPITypes = [
         'provider' => 'string',
-        'data' => '\OpenAPI\Client\Model\BucketData',
-        'credentials' => '\OpenAPI\Client\Model\S3CompatibleCredentials'
+        'data' => '\Ragie\Api\Model\BucketData',
+        'credentials' => '\Ragie\Api\Model\S3CompatibleCredentials'
     ];
 
     /**
@@ -374,7 +374,7 @@ class PublicS3CompatibleConnection implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\BucketData
+     * @return \Ragie\Api\Model\BucketData
      */
     public function getData()
     {
@@ -384,7 +384,7 @@ class PublicS3CompatibleConnection implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\BucketData $data data
+     * @param \Ragie\Api\Model\BucketData $data data
      *
      * @return self
      */
@@ -401,7 +401,7 @@ class PublicS3CompatibleConnection implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets credentials
      *
-     * @return \OpenAPI\Client\Model\S3CompatibleCredentials
+     * @return \Ragie\Api\Model\S3CompatibleCredentials
      */
     public function getCredentials()
     {
@@ -411,7 +411,7 @@ class PublicS3CompatibleConnection implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets credentials
      *
-     * @param \OpenAPI\Client\Model\S3CompatibleCredentials $credentials credentials
+     * @param \Ragie\Api\Model\S3CompatibleCredentials $credentials credentials
      *
      * @return self
      */

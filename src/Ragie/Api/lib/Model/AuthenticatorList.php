@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Ragie\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Ragie\Api\ObjectSerializer;
 
 /**
  * AuthenticatorList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Ragie\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class AuthenticatorList implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'pagination' => '\OpenAPI\Client\Model\Pagination',
-        'authenticators' => '\OpenAPI\Client\Model\BaseGetAuthenticator[]'
+        'pagination' => '\Ragie\Api\Model\Pagination',
+        'authenticators' => '\Ragie\Api\Model\BaseGetAuthenticator[]'
     ];
 
     /**
@@ -305,7 +305,7 @@ class AuthenticatorList implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets pagination
      *
-     * @return \OpenAPI\Client\Model\Pagination
+     * @return \Ragie\Api\Model\Pagination
      */
     public function getPagination()
     {
@@ -315,7 +315,7 @@ class AuthenticatorList implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets pagination
      *
-     * @param \OpenAPI\Client\Model\Pagination $pagination pagination
+     * @param \Ragie\Api\Model\Pagination $pagination pagination
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class AuthenticatorList implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets authenticators
      *
-     * @return \OpenAPI\Client\Model\BaseGetAuthenticator[]
+     * @return \Ragie\Api\Model\BaseGetAuthenticator[]
      */
     public function getAuthenticators()
     {
@@ -342,7 +342,7 @@ class AuthenticatorList implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets authenticators
      *
-     * @param \OpenAPI\Client\Model\BaseGetAuthenticator[] $authenticators authenticators
+     * @param \Ragie\Api\Model\BaseGetAuthenticator[] $authenticators authenticators
      *
      * @return self
      */

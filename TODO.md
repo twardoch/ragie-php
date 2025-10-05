@@ -1,13 +1,19 @@
+---
+this_file: TODO.md
+---
+
 # TODO
 
-- [ ] Create the main `Client` class file at `src/Ragie/Client.php`.
-- [ ] Implement the constructor for the `Client` class to handle API configuration.
-- [ ] Implement the `addDocument` and `addDocumentFromFile` methods in the `Client` class.
-- [ ] Implement the `getDocument` and `deleteDocument` methods.
-- [ ] Implement the `retrieve` method in the `Client` class.
-- [ ] Implement the `ask` method in the `Client` class.
-- [ ] Create custom exception classes in `src/Ragie/Exception/`.
-- [ ] Add comprehensive error handling for all API calls.
-- [ ] Create an example usage file (e.g., `examples/simple.php`).
-- [ ] Write unit tests for the new `Client` class, mocking the low-level API.
-- [ ] Update `README.md` to include instructions for the new high-level `Client` class.
+- [ ] Mirror the upstream OpenAPI spec locally, extend generator config with Ragie namespaces, and document checksum tracking.
+- [ ] Update `build_generatapi.sh` and `WORK.md` with the regeneration workflow using the local spec.
+- [ ] Create root-level `composer.json` with package metadata, PSR-4 autoload configuration, and required dependencies.
+- [ ] Add repository scaffolding (`.editorconfig`, `.gitattributes`, QA configs, `test.sh`) and document the tooling in `DEPENDENCIES.md`.
+- [ ] Regenerate the API client to use the `Ragie\Api` namespace and implement a `ClientFactory` that centralizes configuration.
+- [ ] Introduce DTOs plus `DocumentsService` covering all `/documents` endpoints with unit tests.
+- [ ] Build `RetrievalsService` and `ResponsesService` with polling helpers and accompanying tests.
+- [ ] Implement `ConnectionsService` and authenticator helpers for `/connections` and `/authenticators`, with tests for enable/disable/sync flows.
+- [ ] Implement `PartitionsService` and `InstructionsService`, including MCP handling and entity retrieval tests.
+- [ ] Assemble the top-level `Ragie\Client` facade with retry policy, logger hooks, and consolidated exception mapping.
+- [ ] Configure PHPUnit, PHPStan/Psalm, and PHP-CS-Fixer in Composer scripts and ensure coverage thresholds are enforced.
+- [ ] Author runnable examples plus README documentation updates covering installation, quickstart, and advanced topics.
+- [ ] Set up CI workflows, release checklist, and Packagist publication steps.

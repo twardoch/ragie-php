@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PartitionStrategyTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class PartitionStrategyTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

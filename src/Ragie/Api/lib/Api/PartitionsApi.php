@@ -80,12 +80,6 @@ class PartitionsApi
         'deletePartitionPartitionsPartitionIdDelete' => [
             'application/json',
         ],
-        'disableMcpPartitionsPartitionIdMcpDelete' => [
-            'application/json',
-        ],
-        'enableMcpPartitionsPartitionIdMcpPost' => [
-            'application/json',
-        ],
         'getPartitionPartitionsPartitionIdGet' => [
             'application/json',
         ],
@@ -93,6 +87,9 @@ class PartitionsApi
             'application/json',
         ],
         'setPartitionLimitsPartitionsPartitionIdLimitsPut' => [
+            'application/json',
+        ],
+        'updatePartitionPartitionsPartitionIdPatch' => [
             'application/json',
         ],
     ];
@@ -820,690 +817,6 @@ class PartitionsApi
         $query = ObjectSerializer::buildQuery($queryParams);
         return new Request(
             'DELETE',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation disableMcpPartitionsPartitionIdMcpDelete
-     *
-     * Disable Mcp
-     *
-     * @param  string $partition_id partition_id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['disableMcpPartitionsPartitionIdMcpDelete'] to see the possible values for this operation
-     *
-     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return mixed|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
-     */
-    public function disableMcpPartitionsPartitionIdMcpDelete($partition_id, string $contentType = self::contentTypes['disableMcpPartitionsPartitionIdMcpDelete'][0])
-    {
-        list($response) = $this->disableMcpPartitionsPartitionIdMcpDeleteWithHttpInfo($partition_id, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation disableMcpPartitionsPartitionIdMcpDeleteWithHttpInfo
-     *
-     * Disable Mcp
-     *
-     * @param  string $partition_id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['disableMcpPartitionsPartitionIdMcpDelete'] to see the possible values for this operation
-     *
-     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of mixed|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function disableMcpPartitionsPartitionIdMcpDeleteWithHttpInfo($partition_id, string $contentType = self::contentTypes['disableMcpPartitionsPartitionIdMcpDelete'][0])
-    {
-        $request = $this->disableMcpPartitionsPartitionIdMcpDeleteRequest($partition_id, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-
-            switch($statusCode) {
-                case 200:
-                    return $this->handleResponseWithDataType(
-                        'mixed',
-                        $request,
-                        $response,
-                    );
-                case 401:
-                    return $this->handleResponseWithDataType(
-                        '\Ragie\Api\Model\ErrorMessage',
-                        $request,
-                        $response,
-                    );
-                case 402:
-                    return $this->handleResponseWithDataType(
-                        '\Ragie\Api\Model\ErrorMessage',
-                        $request,
-                        $response,
-                    );
-                case 429:
-                    return $this->handleResponseWithDataType(
-                        '\Ragie\Api\Model\ErrorMessage',
-                        $request,
-                        $response,
-                    );
-                case 500:
-                    return $this->handleResponseWithDataType(
-                        '\Ragie\Api\Model\ErrorMessage',
-                        $request,
-                        $response,
-                    );
-                case 422:
-                    return $this->handleResponseWithDataType(
-                        '\Ragie\Api\Model\HTTPValidationError',
-                        $request,
-                        $response,
-                    );
-            }
-
-            
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            return $this->handleResponseWithDataType(
-                'mixed',
-                $request,
-                $response,
-            );
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'mixed',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Ragie\Api\Model\ErrorMessage',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
-                case 402:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Ragie\Api\Model\ErrorMessage',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
-                case 429:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Ragie\Api\Model\ErrorMessage',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Ragie\Api\Model\ErrorMessage',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
-                case 422:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Ragie\Api\Model\HTTPValidationError',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
-            }
-        
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation disableMcpPartitionsPartitionIdMcpDeleteAsync
-     *
-     * Disable Mcp
-     *
-     * @param  string $partition_id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['disableMcpPartitionsPartitionIdMcpDelete'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function disableMcpPartitionsPartitionIdMcpDeleteAsync($partition_id, string $contentType = self::contentTypes['disableMcpPartitionsPartitionIdMcpDelete'][0])
-    {
-        return $this->disableMcpPartitionsPartitionIdMcpDeleteAsyncWithHttpInfo($partition_id, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation disableMcpPartitionsPartitionIdMcpDeleteAsyncWithHttpInfo
-     *
-     * Disable Mcp
-     *
-     * @param  string $partition_id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['disableMcpPartitionsPartitionIdMcpDelete'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function disableMcpPartitionsPartitionIdMcpDeleteAsyncWithHttpInfo($partition_id, string $contentType = self::contentTypes['disableMcpPartitionsPartitionIdMcpDelete'][0])
-    {
-        $returnType = 'mixed';
-        $request = $this->disableMcpPartitionsPartitionIdMcpDeleteRequest($partition_id, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'disableMcpPartitionsPartitionIdMcpDelete'
-     *
-     * @param  string $partition_id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['disableMcpPartitionsPartitionIdMcpDelete'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function disableMcpPartitionsPartitionIdMcpDeleteRequest($partition_id, string $contentType = self::contentTypes['disableMcpPartitionsPartitionIdMcpDelete'][0])
-    {
-
-        // verify the required parameter 'partition_id' is set
-        if ($partition_id === null || (is_array($partition_id) && count($partition_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $partition_id when calling disableMcpPartitionsPartitionIdMcpDelete'
-            );
-        }
-
-
-        $resourcePath = '/partitions/{partition_id}/mcp';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-        // path params
-        if ($partition_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'partition_id' . '}',
-                ObjectSerializer::toPathValue($partition_id),
-                $resourcePath
-            );
-        }
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-        // this endpoint requires Bearer authentication (access token)
-        if (!empty($this->config->getAccessToken())) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'DELETE',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation enableMcpPartitionsPartitionIdMcpPost
-     *
-     * Enable Mcp
-     *
-     * @param  string $partition_id partition_id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['enableMcpPartitionsPartitionIdMcpPost'] to see the possible values for this operation
-     *
-     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return mixed|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
-     */
-    public function enableMcpPartitionsPartitionIdMcpPost($partition_id, string $contentType = self::contentTypes['enableMcpPartitionsPartitionIdMcpPost'][0])
-    {
-        list($response) = $this->enableMcpPartitionsPartitionIdMcpPostWithHttpInfo($partition_id, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation enableMcpPartitionsPartitionIdMcpPostWithHttpInfo
-     *
-     * Enable Mcp
-     *
-     * @param  string $partition_id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['enableMcpPartitionsPartitionIdMcpPost'] to see the possible values for this operation
-     *
-     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of mixed|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function enableMcpPartitionsPartitionIdMcpPostWithHttpInfo($partition_id, string $contentType = self::contentTypes['enableMcpPartitionsPartitionIdMcpPost'][0])
-    {
-        $request = $this->enableMcpPartitionsPartitionIdMcpPostRequest($partition_id, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-
-            switch($statusCode) {
-                case 200:
-                    return $this->handleResponseWithDataType(
-                        'mixed',
-                        $request,
-                        $response,
-                    );
-                case 401:
-                    return $this->handleResponseWithDataType(
-                        '\Ragie\Api\Model\ErrorMessage',
-                        $request,
-                        $response,
-                    );
-                case 402:
-                    return $this->handleResponseWithDataType(
-                        '\Ragie\Api\Model\ErrorMessage',
-                        $request,
-                        $response,
-                    );
-                case 429:
-                    return $this->handleResponseWithDataType(
-                        '\Ragie\Api\Model\ErrorMessage',
-                        $request,
-                        $response,
-                    );
-                case 500:
-                    return $this->handleResponseWithDataType(
-                        '\Ragie\Api\Model\ErrorMessage',
-                        $request,
-                        $response,
-                    );
-                case 422:
-                    return $this->handleResponseWithDataType(
-                        '\Ragie\Api\Model\HTTPValidationError',
-                        $request,
-                        $response,
-                    );
-            }
-
-            
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            return $this->handleResponseWithDataType(
-                'mixed',
-                $request,
-                $response,
-            );
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'mixed',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Ragie\Api\Model\ErrorMessage',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
-                case 402:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Ragie\Api\Model\ErrorMessage',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
-                case 429:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Ragie\Api\Model\ErrorMessage',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Ragie\Api\Model\ErrorMessage',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
-                case 422:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Ragie\Api\Model\HTTPValidationError',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
-            }
-        
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation enableMcpPartitionsPartitionIdMcpPostAsync
-     *
-     * Enable Mcp
-     *
-     * @param  string $partition_id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['enableMcpPartitionsPartitionIdMcpPost'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function enableMcpPartitionsPartitionIdMcpPostAsync($partition_id, string $contentType = self::contentTypes['enableMcpPartitionsPartitionIdMcpPost'][0])
-    {
-        return $this->enableMcpPartitionsPartitionIdMcpPostAsyncWithHttpInfo($partition_id, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation enableMcpPartitionsPartitionIdMcpPostAsyncWithHttpInfo
-     *
-     * Enable Mcp
-     *
-     * @param  string $partition_id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['enableMcpPartitionsPartitionIdMcpPost'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function enableMcpPartitionsPartitionIdMcpPostAsyncWithHttpInfo($partition_id, string $contentType = self::contentTypes['enableMcpPartitionsPartitionIdMcpPost'][0])
-    {
-        $returnType = 'mixed';
-        $request = $this->enableMcpPartitionsPartitionIdMcpPostRequest($partition_id, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'enableMcpPartitionsPartitionIdMcpPost'
-     *
-     * @param  string $partition_id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['enableMcpPartitionsPartitionIdMcpPost'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function enableMcpPartitionsPartitionIdMcpPostRequest($partition_id, string $contentType = self::contentTypes['enableMcpPartitionsPartitionIdMcpPost'][0])
-    {
-
-        // verify the required parameter 'partition_id' is set
-        if ($partition_id === null || (is_array($partition_id) && count($partition_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $partition_id when calling enableMcpPartitionsPartitionIdMcpPost'
-            );
-        }
-
-
-        $resourcePath = '/partitions/{partition_id}/mcp';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-        // path params
-        if ($partition_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'partition_id' . '}',
-                ObjectSerializer::toPathValue($partition_id),
-                $resourcePath
-            );
-        }
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-        // this endpoint requires Bearer authentication (access token)
-        if (!empty($this->config->getAccessToken())) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
             $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
@@ -2565,6 +1878,367 @@ class PartitionsApi
         $query = ObjectSerializer::buildQuery($queryParams);
         return new Request(
             'PUT',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation updatePartitionPartitionsPartitionIdPatch
+     *
+     * Update Partition
+     *
+     * @param  string $partition_id partition_id (required)
+     * @param  \Ragie\Api\Model\UpdatePartitionParams $update_partition_params update_partition_params (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePartitionPartitionsPartitionIdPatch'] to see the possible values for this operation
+     *
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \Ragie\Api\Model\PartitionDetail|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError
+     */
+    public function updatePartitionPartitionsPartitionIdPatch($partition_id, $update_partition_params, string $contentType = self::contentTypes['updatePartitionPartitionsPartitionIdPatch'][0])
+    {
+        list($response) = $this->updatePartitionPartitionsPartitionIdPatchWithHttpInfo($partition_id, $update_partition_params, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation updatePartitionPartitionsPartitionIdPatchWithHttpInfo
+     *
+     * Update Partition
+     *
+     * @param  string $partition_id (required)
+     * @param  \Ragie\Api\Model\UpdatePartitionParams $update_partition_params (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePartitionPartitionsPartitionIdPatch'] to see the possible values for this operation
+     *
+     * @throws \Ragie\Api\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \Ragie\Api\Model\PartitionDetail|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\ErrorMessage|\Ragie\Api\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updatePartitionPartitionsPartitionIdPatchWithHttpInfo($partition_id, $update_partition_params, string $contentType = self::contentTypes['updatePartitionPartitionsPartitionIdPatch'][0])
+    {
+        $request = $this->updatePartitionPartitionsPartitionIdPatchRequest($partition_id, $update_partition_params, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            switch($statusCode) {
+                case 200:
+                    return $this->handleResponseWithDataType(
+                        '\Ragie\Api\Model\PartitionDetail',
+                        $request,
+                        $response,
+                    );
+                case 401:
+                    return $this->handleResponseWithDataType(
+                        '\Ragie\Api\Model\ErrorMessage',
+                        $request,
+                        $response,
+                    );
+                case 402:
+                    return $this->handleResponseWithDataType(
+                        '\Ragie\Api\Model\ErrorMessage',
+                        $request,
+                        $response,
+                    );
+                case 429:
+                    return $this->handleResponseWithDataType(
+                        '\Ragie\Api\Model\ErrorMessage',
+                        $request,
+                        $response,
+                    );
+                case 500:
+                    return $this->handleResponseWithDataType(
+                        '\Ragie\Api\Model\ErrorMessage',
+                        $request,
+                        $response,
+                    );
+                case 422:
+                    return $this->handleResponseWithDataType(
+                        '\Ragie\Api\Model\HTTPValidationError',
+                        $request,
+                        $response,
+                    );
+            }
+
+            
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return $this->handleResponseWithDataType(
+                '\Ragie\Api\Model\PartitionDetail',
+                $request,
+                $response,
+            );
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Ragie\Api\Model\PartitionDetail',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Ragie\Api\Model\ErrorMessage',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 402:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Ragie\Api\Model\ErrorMessage',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 429:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Ragie\Api\Model\ErrorMessage',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Ragie\Api\Model\ErrorMessage',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Ragie\Api\Model\HTTPValidationError',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+        
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updatePartitionPartitionsPartitionIdPatchAsync
+     *
+     * Update Partition
+     *
+     * @param  string $partition_id (required)
+     * @param  \Ragie\Api\Model\UpdatePartitionParams $update_partition_params (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePartitionPartitionsPartitionIdPatch'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updatePartitionPartitionsPartitionIdPatchAsync($partition_id, $update_partition_params, string $contentType = self::contentTypes['updatePartitionPartitionsPartitionIdPatch'][0])
+    {
+        return $this->updatePartitionPartitionsPartitionIdPatchAsyncWithHttpInfo($partition_id, $update_partition_params, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation updatePartitionPartitionsPartitionIdPatchAsyncWithHttpInfo
+     *
+     * Update Partition
+     *
+     * @param  string $partition_id (required)
+     * @param  \Ragie\Api\Model\UpdatePartitionParams $update_partition_params (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePartitionPartitionsPartitionIdPatch'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updatePartitionPartitionsPartitionIdPatchAsyncWithHttpInfo($partition_id, $update_partition_params, string $contentType = self::contentTypes['updatePartitionPartitionsPartitionIdPatch'][0])
+    {
+        $returnType = '\Ragie\Api\Model\PartitionDetail';
+        $request = $this->updatePartitionPartitionsPartitionIdPatchRequest($partition_id, $update_partition_params, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'updatePartitionPartitionsPartitionIdPatch'
+     *
+     * @param  string $partition_id (required)
+     * @param  \Ragie\Api\Model\UpdatePartitionParams $update_partition_params (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePartitionPartitionsPartitionIdPatch'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function updatePartitionPartitionsPartitionIdPatchRequest($partition_id, $update_partition_params, string $contentType = self::contentTypes['updatePartitionPartitionsPartitionIdPatch'][0])
+    {
+
+        // verify the required parameter 'partition_id' is set
+        if ($partition_id === null || (is_array($partition_id) && count($partition_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $partition_id when calling updatePartitionPartitionsPartitionIdPatch'
+            );
+        }
+
+        // verify the required parameter 'update_partition_params' is set
+        if ($update_partition_params === null || (is_array($update_partition_params) && count($update_partition_params) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $update_partition_params when calling updatePartitionPartitionsPartitionIdPatch'
+            );
+        }
+
+
+        $resourcePath = '/partitions/{partition_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($partition_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'partition_id' . '}',
+                ObjectSerializer::toPathValue($partition_id),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($update_partition_params)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($update_partition_params));
+            } else {
+                $httpBody = $update_partition_params;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'PATCH',
             $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody

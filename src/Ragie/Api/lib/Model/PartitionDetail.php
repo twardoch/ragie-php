@@ -60,6 +60,9 @@ class PartitionDetail implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'string',
         'is_default' => 'bool',
         'limit_exceeded_at' => '\DateTime',
+        'description' => 'string',
+        'context_aware' => 'bool',
+        'metadata_schema' => 'array<string,\Ragie\Api\Model\CreatePartitionParamsMetadataSchemaValue>',
         'limits' => '\Ragie\Api\Model\PartitionLimits',
         'stats' => '\Ragie\Api\Model\PartitionStats'
     ];
@@ -75,6 +78,9 @@ class PartitionDetail implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => null,
         'is_default' => null,
         'limit_exceeded_at' => 'date-time',
+        'description' => null,
+        'context_aware' => null,
+        'metadata_schema' => null,
         'limits' => null,
         'stats' => null
     ];
@@ -88,6 +94,9 @@ class PartitionDetail implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => false,
         'is_default' => false,
         'limit_exceeded_at' => true,
+        'description' => true,
+        'context_aware' => false,
+        'metadata_schema' => true,
         'limits' => false,
         'stats' => false
     ];
@@ -181,6 +190,9 @@ class PartitionDetail implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'name',
         'is_default' => 'is_default',
         'limit_exceeded_at' => 'limit_exceeded_at',
+        'description' => 'description',
+        'context_aware' => 'context_aware',
+        'metadata_schema' => 'metadata_schema',
         'limits' => 'limits',
         'stats' => 'stats'
     ];
@@ -194,6 +206,9 @@ class PartitionDetail implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'setName',
         'is_default' => 'setIsDefault',
         'limit_exceeded_at' => 'setLimitExceededAt',
+        'description' => 'setDescription',
+        'context_aware' => 'setContextAware',
+        'metadata_schema' => 'setMetadataSchema',
         'limits' => 'setLimits',
         'stats' => 'setStats'
     ];
@@ -207,6 +222,9 @@ class PartitionDetail implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'getName',
         'is_default' => 'getIsDefault',
         'limit_exceeded_at' => 'getLimitExceededAt',
+        'description' => 'getDescription',
+        'context_aware' => 'getContextAware',
+        'metadata_schema' => 'getMetadataSchema',
         'limits' => 'getLimits',
         'stats' => 'getStats'
     ];
@@ -271,6 +289,9 @@ class PartitionDetail implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('is_default', $data ?? [], null);
         $this->setIfExists('limit_exceeded_at', $data ?? [], null);
+        $this->setIfExists('description', $data ?? [], null);
+        $this->setIfExists('context_aware', $data ?? [], null);
+        $this->setIfExists('metadata_schema', $data ?? [], null);
         $this->setIfExists('limits', $data ?? [], null);
         $this->setIfExists('stats', $data ?? [], null);
     }
@@ -307,6 +328,15 @@ class PartitionDetail implements ModelInterface, ArrayAccess, \JsonSerializable
         }
         if ($this->container['is_default'] === null) {
             $invalidProperties[] = "'is_default' can't be null";
+        }
+        if ($this->container['description'] === null) {
+            $invalidProperties[] = "'description' can't be null";
+        }
+        if ($this->container['context_aware'] === null) {
+            $invalidProperties[] = "'context_aware' can't be null";
+        }
+        if ($this->container['metadata_schema'] === null) {
+            $invalidProperties[] = "'metadata_schema' can't be null";
         }
         if ($this->container['limits'] === null) {
             $invalidProperties[] = "'limits' can't be null";
@@ -413,6 +443,101 @@ class PartitionDetail implements ModelInterface, ArrayAccess, \JsonSerializable
             }
         }
         $this->container['limit_exceeded_at'] = $limit_exceeded_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     *
+     * @param string $description description
+     *
+     * @return self
+     */
+    public function setDescription($description)
+    {
+        if (is_null($description)) {
+            array_push($this->openAPINullablesSetToNull, 'description');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('description', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets context_aware
+     *
+     * @return bool
+     */
+    public function getContextAware()
+    {
+        return $this->container['context_aware'];
+    }
+
+    /**
+     * Sets context_aware
+     *
+     * @param bool $context_aware context_aware
+     *
+     * @return self
+     */
+    public function setContextAware($context_aware)
+    {
+        if (is_null($context_aware)) {
+            throw new \InvalidArgumentException('non-nullable context_aware cannot be null');
+        }
+        $this->container['context_aware'] = $context_aware;
+
+        return $this;
+    }
+
+    /**
+     * Gets metadata_schema
+     *
+     * @return array<string,\Ragie\Api\Model\CreatePartitionParamsMetadataSchemaValue>
+     */
+    public function getMetadataSchema()
+    {
+        return $this->container['metadata_schema'];
+    }
+
+    /**
+     * Sets metadata_schema
+     *
+     * @param array<string,\Ragie\Api\Model\CreatePartitionParamsMetadataSchemaValue> $metadata_schema metadata_schema
+     *
+     * @return self
+     */
+    public function setMetadataSchema($metadata_schema)
+    {
+        if (is_null($metadata_schema)) {
+            array_push($this->openAPINullablesSetToNull, 'metadata_schema');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('metadata_schema', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['metadata_schema'] = $metadata_schema;
 
         return $this;
     }

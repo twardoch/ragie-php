@@ -1,4 +1,5 @@
 <?php
+
 /**
  * RetrievalTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class RetrievalTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

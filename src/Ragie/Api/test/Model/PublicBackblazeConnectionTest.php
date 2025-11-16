@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PublicBackblazeConnectionTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class PublicBackblazeConnectionTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

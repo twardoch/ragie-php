@@ -1,4 +1,5 @@
 <?php
+
 /**
  * EntityExtractedWebhookPayloadTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class EntityExtractedWebhookPayloadTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

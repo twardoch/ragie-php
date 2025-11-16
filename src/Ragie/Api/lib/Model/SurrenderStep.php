@@ -60,6 +60,7 @@ class SurrenderStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'string',
         'think' => 'string',
         'current_question' => 'string',
+        'errored' => 'bool',
         'partial_answer' => '\Ragie\Api\Model\Answer'
     ];
 
@@ -74,6 +75,7 @@ class SurrenderStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => null,
         'think' => null,
         'current_question' => null,
+        'errored' => null,
         'partial_answer' => null
     ];
 
@@ -86,6 +88,7 @@ class SurrenderStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => false,
         'think' => false,
         'current_question' => false,
+        'errored' => false,
         'partial_answer' => false
     ];
 
@@ -178,6 +181,7 @@ class SurrenderStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'type',
         'think' => 'think',
         'current_question' => 'current_question',
+        'errored' => 'errored',
         'partial_answer' => 'partial_answer'
     ];
 
@@ -190,6 +194,7 @@ class SurrenderStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'setType',
         'think' => 'setThink',
         'current_question' => 'setCurrentQuestion',
+        'errored' => 'setErrored',
         'partial_answer' => 'setPartialAnswer'
     ];
 
@@ -202,6 +207,7 @@ class SurrenderStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'getType',
         'think' => 'getThink',
         'current_question' => 'getCurrentQuestion',
+        'errored' => 'getErrored',
         'partial_answer' => 'getPartialAnswer'
     ];
 
@@ -278,6 +284,7 @@ class SurrenderStep implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('type', $data ?? [], 'surrender');
         $this->setIfExists('think', $data ?? [], null);
         $this->setIfExists('current_question', $data ?? [], null);
+        $this->setIfExists('errored', $data ?? [], false);
         $this->setIfExists('partial_answer', $data ?? [], null);
     }
 
@@ -428,6 +435,33 @@ class SurrenderStep implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable current_question cannot be null');
         }
         $this->container['current_question'] = $current_question;
+
+        return $this;
+    }
+
+    /**
+     * Gets errored
+     *
+     * @return bool|null
+     */
+    public function getErrored()
+    {
+        return $this->container['errored'];
+    }
+
+    /**
+     * Sets errored
+     *
+     * @param bool|null $errored errored
+     *
+     * @return self
+     */
+    public function setErrored($errored)
+    {
+        if (is_null($errored)) {
+            throw new \InvalidArgumentException('non-nullable errored cannot be null');
+        }
+        $this->container['errored'] = $errored;
 
         return $this;
     }

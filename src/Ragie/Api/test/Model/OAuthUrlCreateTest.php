@@ -1,4 +1,5 @@
 <?php
+
 /**
  * OAuthUrlCreateTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class OAuthUrlCreateTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

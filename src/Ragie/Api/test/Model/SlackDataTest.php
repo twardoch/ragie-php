@@ -1,4 +1,5 @@
 <?php
+
 /**
  * SlackDataTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class SlackDataTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AuthenticatorGoogleDriveConnectionTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class AuthenticatorGoogleDriveConnectionTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

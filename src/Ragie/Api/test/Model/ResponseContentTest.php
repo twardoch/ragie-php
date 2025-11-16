@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ResponseContentTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class ResponseContentTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ModelUsageTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class ModelUsageTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

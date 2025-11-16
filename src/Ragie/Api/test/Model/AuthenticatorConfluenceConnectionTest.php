@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AuthenticatorConfluenceConnectionTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class AuthenticatorConfluenceConnectionTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

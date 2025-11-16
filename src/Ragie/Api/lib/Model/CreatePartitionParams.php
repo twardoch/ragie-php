@@ -58,6 +58,7 @@ class CreatePartitionParams implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPITypes = [
         'name' => 'string',
+        'description' => 'string',
         'pages_hosted_limit_monthly' => 'int',
         'pages_processed_limit_monthly' => 'int',
         'pages_hosted_limit_max' => 'int',
@@ -82,6 +83,7 @@ class CreatePartitionParams implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPIFormats = [
         'name' => null,
+        'description' => null,
         'pages_hosted_limit_monthly' => null,
         'pages_processed_limit_monthly' => null,
         'pages_hosted_limit_max' => null,
@@ -104,6 +106,7 @@ class CreatePartitionParams implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static array $openAPINullables = [
         'name' => false,
+        'description' => true,
         'pages_hosted_limit_monthly' => true,
         'pages_processed_limit_monthly' => true,
         'pages_hosted_limit_max' => true,
@@ -206,6 +209,7 @@ class CreatePartitionParams implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $attributeMap = [
         'name' => 'name',
+        'description' => 'description',
         'pages_hosted_limit_monthly' => 'pages_hosted_limit_monthly',
         'pages_processed_limit_monthly' => 'pages_processed_limit_monthly',
         'pages_hosted_limit_max' => 'pages_hosted_limit_max',
@@ -228,6 +232,7 @@ class CreatePartitionParams implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $setters = [
         'name' => 'setName',
+        'description' => 'setDescription',
         'pages_hosted_limit_monthly' => 'setPagesHostedLimitMonthly',
         'pages_processed_limit_monthly' => 'setPagesProcessedLimitMonthly',
         'pages_hosted_limit_max' => 'setPagesHostedLimitMax',
@@ -250,6 +255,7 @@ class CreatePartitionParams implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $getters = [
         'name' => 'getName',
+        'description' => 'getDescription',
         'pages_hosted_limit_monthly' => 'getPagesHostedLimitMonthly',
         'pages_processed_limit_monthly' => 'getPagesProcessedLimitMonthly',
         'pages_hosted_limit_max' => 'getPagesHostedLimitMax',
@@ -323,6 +329,7 @@ class CreatePartitionParams implements ModelInterface, ArrayAccess, \JsonSeriali
     public function __construct(?array $data = null)
     {
         $this->setIfExists('name', $data ?? [], null);
+        $this->setIfExists('description', $data ?? [], null);
         $this->setIfExists('pages_hosted_limit_monthly', $data ?? [], null);
         $this->setIfExists('pages_processed_limit_monthly', $data ?? [], null);
         $this->setIfExists('pages_hosted_limit_max', $data ?? [], null);
@@ -454,6 +461,40 @@ class CreatePartitionParams implements ModelInterface, ArrayAccess, \JsonSeriali
             throw new \InvalidArgumentException('non-nullable name cannot be null');
         }
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     *
+     * @return string|null
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     *
+     * @param string|null $description description
+     *
+     * @return self
+     */
+    public function setDescription($description)
+    {
+        if (is_null($description)) {
+            array_push($this->openAPINullablesSetToNull, 'description');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('description', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['description'] = $description;
 
         return $this;
     }

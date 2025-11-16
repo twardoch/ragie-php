@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CreateAuthenticatorConnectionTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class CreateAuthenticatorConnectionTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

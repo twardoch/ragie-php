@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ValidationErrorLocInnerTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class ValidationErrorLocInnerTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

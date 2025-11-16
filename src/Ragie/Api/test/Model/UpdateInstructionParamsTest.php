@@ -1,4 +1,5 @@
 <?php
+
 /**
  * UpdateInstructionParamsTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class UpdateInstructionParamsTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CreateDocumentRawParamsTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class CreateDocumentRawParamsTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

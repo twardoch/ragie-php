@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Mode1Test
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class Mode1Test extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

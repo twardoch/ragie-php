@@ -1,4 +1,5 @@
 <?php
+
 /**
  * GoogleFolderDataTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class GoogleFolderDataTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

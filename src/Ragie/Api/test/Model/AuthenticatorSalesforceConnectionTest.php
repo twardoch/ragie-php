@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AuthenticatorSalesforceConnectionTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class AuthenticatorSalesforceConnectionTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

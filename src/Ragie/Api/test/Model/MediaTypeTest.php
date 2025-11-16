@@ -1,4 +1,5 @@
 <?php
+
 /**
  * MediaTypeTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class MediaTypeTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

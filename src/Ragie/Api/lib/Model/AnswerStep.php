@@ -60,6 +60,7 @@ class AnswerStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'string',
         'think' => 'string',
         'current_question' => 'string',
+        'errored' => 'bool',
         'other_resolved_question_ids' => 'string[]',
         'answer' => '\Ragie\Api\Model\Answer'
     ];
@@ -75,6 +76,7 @@ class AnswerStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => null,
         'think' => null,
         'current_question' => null,
+        'errored' => null,
         'other_resolved_question_ids' => null,
         'answer' => null
     ];
@@ -88,6 +90,7 @@ class AnswerStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => false,
         'think' => false,
         'current_question' => false,
+        'errored' => false,
         'other_resolved_question_ids' => false,
         'answer' => false
     ];
@@ -181,6 +184,7 @@ class AnswerStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'type',
         'think' => 'think',
         'current_question' => 'current_question',
+        'errored' => 'errored',
         'other_resolved_question_ids' => 'other_resolved_question_ids',
         'answer' => 'answer'
     ];
@@ -194,6 +198,7 @@ class AnswerStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'setType',
         'think' => 'setThink',
         'current_question' => 'setCurrentQuestion',
+        'errored' => 'setErrored',
         'other_resolved_question_ids' => 'setOtherResolvedQuestionIds',
         'answer' => 'setAnswer'
     ];
@@ -207,6 +212,7 @@ class AnswerStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'getType',
         'think' => 'getThink',
         'current_question' => 'getCurrentQuestion',
+        'errored' => 'getErrored',
         'other_resolved_question_ids' => 'getOtherResolvedQuestionIds',
         'answer' => 'getAnswer'
     ];
@@ -284,6 +290,7 @@ class AnswerStep implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('type', $data ?? [], 'answer');
         $this->setIfExists('think', $data ?? [], null);
         $this->setIfExists('current_question', $data ?? [], null);
+        $this->setIfExists('errored', $data ?? [], false);
         $this->setIfExists('other_resolved_question_ids', $data ?? [], null);
         $this->setIfExists('answer', $data ?? [], null);
     }
@@ -435,6 +442,33 @@ class AnswerStep implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable current_question cannot be null');
         }
         $this->container['current_question'] = $current_question;
+
+        return $this;
+    }
+
+    /**
+     * Gets errored
+     *
+     * @return bool|null
+     */
+    public function getErrored()
+    {
+        return $this->container['errored'];
+    }
+
+    /**
+     * Sets errored
+     *
+     * @param bool|null $errored errored
+     *
+     * @return self
+     */
+    public function setErrored($errored)
+    {
+        if (is_null($errored)) {
+            throw new \InvalidArgumentException('non-nullable errored cannot be null');
+        }
+        $this->container['errored'] = $errored;
 
         return $this;
     }

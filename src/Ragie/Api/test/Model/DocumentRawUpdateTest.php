@@ -1,4 +1,5 @@
 <?php
+
 /**
  * DocumentRawUpdateTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class DocumentRawUpdateTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

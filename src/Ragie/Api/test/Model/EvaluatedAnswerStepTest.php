@@ -1,4 +1,5 @@
 <?php
+
 /**
  * EvaluatedAnswerStepTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class EvaluatedAnswerStepTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

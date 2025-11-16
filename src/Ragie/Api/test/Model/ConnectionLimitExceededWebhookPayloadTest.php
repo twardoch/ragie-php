@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ConnectionLimitExceededWebhookPayloadTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class ConnectionLimitExceededWebhookPayloadTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

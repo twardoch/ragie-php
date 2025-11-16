@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PartitionLimitResetWebhookTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class PartitionLimitResetWebhookTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

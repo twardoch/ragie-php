@@ -1,4 +1,5 @@
 <?php
+
 /**
  * FreshdeskDataTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class FreshdeskDataTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

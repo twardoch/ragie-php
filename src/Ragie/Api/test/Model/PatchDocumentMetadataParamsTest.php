@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PatchDocumentMetadataParamsTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class PatchDocumentMetadataParamsTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

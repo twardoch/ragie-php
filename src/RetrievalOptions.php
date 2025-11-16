@@ -7,6 +7,7 @@ declare(strict_types=1);
 namespace Ragie;
 
 use Ragie\Api\Model\RetrieveParams;
+use Ragie\Exception\InvalidParameterException;
 
 /**
  * Fluent builder for retrieval parameters
@@ -62,14 +63,19 @@ final class RetrievalOptions
      *
      * @param int $topK Number of chunks to retrieve (must be positive)
      *
+     * @example
+     * ```php
+     * $options = RetrievalOptions::create()->withTopK(10);
+     * // Returns top 10 most relevant chunks
+     * ```
      *
-     * @throws \InvalidArgumentException If topK is not positive
+     * @throws InvalidParameterException If topK is not positive
      * @return self New instance with the updated value
      */
     public function withTopK(int $topK): self
     {
         if ($topK <= 0) {
-            throw new \InvalidArgumentException('topK must be a positive integer');
+            throw InvalidParameterException::invalidTopK($topK);
         }
 
         $clone = clone $this;
@@ -115,6 +121,15 @@ final class RetrievalOptions
      *
      * @param bool $rerank Whether to rerank results (default: true)
      *
+     * @example
+     * ```php
+     * $options = RetrievalOptions::create()->withRerank();
+     * // Enable reranking for more accurate results (slight performance cost)
+     *
+     * $options = RetrievalOptions::create()->withRerank(false);
+     * // Disable reranking for faster retrieval
+     * ```
+     *
      * @return self New instance with the updated value
      */
     public function withRerank(bool $rerank = true): self
@@ -133,13 +148,13 @@ final class RetrievalOptions
      * @param int $max Maximum chunks per document (must be positive)
      *
      *
-     * @throws \InvalidArgumentException If max is not positive
+     * @throws InvalidParameterException If max is not positive
      * @return self New instance with the updated value
      */
     public function withMaxChunksPerDocument(int $max): self
     {
         if ($max <= 0) {
-            throw new \InvalidArgumentException('maxChunksPerDocument must be a positive integer');
+            throw InvalidParameterException::invalidMaxChunks($max);
         }
 
         $clone = clone $this;
@@ -156,13 +171,17 @@ final class RetrievalOptions
      * @param string $partition Partition identifier
      *
      *
-     * @throws \InvalidArgumentException If partition is empty
+     * @throws InvalidParameterException If partition is empty or whitespace
      * @return self New instance with the updated value
      */
     public function withPartition(string $partition): self
     {
-        if (empty(trim($partition))) {
-            throw new \InvalidArgumentException('partition cannot be empty');
+        $trimmed = trim($partition);
+        if ($trimmed === '') {
+            if ($partition === '') {
+                throw InvalidParameterException::emptyPartition();
+            }
+            throw InvalidParameterException::whitespacePartition();
         }
 
         $clone = clone $this;

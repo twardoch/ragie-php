@@ -60,6 +60,7 @@ class CodeStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'string',
         'think' => 'string',
         'current_question' => 'string',
+        'errored' => 'bool',
         'code_issue' => 'string',
         'code' => 'string',
         'code_result' => 'string'
@@ -76,6 +77,7 @@ class CodeStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => null,
         'think' => null,
         'current_question' => null,
+        'errored' => null,
         'code_issue' => null,
         'code' => null,
         'code_result' => null
@@ -90,6 +92,7 @@ class CodeStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => false,
         'think' => false,
         'current_question' => false,
+        'errored' => false,
         'code_issue' => false,
         'code' => false,
         'code_result' => false
@@ -184,6 +187,7 @@ class CodeStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'type',
         'think' => 'think',
         'current_question' => 'current_question',
+        'errored' => 'errored',
         'code_issue' => 'code_issue',
         'code' => 'code',
         'code_result' => 'code_result'
@@ -198,6 +202,7 @@ class CodeStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'setType',
         'think' => 'setThink',
         'current_question' => 'setCurrentQuestion',
+        'errored' => 'setErrored',
         'code_issue' => 'setCodeIssue',
         'code' => 'setCode',
         'code_result' => 'setCodeResult'
@@ -212,6 +217,7 @@ class CodeStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'getType',
         'think' => 'getThink',
         'current_question' => 'getCurrentQuestion',
+        'errored' => 'getErrored',
         'code_issue' => 'getCodeIssue',
         'code' => 'getCode',
         'code_result' => 'getCodeResult'
@@ -290,6 +296,7 @@ class CodeStep implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('type', $data ?? [], 'code');
         $this->setIfExists('think', $data ?? [], null);
         $this->setIfExists('current_question', $data ?? [], null);
+        $this->setIfExists('errored', $data ?? [], false);
         $this->setIfExists('code_issue', $data ?? [], null);
         $this->setIfExists('code', $data ?? [], '');
         $this->setIfExists('code_result', $data ?? [], '');
@@ -442,6 +449,33 @@ class CodeStep implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable current_question cannot be null');
         }
         $this->container['current_question'] = $current_question;
+
+        return $this;
+    }
+
+    /**
+     * Gets errored
+     *
+     * @return bool|null
+     */
+    public function getErrored()
+    {
+        return $this->container['errored'];
+    }
+
+    /**
+     * Sets errored
+     *
+     * @param bool|null $errored errored
+     *
+     * @return self
+     */
+    public function setErrored($errored)
+    {
+        if (is_null($errored)) {
+            throw new \InvalidArgumentException('non-nullable errored cannot be null');
+        }
+        $this->container['errored'] = $errored;
 
         return $this;
     }

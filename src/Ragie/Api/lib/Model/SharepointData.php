@@ -58,6 +58,7 @@ class SharepointData implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'site' => '\Ragie\Api\Model\SharepointSiteData',
+        'drive' => '\Ragie\Api\Model\SharepointDriveData',
         'files' => '\Ragie\Api\Model\SharepointFileData[]'
     ];
 
@@ -70,6 +71,7 @@ class SharepointData implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'site' => null,
+        'drive' => null,
         'files' => null
     ];
 
@@ -80,6 +82,7 @@ class SharepointData implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'site' => false,
+        'drive' => true,
         'files' => false
     ];
 
@@ -170,6 +173,7 @@ class SharepointData implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'site' => 'site',
+        'drive' => 'drive',
         'files' => 'files'
     ];
 
@@ -180,6 +184,7 @@ class SharepointData implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'site' => 'setSite',
+        'drive' => 'setDrive',
         'files' => 'setFiles'
     ];
 
@@ -190,6 +195,7 @@ class SharepointData implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'site' => 'getSite',
+        'drive' => 'getDrive',
         'files' => 'getFiles'
     ];
 
@@ -251,6 +257,7 @@ class SharepointData implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(?array $data = null)
     {
         $this->setIfExists('site', $data ?? [], null);
+        $this->setIfExists('drive', $data ?? [], null);
         $this->setIfExists('files', $data ?? [], null);
     }
 
@@ -283,6 +290,9 @@ class SharepointData implements ModelInterface, ArrayAccess, \JsonSerializable
 
         if ($this->container['site'] === null) {
             $invalidProperties[] = "'site' can't be null";
+        }
+        if ($this->container['drive'] === null) {
+            $invalidProperties[] = "'drive' can't be null";
         }
         if ($this->container['files'] === null) {
             $invalidProperties[] = "'files' can't be null";
@@ -325,6 +335,40 @@ class SharepointData implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable site cannot be null');
         }
         $this->container['site'] = $site;
+
+        return $this;
+    }
+
+    /**
+     * Gets drive
+     *
+     * @return \Ragie\Api\Model\SharepointDriveData
+     */
+    public function getDrive()
+    {
+        return $this->container['drive'];
+    }
+
+    /**
+     * Sets drive
+     *
+     * @param \Ragie\Api\Model\SharepointDriveData $drive drive
+     *
+     * @return self
+     */
+    public function setDrive($drive)
+    {
+        if (is_null($drive)) {
+            array_push($this->openAPINullablesSetToNull, 'drive');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('drive', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['drive'] = $drive;
 
         return $this;
     }

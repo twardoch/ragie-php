@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ToolTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class ToolTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

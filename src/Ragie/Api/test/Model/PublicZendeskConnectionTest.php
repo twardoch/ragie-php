@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PublicZendeskConnectionTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class PublicZendeskConnectionTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

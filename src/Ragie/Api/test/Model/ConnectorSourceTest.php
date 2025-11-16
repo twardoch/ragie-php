@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ConnectorSourceTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class ConnectorSourceTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

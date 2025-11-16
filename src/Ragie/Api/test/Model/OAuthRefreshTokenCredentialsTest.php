@@ -1,4 +1,5 @@
 <?php
+
 /**
  * OAuthRefreshTokenCredentialsTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class OAuthRefreshTokenCredentialsTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

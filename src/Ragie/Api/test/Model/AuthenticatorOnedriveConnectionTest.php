@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AuthenticatorOnedriveConnectionTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class AuthenticatorOnedriveConnectionTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

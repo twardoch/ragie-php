@@ -1,4 +1,5 @@
 <?php
+
 /**
  * DeleteConnectionPayloadTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class DeleteConnectionPayloadTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

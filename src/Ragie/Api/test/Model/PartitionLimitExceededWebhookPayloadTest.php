@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PartitionLimitExceededWebhookPayloadTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class PartitionLimitExceededWebhookPayloadTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

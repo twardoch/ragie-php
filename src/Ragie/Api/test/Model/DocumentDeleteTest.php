@@ -1,4 +1,5 @@
 <?php
+
 /**
  * DocumentDeleteTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class DocumentDeleteTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

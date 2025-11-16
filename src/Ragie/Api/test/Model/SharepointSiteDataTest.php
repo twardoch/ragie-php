@@ -1,4 +1,5 @@
 <?php
+
 /**
  * SharepointSiteDataTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class SharepointSiteDataTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

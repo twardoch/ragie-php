@@ -1,4 +1,5 @@
 <?php
+
 /**
  * FinalAnswerStepsInnerTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class FinalAnswerStepsInnerTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

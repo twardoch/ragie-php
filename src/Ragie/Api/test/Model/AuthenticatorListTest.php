@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AuthenticatorListTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class AuthenticatorListTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

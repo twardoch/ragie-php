@@ -1,4 +1,5 @@
 <?php
+
 /**
  * IntercomDataTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class IntercomDataTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

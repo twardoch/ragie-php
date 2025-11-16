@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PublicS3CompatibleConnectionTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class PublicS3CompatibleConnectionTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

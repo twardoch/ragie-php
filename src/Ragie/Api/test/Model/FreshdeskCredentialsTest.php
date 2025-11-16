@@ -1,4 +1,5 @@
 <?php
+
 /**
  * FreshdeskCredentialsTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class FreshdeskCredentialsTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

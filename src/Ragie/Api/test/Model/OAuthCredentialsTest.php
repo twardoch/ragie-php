@@ -1,4 +1,5 @@
 <?php
+
 /**
  * OAuthCredentialsTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class OAuthCredentialsTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

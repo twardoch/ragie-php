@@ -1,4 +1,5 @@
 <?php
+
 /**
  * DocumentTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class DocumentTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

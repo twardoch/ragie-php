@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CreateDocumentFromUrlParamsTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class CreateDocumentFromUrlParamsTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

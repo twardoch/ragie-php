@@ -45,6 +45,12 @@ final class RetrievalResult implements \Countable
 {
     private Retrieval $retrieval;
 
+    /** @var string[]|null Memoized chunk texts */
+    private ?array $chunkTexts = null;
+
+    /** @var string[]|null Memoized document IDs */
+    private ?array $documentIds = null;
+
     /**
      * Wrap an API Retrieval response
      *
@@ -89,40 +95,50 @@ final class RetrievalResult implements \Countable
      * Get array of just the text content from all chunks
      *
      * Convenient method to extract just the text strings without the full chunk objects.
+     * Results are memoized for performance on repeated calls.
      *
      * @return string[] Array of text strings
      */
     public function getChunkTexts(): array
     {
-        return array_map(
-            static function (ScoredChunk $chunk): string {
-                $text = $chunk->getText();
-                // @phpstan-ignore-next-line getText() can return null from generated API
-                return $text ?? '';
-            },
-            $this->getChunks()
-        );
+        if ($this->chunkTexts === null) {
+            $this->chunkTexts = array_map(
+                static function (ScoredChunk $chunk): string {
+                    $text = $chunk->getText();
+                    // @phpstan-ignore-next-line getText() can return null from generated API
+                    return $text ?? '';
+                },
+                $this->getChunks()
+            );
+        }
+
+        return $this->chunkTexts;
     }
 
     /**
      * Get unique document IDs from the results
      *
      * Returns an array of unique document IDs that appear in the results.
+     * Results are memoized for performance on repeated calls.
      *
      * @return string[] Array of unique document IDs
      */
     public function getDocumentIds(): array
     {
-        $ids = array_map(
-            static function (ScoredChunk $chunk): string {
-                $id = $chunk->getDocumentId();
-                // @phpstan-ignore-next-line getDocumentId() can return null from generated API
-                return $id ?? '';
-            },
-            $this->getChunks()
-        );
+        if ($this->documentIds === null) {
+            $ids = array_map(
+                static function (ScoredChunk $chunk): string {
+                    $id = $chunk->getDocumentId();
+                    // @phpstan-ignore-next-line getDocumentId() can return null from generated API
+                    return $id ?? '';
+                },
+                $this->getChunks()
+            );
 
-        return array_values(array_unique(array_filter($ids)));
+            $this->documentIds = array_values(array_unique(array_filter($ids)));
+        }
+
+        return $this->documentIds;
     }
 
     /**

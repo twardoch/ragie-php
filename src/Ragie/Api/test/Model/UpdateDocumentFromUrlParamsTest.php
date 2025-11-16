@@ -1,4 +1,5 @@
 <?php
+
 /**
  * UpdateDocumentFromUrlParamsTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class UpdateDocumentFromUrlParamsTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

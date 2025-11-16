@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PayloadTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class PayloadTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * SearchStepWithQueryDetailsTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class SearchStepWithQueryDetailsTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

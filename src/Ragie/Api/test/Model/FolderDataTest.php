@@ -1,4 +1,5 @@
 <?php
+
 /**
  * FolderDataTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class FolderDataTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

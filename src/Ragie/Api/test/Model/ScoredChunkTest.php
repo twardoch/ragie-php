@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ScoredChunkTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class ScoredChunkTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

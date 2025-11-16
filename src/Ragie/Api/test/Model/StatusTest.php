@@ -1,4 +1,5 @@
 <?php
+
 /**
  * StatusTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class StatusTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

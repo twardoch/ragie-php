@@ -1,4 +1,5 @@
 <?php
+
 /**
  * HubspotDataTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class HubspotDataTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

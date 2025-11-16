@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AuthenticatorJiraConnectionTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class AuthenticatorJiraConnectionTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

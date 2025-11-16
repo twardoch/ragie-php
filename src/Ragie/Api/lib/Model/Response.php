@@ -364,6 +364,7 @@ class Response implements ModelInterface, ArrayAccess, \JsonSerializable
     public const STATUS_COMPLETED = 'completed';
     public const STATUS_FAILED = 'failed';
     public const STATUS_IN_PROGRESS = 'in_progress';
+    public const STATUS_CANCELLED = 'cancelled';
     public const MODEL_DEEP_SEARCH = 'deep-search';
     public const TOOL_CHOICE_AUTO = 'auto';
     public const TRUNCATION_DISABLED = 'disabled';
@@ -391,6 +392,7 @@ class Response implements ModelInterface, ArrayAccess, \JsonSerializable
             self::STATUS_COMPLETED,
             self::STATUS_FAILED,
             self::STATUS_IN_PROGRESS,
+            self::STATUS_CANCELLED,
         ];
     }
 

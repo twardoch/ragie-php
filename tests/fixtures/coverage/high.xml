@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- this_file: ragie-php/tests/fixtures/coverage/high.xml -->
+<coverage generated="1731880000" timestamp="1731880000">
+    <project timestamp="1731880000">
+        <metrics statements="200" coveredstatements="190" />
+    </project>
+</coverage>

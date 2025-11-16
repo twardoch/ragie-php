@@ -1,4 +1,5 @@
 <?php
+
 /**
  * VideoModalityDataTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class VideoModalityDataTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

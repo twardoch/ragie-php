@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CreateGoogleAuthenticatorTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class CreateGoogleAuthenticatorTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AuthenticatorSlackConnectionTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class AuthenticatorSlackConnectionTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

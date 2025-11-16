@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ZendeskCredentialsTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class ZendeskCredentialsTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

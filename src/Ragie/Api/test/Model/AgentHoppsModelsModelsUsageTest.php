@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AgentHoppsModelsModelsUsageTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class AgentHoppsModelsModelsUsageTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

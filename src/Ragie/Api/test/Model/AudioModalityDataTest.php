@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AudioModalityDataTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class AudioModalityDataTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

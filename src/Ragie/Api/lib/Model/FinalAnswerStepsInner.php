@@ -60,6 +60,7 @@ class FinalAnswerStepsInner implements ModelInterface, ArrayAccess, \JsonSeriali
         'type' => 'string',
         'think' => 'string',
         'current_question' => 'string',
+        'errored' => 'bool',
         'other_resolved_question_ids' => 'string[]',
         'answer' => '\Ragie\Api\Model\Answer',
         'search' => '\Ragie\Api\Model\Search',
@@ -85,6 +86,7 @@ class FinalAnswerStepsInner implements ModelInterface, ArrayAccess, \JsonSeriali
         'type' => null,
         'think' => null,
         'current_question' => null,
+        'errored' => null,
         'other_resolved_question_ids' => null,
         'answer' => null,
         'search' => null,
@@ -108,6 +110,7 @@ class FinalAnswerStepsInner implements ModelInterface, ArrayAccess, \JsonSeriali
         'type' => false,
         'think' => false,
         'current_question' => false,
+        'errored' => false,
         'other_resolved_question_ids' => false,
         'answer' => false,
         'search' => false,
@@ -211,6 +214,7 @@ class FinalAnswerStepsInner implements ModelInterface, ArrayAccess, \JsonSeriali
         'type' => 'type',
         'think' => 'think',
         'current_question' => 'current_question',
+        'errored' => 'errored',
         'other_resolved_question_ids' => 'other_resolved_question_ids',
         'answer' => 'answer',
         'search' => 'search',
@@ -234,6 +238,7 @@ class FinalAnswerStepsInner implements ModelInterface, ArrayAccess, \JsonSeriali
         'type' => 'setType',
         'think' => 'setThink',
         'current_question' => 'setCurrentQuestion',
+        'errored' => 'setErrored',
         'other_resolved_question_ids' => 'setOtherResolvedQuestionIds',
         'answer' => 'setAnswer',
         'search' => 'setSearch',
@@ -257,6 +262,7 @@ class FinalAnswerStepsInner implements ModelInterface, ArrayAccess, \JsonSeriali
         'type' => 'getType',
         'think' => 'getThink',
         'current_question' => 'getCurrentQuestion',
+        'errored' => 'getErrored',
         'other_resolved_question_ids' => 'getOtherResolvedQuestionIds',
         'answer' => 'getAnswer',
         'search' => 'getSearch',
@@ -319,6 +325,7 @@ class FinalAnswerStepsInner implements ModelInterface, ArrayAccess, \JsonSeriali
     public const TYPE_CODE = 'code';
     public const TYPE_SURRENDER = 'surrender';
     public const TYPE_EVALUATED_ANSWER = 'evaluated_answer';
+    public const TYPE_FAILED = 'failed';
 
     /**
      * Gets allowable values of the enum
@@ -335,6 +342,7 @@ class FinalAnswerStepsInner implements ModelInterface, ArrayAccess, \JsonSeriali
             self::TYPE_CODE,
             self::TYPE_SURRENDER,
             self::TYPE_EVALUATED_ANSWER,
+            self::TYPE_FAILED,
         ];
     }
 
@@ -356,6 +364,7 @@ class FinalAnswerStepsInner implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->setIfExists('type', $data ?? [], 'answer');
         $this->setIfExists('think', $data ?? [], null);
         $this->setIfExists('current_question', $data ?? [], null);
+        $this->setIfExists('errored', $data ?? [], false);
         $this->setIfExists('other_resolved_question_ids', $data ?? [], null);
         $this->setIfExists('answer', $data ?? [], null);
         $this->setIfExists('search', $data ?? [], null);
@@ -532,6 +541,33 @@ class FinalAnswerStepsInner implements ModelInterface, ArrayAccess, \JsonSeriali
             throw new \InvalidArgumentException('non-nullable current_question cannot be null');
         }
         $this->container['current_question'] = $current_question;
+
+        return $this;
+    }
+
+    /**
+     * Gets errored
+     *
+     * @return bool|null
+     */
+    public function getErrored()
+    {
+        return $this->container['errored'];
+    }
+
+    /**
+     * Sets errored
+     *
+     * @param bool|null $errored errored
+     *
+     * @return self
+     */
+    public function setErrored($errored)
+    {
+        if (is_null($errored)) {
+            throw new \InvalidArgumentException('non-nullable errored cannot be null');
+        }
+        $this->container['errored'] = $errored;
 
         return $this;
     }

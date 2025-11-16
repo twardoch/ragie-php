@@ -83,8 +83,6 @@ Class | Method | HTTP request | Description
 *BetaApi* | [**createAuthenticatorConnection**](docs/Api/BetaApi.md#createauthenticatorconnection) | **POST** /authenticators/{authenticator_id}/connection | Create Authenticator Connection
 *BetaApi* | [**createConnection**](docs/Api/BetaApi.md#createconnection) | **POST** /connection | Create Connection
 *BetaApi* | [**deleteAuthenticatorConnection**](docs/Api/BetaApi.md#deleteauthenticatorconnection) | **DELETE** /authenticators/{authenticator_id} | Delete Authenticator
-*BetaApi* | [**disableMcpPartitionsPartitionIdMcpDelete**](docs/Api/BetaApi.md#disablemcppartitionspartitionidmcpdelete) | **DELETE** /partitions/{partition_id}/mcp | Disable Mcp
-*BetaApi* | [**enableMcpPartitionsPartitionIdMcpPost**](docs/Api/BetaApi.md#enablemcppartitionspartitionidmcppost) | **POST** /partitions/{partition_id}/mcp | Enable Mcp
 *BetaApi* | [**listAuthenticators**](docs/Api/BetaApi.md#listauthenticators) | **GET** /authenticators | List Authenticators
 *ConnectionsApi* | [**createConnection**](docs/Api/ConnectionsApi.md#createconnection) | **POST** /connection | Create Connection
 *ConnectionsApi* | [**createOauthRedirectUrlConnectionsOauthPost**](docs/Api/ConnectionsApi.md#createoauthredirecturlconnectionsoauthpost) | **POST** /connections/oauth | Create Oauth Redirect Url
@@ -126,11 +124,10 @@ Class | Method | HTTP request | Description
 *EntitiesApi* | [**updateInstruction**](docs/Api/EntitiesApi.md#updateinstruction) | **PUT** /instructions/{instruction_id} | Update Instruction
 *PartitionsApi* | [**createPartitionPartitionsPost**](docs/Api/PartitionsApi.md#createpartitionpartitionspost) | **POST** /partitions | Create Partition
 *PartitionsApi* | [**deletePartitionPartitionsPartitionIdDelete**](docs/Api/PartitionsApi.md#deletepartitionpartitionspartitioniddelete) | **DELETE** /partitions/{partition_id} | Delete Partition
-*PartitionsApi* | [**disableMcpPartitionsPartitionIdMcpDelete**](docs/Api/PartitionsApi.md#disablemcppartitionspartitionidmcpdelete) | **DELETE** /partitions/{partition_id}/mcp | Disable Mcp
-*PartitionsApi* | [**enableMcpPartitionsPartitionIdMcpPost**](docs/Api/PartitionsApi.md#enablemcppartitionspartitionidmcppost) | **POST** /partitions/{partition_id}/mcp | Enable Mcp
 *PartitionsApi* | [**getPartitionPartitionsPartitionIdGet**](docs/Api/PartitionsApi.md#getpartitionpartitionspartitionidget) | **GET** /partitions/{partition_id} | Get Partition
 *PartitionsApi* | [**listPartitionsPartitionsGet**](docs/Api/PartitionsApi.md#listpartitionspartitionsget) | **GET** /partitions | List Partitions
 *PartitionsApi* | [**setPartitionLimitsPartitionsPartitionIdLimitsPut**](docs/Api/PartitionsApi.md#setpartitionlimitspartitionspartitionidlimitsput) | **PUT** /partitions/{partition_id}/limits | Set Partition Limits
+*PartitionsApi* | [**updatePartitionPartitionsPartitionIdPatch**](docs/Api/PartitionsApi.md#updatepartitionpartitionspartitionidpatch) | **PATCH** /partitions/{partition_id} | Update Partition
 *ResponsesApi* | [**createResponseResponsesPost**](docs/Api/ResponsesApi.md#createresponseresponsespost) | **POST** /responses | Create Response
 *ResponsesApi* | [**getResponseResponsesResponseIdGet**](docs/Api/ResponsesApi.md#getresponseresponsesresponseidget) | **GET** /responses/{response_id} | Get Response
 *RetrievalsApi* | [**retrieve**](docs/Api/RetrievalsApi.md#retrieve) | **POST** /retrievals | Retrieve
@@ -216,6 +213,7 @@ Class | Method | HTTP request | Description
 - [EntityList](docs/Model/EntityList.md)
 - [ErrorMessage](docs/Model/ErrorMessage.md)
 - [EvaluatedAnswerStep](docs/Model/EvaluatedAnswerStep.md)
+- [FailedStep](docs/Model/FailedStep.md)
 - [FileSearchOutput](docs/Model/FileSearchOutput.md)
 - [FileSearchResult](docs/Model/FileSearchResult.md)
 - [FinalAnswer](docs/Model/FinalAnswer.md)
@@ -296,6 +294,7 @@ Class | Method | HTTP request | Description
 - [SearchStepWithQueryDetails](docs/Model/SearchStepWithQueryDetails.md)
 - [SetConnectionEnabledPayload](docs/Model/SetConnectionEnabledPayload.md)
 - [SharepointData](docs/Model/SharepointData.md)
+- [SharepointDriveData](docs/Model/SharepointDriveData.md)
 - [SharepointFileData](docs/Model/SharepointFileData.md)
 - [SharepointSiteData](docs/Model/SharepointSiteData.md)
 - [SlackData](docs/Model/SlackData.md)
@@ -306,6 +305,7 @@ Class | Method | HTTP request | Description
 - [UpdateDocumentFromUrlParams](docs/Model/UpdateDocumentFromUrlParams.md)
 - [UpdateDocumentRawParams](docs/Model/UpdateDocumentRawParams.md)
 - [UpdateInstructionParams](docs/Model/UpdateInstructionParams.md)
+- [UpdatePartitionParams](docs/Model/UpdatePartitionParams.md)
 - [ValidationError](docs/Model/ValidationError.md)
 - [ValidationErrorLocInner](docs/Model/ValidationErrorLocInner.md)
 - [VideoModalityData](docs/Model/VideoModalityData.md)

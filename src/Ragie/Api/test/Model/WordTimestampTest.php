@@ -1,4 +1,5 @@
 <?php
+
 /**
  * WordTimestampTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class WordTimestampTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

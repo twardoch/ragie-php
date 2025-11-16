@@ -60,6 +60,7 @@ class SearchStepWithQueryDetails implements ModelInterface, ArrayAccess, \JsonSe
         'type' => 'string',
         'think' => 'string',
         'current_question' => 'string',
+        'errored' => 'bool',
         'search' => '\Ragie\Api\Model\Search',
         'query_details' => '\Ragie\Api\Model\QueryDetails[]',
         'search_log' => 'string'
@@ -76,6 +77,7 @@ class SearchStepWithQueryDetails implements ModelInterface, ArrayAccess, \JsonSe
         'type' => null,
         'think' => null,
         'current_question' => null,
+        'errored' => null,
         'search' => null,
         'query_details' => null,
         'search_log' => null
@@ -90,6 +92,7 @@ class SearchStepWithQueryDetails implements ModelInterface, ArrayAccess, \JsonSe
         'type' => false,
         'think' => false,
         'current_question' => false,
+        'errored' => false,
         'search' => false,
         'query_details' => false,
         'search_log' => false
@@ -184,6 +187,7 @@ class SearchStepWithQueryDetails implements ModelInterface, ArrayAccess, \JsonSe
         'type' => 'type',
         'think' => 'think',
         'current_question' => 'current_question',
+        'errored' => 'errored',
         'search' => 'search',
         'query_details' => 'query_details',
         'search_log' => 'search_log'
@@ -198,6 +202,7 @@ class SearchStepWithQueryDetails implements ModelInterface, ArrayAccess, \JsonSe
         'type' => 'setType',
         'think' => 'setThink',
         'current_question' => 'setCurrentQuestion',
+        'errored' => 'setErrored',
         'search' => 'setSearch',
         'query_details' => 'setQueryDetails',
         'search_log' => 'setSearchLog'
@@ -212,6 +217,7 @@ class SearchStepWithQueryDetails implements ModelInterface, ArrayAccess, \JsonSe
         'type' => 'getType',
         'think' => 'getThink',
         'current_question' => 'getCurrentQuestion',
+        'errored' => 'getErrored',
         'search' => 'getSearch',
         'query_details' => 'getQueryDetails',
         'search_log' => 'getSearchLog'
@@ -290,6 +296,7 @@ class SearchStepWithQueryDetails implements ModelInterface, ArrayAccess, \JsonSe
         $this->setIfExists('type', $data ?? [], 'search');
         $this->setIfExists('think', $data ?? [], null);
         $this->setIfExists('current_question', $data ?? [], null);
+        $this->setIfExists('errored', $data ?? [], false);
         $this->setIfExists('search', $data ?? [], null);
         $this->setIfExists('query_details', $data ?? [], null);
         $this->setIfExists('search_log', $data ?? [], '');
@@ -442,6 +449,33 @@ class SearchStepWithQueryDetails implements ModelInterface, ArrayAccess, \JsonSe
             throw new \InvalidArgumentException('non-nullable current_question cannot be null');
         }
         $this->container['current_question'] = $current_question;
+
+        return $this;
+    }
+
+    /**
+     * Gets errored
+     *
+     * @return bool|null
+     */
+    public function getErrored()
+    {
+        return $this->container['errored'];
+    }
+
+    /**
+     * Sets errored
+     *
+     * @param bool|null $errored errored
+     *
+     * @return self
+     */
+    public function setErrored($errored)
+    {
+        if (is_null($errored)) {
+            throw new \InvalidArgumentException('non-nullable errored cannot be null');
+        }
+        $this->container['errored'] = $errored;
 
         return $this;
     }

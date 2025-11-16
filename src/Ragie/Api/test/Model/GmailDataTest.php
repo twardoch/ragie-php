@@ -1,4 +1,5 @@
 <?php
+
 /**
  * GmailDataTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class GmailDataTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

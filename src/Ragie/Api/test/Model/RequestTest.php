@@ -1,4 +1,5 @@
 <?php
+
 /**
  * RequestTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class RequestTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

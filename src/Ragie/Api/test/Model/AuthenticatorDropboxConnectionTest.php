@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AuthenticatorDropboxConnectionTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class AuthenticatorDropboxConnectionTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

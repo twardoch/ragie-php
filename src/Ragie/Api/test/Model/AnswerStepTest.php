@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AnswerStepTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class AnswerStepTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

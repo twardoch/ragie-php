@@ -1,4 +1,5 @@
 <?php
+
 /**
  * BucketDataTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class BucketDataTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

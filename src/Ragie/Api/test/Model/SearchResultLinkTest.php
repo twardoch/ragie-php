@@ -1,4 +1,5 @@
 <?php
+
 /**
  * SearchResultLinkTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class SearchResultLinkTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

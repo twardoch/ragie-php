@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ZendeskDataTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class ZendeskDataTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

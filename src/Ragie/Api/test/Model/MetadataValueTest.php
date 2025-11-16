@@ -1,4 +1,5 @@
 <?php
+
 /**
  * MetadataValueTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class MetadataValueTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

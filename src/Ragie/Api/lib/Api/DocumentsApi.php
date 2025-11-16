@@ -3980,7 +3980,7 @@ class DocumentsApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/octet-stream', 'application/json', ],
+            ['*/*', 'application/json', ],
             $contentType,
             $multipart
         );

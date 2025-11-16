@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PaginationTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class PaginationTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

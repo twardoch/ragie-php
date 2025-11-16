@@ -30,7 +30,8 @@
     "guzzlehttp/guzzle": "^7.10",
     "guzzlehttp/psr7": "^2.8",
     "psr/http-client": "^1.0",
-    "psr/log": "^3.0"
+    "psr/log": "^3.0",
+    "psr/simple-cache": "^3.0"
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.88",
@@ -46,7 +47,8 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Ragie\\Tests\\": "tests/"
+      "Ragie\\Tests\\": "tests/",
+      "Ragie\\Dev\\": "dev/"
     }
   },
   "scripts": {
@@ -54,12 +56,23 @@
     "stan": "@php vendor/bin/phpstan analyse --configuration=phpstan.neon.dist",
     "psalm": "@php vendor/bin/psalm --config=psalm.xml",
     "test": "@php vendor/bin/phpunit --configuration=phpunit.xml.dist",
+    "coverage": [
+      "Composer\\Config::disableProcessTimeout",
+      "phpdbg -qrr vendor/bin/phpunit --configuration=phpunit.xml.dist --coverage-html=coverage --coverage-text"
+    ],
+    "coverage-check": [
+      "Composer\\Config::disableProcessTimeout",
+      "phpdbg -qrr vendor/bin/phpunit --configuration=phpunit.xml.dist --coverage-text --coverage-clover=coverage.xml --coverage-filter=src",
+      "@php coverage-checker.php coverage.xml 80"
+    ],
     "qa": [
       "@lint",
       "@stan",
       "@psalm",
       "@test"
-    ]
+    ],
+    "docs:build": "uvx zensical build --clean",
+    "docs:serve": "uvx zensical serve"
   },
   "config": {
     "sort-packages": true

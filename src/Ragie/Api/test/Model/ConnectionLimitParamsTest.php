@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ConnectionLimitParamsTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class ConnectionLimitParamsTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

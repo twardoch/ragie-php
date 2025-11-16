@@ -1,4 +1,5 @@
 <?php
+
 /**
  * DocumentChunkDetailModalityDataTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class DocumentChunkDetailModalityDataTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

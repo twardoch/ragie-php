@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PlanStepTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class PlanStepTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

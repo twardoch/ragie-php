@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ReasoningOutputTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class ReasoningOutputTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

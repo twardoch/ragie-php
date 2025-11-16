@@ -1,4 +1,5 @@
 <?php
+
 /**
  * DocumentChunkTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class DocumentChunkTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

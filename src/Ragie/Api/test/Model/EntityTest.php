@@ -1,4 +1,5 @@
 <?php
+
 /**
  * EntityTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class EntityTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

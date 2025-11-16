@@ -1,4 +1,5 @@
 <?php
+
 /**
  * IntercomCredentialsTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class IntercomCredentialsTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

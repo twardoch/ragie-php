@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PublicIntercomConnectionTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class PublicIntercomConnectionTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CodeInterpreterOutputTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class CodeInterpreterOutputTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

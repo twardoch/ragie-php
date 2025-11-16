@@ -59,7 +59,8 @@ class SharepointFileData implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $openAPITypes = [
         'id' => 'string',
         'name' => 'string',
-        'type' => 'string'
+        'type' => 'string',
+        'drive_id' => 'string'
     ];
 
     /**
@@ -72,7 +73,8 @@ class SharepointFileData implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
-        'type' => null
+        'type' => null,
+        'drive_id' => null
     ];
 
     /**
@@ -83,7 +85,8 @@ class SharepointFileData implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static array $openAPINullables = [
         'id' => false,
         'name' => false,
-        'type' => false
+        'type' => false,
+        'drive_id' => true
     ];
 
     /**
@@ -174,7 +177,8 @@ class SharepointFileData implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
-        'type' => 'type'
+        'type' => 'type',
+        'drive_id' => 'drive_id'
     ];
 
     /**
@@ -185,7 +189,8 @@ class SharepointFileData implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
-        'type' => 'setType'
+        'type' => 'setType',
+        'drive_id' => 'setDriveId'
     ];
 
     /**
@@ -196,7 +201,8 @@ class SharepointFileData implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
-        'type' => 'getType'
+        'type' => 'getType',
+        'drive_id' => 'getDriveId'
     ];
 
     /**
@@ -274,6 +280,7 @@ class SharepointFileData implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('drive_id', $data ?? [], null);
     }
 
     /**
@@ -321,6 +328,9 @@ class SharepointFileData implements ModelInterface, ArrayAccess, \JsonSerializab
             );
         }
 
+        if ($this->container['drive_id'] === null) {
+            $invalidProperties[] = "'drive_id' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -423,6 +433,40 @@ class SharepointFileData implements ModelInterface, ArrayAccess, \JsonSerializab
             );
         }
         $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets drive_id
+     *
+     * @return string
+     */
+    public function getDriveId()
+    {
+        return $this->container['drive_id'];
+    }
+
+    /**
+     * Sets drive_id
+     *
+     * @param string $drive_id drive_id
+     *
+     * @return self
+     */
+    public function setDriveId($drive_id)
+    {
+        if (is_null($drive_id)) {
+            array_push($this->openAPINullablesSetToNull, 'drive_id');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('drive_id', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['drive_id'] = $drive_id;
 
         return $this;
     }

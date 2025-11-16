@@ -1,4 +1,5 @@
 <?php
+
 /**
  * OAuthUrlResponseTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class OAuthUrlResponseTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CreatePartitionParamsTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class CreatePartitionParamsTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

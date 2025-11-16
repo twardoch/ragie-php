@@ -1,4 +1,5 @@
 <?php
+
 /**
  * LinkTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class LinkTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * SearchTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class SearchTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

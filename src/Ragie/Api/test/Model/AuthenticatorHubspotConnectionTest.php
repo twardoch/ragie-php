@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AuthenticatorHubspotConnectionTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class AuthenticatorHubspotConnectionTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

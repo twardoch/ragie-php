@@ -1,4 +1,5 @@
 <?php
+
 /**
  * DocumentMetadataUpdateTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class DocumentMetadataUpdateTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

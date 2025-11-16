@@ -97,6 +97,7 @@ lib/Model/EntityExtractedWebhookPayload.php
 lib/Model/EntityList.php
 lib/Model/ErrorMessage.php
 lib/Model/EvaluatedAnswerStep.php
+lib/Model/FailedStep.php
 lib/Model/FileSearchOutput.php
 lib/Model/FileSearchResult.php
 lib/Model/FinalAnswer.php
@@ -178,6 +179,7 @@ lib/Model/SearchStep.php
 lib/Model/SearchStepWithQueryDetails.php
 lib/Model/SetConnectionEnabledPayload.php
 lib/Model/SharepointData.php
+lib/Model/SharepointDriveData.php
 lib/Model/SharepointFileData.php
 lib/Model/SharepointSiteData.php
 lib/Model/SlackData.php
@@ -188,6 +190,7 @@ lib/Model/Tool.php
 lib/Model/UpdateDocumentFromUrlParams.php
 lib/Model/UpdateDocumentRawParams.php
 lib/Model/UpdateInstructionParams.php
+lib/Model/UpdatePartitionParams.php
 lib/Model/ValidationError.php
 lib/Model/ValidationErrorLocInner.php
 lib/Model/VideoModalityData.php

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PartitionListTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class PartitionListTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

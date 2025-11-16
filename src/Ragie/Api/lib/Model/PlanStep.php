@@ -60,6 +60,7 @@ class PlanStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'string',
         'think' => 'string',
         'current_question' => 'string',
+        'errored' => 'bool',
         'questions_to_answer' => 'string[]'
     ];
 
@@ -74,6 +75,7 @@ class PlanStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => null,
         'think' => null,
         'current_question' => null,
+        'errored' => null,
         'questions_to_answer' => null
     ];
 
@@ -86,6 +88,7 @@ class PlanStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => false,
         'think' => false,
         'current_question' => false,
+        'errored' => false,
         'questions_to_answer' => false
     ];
 
@@ -178,6 +181,7 @@ class PlanStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'type',
         'think' => 'think',
         'current_question' => 'current_question',
+        'errored' => 'errored',
         'questions_to_answer' => 'questions_to_answer'
     ];
 
@@ -190,6 +194,7 @@ class PlanStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'setType',
         'think' => 'setThink',
         'current_question' => 'setCurrentQuestion',
+        'errored' => 'setErrored',
         'questions_to_answer' => 'setQuestionsToAnswer'
     ];
 
@@ -202,6 +207,7 @@ class PlanStep implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'getType',
         'think' => 'getThink',
         'current_question' => 'getCurrentQuestion',
+        'errored' => 'getErrored',
         'questions_to_answer' => 'getQuestionsToAnswer'
     ];
 
@@ -278,6 +284,7 @@ class PlanStep implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('type', $data ?? [], 'plan');
         $this->setIfExists('think', $data ?? [], null);
         $this->setIfExists('current_question', $data ?? [], null);
+        $this->setIfExists('errored', $data ?? [], false);
         $this->setIfExists('questions_to_answer', $data ?? [], null);
     }
 
@@ -425,6 +432,33 @@ class PlanStep implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable current_question cannot be null');
         }
         $this->container['current_question'] = $current_question;
+
+        return $this;
+    }
+
+    /**
+     * Gets errored
+     *
+     * @return bool|null
+     */
+    public function getErrored()
+    {
+        return $this->container['errored'];
+    }
+
+    /**
+     * Sets errored
+     *
+     * @param bool|null $errored errored
+     *
+     * @return self
+     */
+    public function setErrored($errored)
+    {
+        if (is_null($errored)) {
+            throw new \InvalidArgumentException('non-nullable errored cannot be null');
+        }
+        $this->container['errored'] = $errored;
 
         return $this;
     }

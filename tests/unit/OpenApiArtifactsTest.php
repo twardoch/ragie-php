@@ -63,4 +63,39 @@ final class OpenApiArtifactsTest extends TestCase
         self::assertStringContainsString('openapi.json', $contents, 'Script must use the local openapi.json.');
         self::assertStringNotContainsString('https://api.ragie.ai/openapi.json', $contents, 'Script should not pull the remote spec directly.');
     }
+
+    public function testRegenStampTracksChecksumAndTimestamp(): void
+    {
+        $stampPath = $this->projectRoot() . '/src/Ragie/Api/.regen-stamp';
+        self::assertFileExists($stampPath, '.regen-stamp is missing. Run build_generatapi.sh after updating the spec.');
+
+        $stampContent = trim((string) file_get_contents($stampPath));
+        self::assertNotSame('', $stampContent, '.regen-stamp must contain metadata.');
+
+        $data = [];
+        foreach (preg_split('/\r\n|\r|\n/', $stampContent) as $line) {
+            if ($line === '') {
+                continue;
+            }
+            [$key, $value] = array_pad(explode('=', $line, 2), 2, '');
+            $data[$key] = $value;
+        }
+
+        self::assertArrayHasKey('spec_sha', $data, '.regen-stamp must record spec_sha.');
+        self::assertArrayHasKey('generated_at', $data, '.regen-stamp must record generated_at timestamp.');
+
+        $expectedSha = trim((string) file_get_contents($this->projectRoot() . '/openapi.sha256'));
+        self::assertSame(
+            $expectedSha,
+            $data['spec_sha'],
+            '.regen-stamp spec_sha must match openapi.sha256.'
+        );
+
+        $timestamp = \DateTimeImmutable::createFromFormat(\DateTimeInterface::ATOM, $data['generated_at']);
+        self::assertInstanceOf(
+            \DateTimeImmutable::class,
+            $timestamp,
+            '.regen-stamp generated_at must be a valid ISO-8601 timestamp.'
+        );
+    }
 }

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AuthenticatorGmailConnectionTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class AuthenticatorGmailConnectionTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

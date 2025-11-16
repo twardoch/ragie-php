@@ -1,4 +1,5 @@
 <?php
+
 /**
  * OutputTokenDetailsTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class OutputTokenDetailsTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

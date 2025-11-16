@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ConnectionSyncStartedWebhookPayloadTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class ConnectionSyncStartedWebhookPayloadTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

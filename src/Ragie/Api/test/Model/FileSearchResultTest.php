@@ -1,4 +1,5 @@
 <?php
+
 /**
  * FileSearchResultTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class FileSearchResultTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

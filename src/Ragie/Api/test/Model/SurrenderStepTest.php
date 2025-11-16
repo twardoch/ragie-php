@@ -1,4 +1,5 @@
 <?php
+
 /**
  * SurrenderStepTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class SurrenderStepTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

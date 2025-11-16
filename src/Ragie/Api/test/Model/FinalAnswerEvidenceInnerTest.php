@@ -1,4 +1,5 @@
 <?php
+
 /**
  * FinalAnswerEvidenceInnerTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class FinalAnswerEvidenceInnerTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

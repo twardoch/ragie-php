@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CodeInterpreterEvidenceTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class CodeInterpreterEvidenceTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AccessTokenCredentialsTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class AccessTokenCredentialsTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

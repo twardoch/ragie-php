@@ -1,4 +1,5 @@
 <?php
+
 /**
  * FinalAnswerTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class FinalAnswerTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

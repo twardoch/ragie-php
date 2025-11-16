@@ -1,4 +1,5 @@
 <?php
+
 /**
  * DocumentDeleteWebhookTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class DocumentDeleteWebhookTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

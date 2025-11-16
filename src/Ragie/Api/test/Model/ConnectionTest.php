@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ConnectionTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class ConnectionTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

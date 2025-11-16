@@ -1,4 +1,5 @@
 <?php
+
 /**
  * DocumentUpdateWebhookPayloadTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class DocumentUpdateWebhookPayloadTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

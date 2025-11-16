@@ -60,6 +60,7 @@ class EvaluatedAnswerStep implements ModelInterface, ArrayAccess, \JsonSerializa
         'type' => 'string',
         'think' => 'string',
         'current_question' => 'string',
+        'errored' => 'bool',
         'answer' => '\Ragie\Api\Model\Answer',
         'other_resolved_question_ids' => 'string[]',
         'eval_passed' => 'bool',
@@ -77,6 +78,7 @@ class EvaluatedAnswerStep implements ModelInterface, ArrayAccess, \JsonSerializa
         'type' => null,
         'think' => null,
         'current_question' => null,
+        'errored' => null,
         'answer' => null,
         'other_resolved_question_ids' => null,
         'eval_passed' => null,
@@ -92,6 +94,7 @@ class EvaluatedAnswerStep implements ModelInterface, ArrayAccess, \JsonSerializa
         'type' => false,
         'think' => false,
         'current_question' => false,
+        'errored' => false,
         'answer' => false,
         'other_resolved_question_ids' => false,
         'eval_passed' => false,
@@ -187,6 +190,7 @@ class EvaluatedAnswerStep implements ModelInterface, ArrayAccess, \JsonSerializa
         'type' => 'type',
         'think' => 'think',
         'current_question' => 'current_question',
+        'errored' => 'errored',
         'answer' => 'answer',
         'other_resolved_question_ids' => 'other_resolved_question_ids',
         'eval_passed' => 'eval_passed',
@@ -202,6 +206,7 @@ class EvaluatedAnswerStep implements ModelInterface, ArrayAccess, \JsonSerializa
         'type' => 'setType',
         'think' => 'setThink',
         'current_question' => 'setCurrentQuestion',
+        'errored' => 'setErrored',
         'answer' => 'setAnswer',
         'other_resolved_question_ids' => 'setOtherResolvedQuestionIds',
         'eval_passed' => 'setEvalPassed',
@@ -217,6 +222,7 @@ class EvaluatedAnswerStep implements ModelInterface, ArrayAccess, \JsonSerializa
         'type' => 'getType',
         'think' => 'getThink',
         'current_question' => 'getCurrentQuestion',
+        'errored' => 'getErrored',
         'answer' => 'getAnswer',
         'other_resolved_question_ids' => 'getOtherResolvedQuestionIds',
         'eval_passed' => 'getEvalPassed',
@@ -296,6 +302,7 @@ class EvaluatedAnswerStep implements ModelInterface, ArrayAccess, \JsonSerializa
         $this->setIfExists('type', $data ?? [], 'evaluated_answer');
         $this->setIfExists('think', $data ?? [], null);
         $this->setIfExists('current_question', $data ?? [], null);
+        $this->setIfExists('errored', $data ?? [], false);
         $this->setIfExists('answer', $data ?? [], null);
         $this->setIfExists('other_resolved_question_ids', $data ?? [], null);
         $this->setIfExists('eval_passed', $data ?? [], null);
@@ -455,6 +462,33 @@ class EvaluatedAnswerStep implements ModelInterface, ArrayAccess, \JsonSerializa
             throw new \InvalidArgumentException('non-nullable current_question cannot be null');
         }
         $this->container['current_question'] = $current_question;
+
+        return $this;
+    }
+
+    /**
+     * Gets errored
+     *
+     * @return bool|null
+     */
+    public function getErrored()
+    {
+        return $this->container['errored'];
+    }
+
+    /**
+     * Sets errored
+     *
+     * @param bool|null $errored errored
+     *
+     * @return self
+     */
+    public function setErrored($errored)
+    {
+        if (is_null($errored)) {
+            throw new \InvalidArgumentException('non-nullable errored cannot be null');
+        }
+        $this->container['errored'] = $errored;
 
         return $this;
     }

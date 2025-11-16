@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PartitionLimitParamsTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class PartitionLimitParamsTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

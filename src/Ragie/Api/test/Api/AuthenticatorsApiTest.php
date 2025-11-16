@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AuthenticatorsApiTest
  * PHP version 8.1
@@ -42,7 +43,6 @@ use PHPUnit\Framework\TestCase;
  */
 class AuthenticatorsApiTest extends TestCase
 {
-
     /**
      * Setup before running any test cases
      */

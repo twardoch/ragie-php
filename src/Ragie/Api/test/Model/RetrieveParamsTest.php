@@ -1,4 +1,5 @@
 <?php
+
 /**
  * RetrieveParamsTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class RetrieveParamsTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

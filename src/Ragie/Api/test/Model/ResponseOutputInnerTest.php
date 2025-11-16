@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ResponseOutputInnerTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class ResponseOutputInnerTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

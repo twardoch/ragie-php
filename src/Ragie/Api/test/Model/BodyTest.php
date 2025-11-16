@@ -1,4 +1,5 @@
 <?php
+
 /**
  * BodyTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class BodyTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

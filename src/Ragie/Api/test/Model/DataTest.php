@@ -1,4 +1,5 @@
 <?php
+
 /**
  * DataTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class DataTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */

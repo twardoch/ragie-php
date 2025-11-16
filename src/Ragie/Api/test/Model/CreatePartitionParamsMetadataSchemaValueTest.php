@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CreatePartitionParamsMetadataSchemaValueTest
  *
@@ -41,7 +42,6 @@ use PHPUnit\Framework\TestCase;
  */
 class CreatePartitionParamsMetadataSchemaValueTest extends TestCase
 {
-
     /**
      * Setup before running any test case
      */
